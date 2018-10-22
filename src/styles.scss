@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+@import "variables.scss";
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Nanum Myeongjo', serif;
+  background: $color-dark-red;
+  background-attachment: fixed;
+  background-image:
+    radial-gradient(
+      $color-red,
+      $color-dark-red
+    );
+  padding: 0;
+}
+
+.page {
+  margin: 2vh 2vw;
+  width: 96vw;
+  min-height: 90vh;
+
+  margin: 0;
+  width: 100%;
+  min-height: 90vh;
+  // background: rgba(255,255,255,0.1);
+  &__section {
+    // box-shadow: 0px 2px 8px 2px $color-dark-red;
+    //
+    // margin-bottom: 4rem;
+
+    &--style1 {
+      background-image:
+        radial-gradient(
+          $color-white,
+          $color-dark-white
+        );
+      padding: 2em 10vw;
+      text-align: center;
+    }
+    &--style2 {
+      background-image:
+        radial-gradient(
+          $color-dark-white,
+          darken($color-dark-white,4%)
+        );
+      padding: 2em 10vw;
+      text-align: center;
+    }
+
+    hr {
+      margin: 2em;
+    }
+  }
+  &__headline {
+    font-size: 2.4em;
+    margin-bottom: 1em;
+  }
+}
+
+
+.action{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2em;
+
+  &__link {
+    border-color: transparent !important;
+    color: $color-white;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+  }
+}

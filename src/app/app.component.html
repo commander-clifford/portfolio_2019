@@ -1,0 +1,46 @@
+<div
+  class="app__toolbar"
+  [ngClass]="{cover: getState(o) === 'cover'}">
+
+  <mat-toolbar class="app__mtoolbar">
+
+    <div class="">
+      <p
+        *ngIf="getState(o) != 'cover'"
+        routerLink="/home"
+        class="app__logo">
+        8bit
+      </p>
+    </div>
+
+    <div class="">
+      <nav class="app__nav">
+        <button
+          *ngIf="getState(o) != 'cover'"
+          class="app__link app__link--back"
+          mat-button color="primary"
+          (click)="goBack()">
+          <mat-icon>navigate_before</mat-icon>
+        </button>
+        <button
+          class="app__link"
+          mat-button color="primary"
+          routerLink="/about"
+          routerLinkActive="app__link--active">
+          About</button>
+        <button
+          class="app__link"
+          mat-button color="primary"
+          routerLink="/projects"
+          routerLinkActive="app__link--active">
+          Heros
+        </button>
+      </nav>
+    </div>
+
+  </mat-toolbar>
+</div>
+
+<main class="app__main" [@routerTransition]="getState(o)">
+  <router-outlet #o="outlet"></router-outlet>
+</main>
