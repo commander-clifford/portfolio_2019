@@ -1,20 +1,51 @@
-<article class="about page">
+<article class="project page">
 
-  <section class="page__section page__section--style1">
+  <section
+    *ngIf="project"
+    class="page__section page__section--style1">
 
-    <div *ngIf="project">
+    <div class="display__flex">
 
-      <h2>{{project.name | uppercase}} Details</h2>
-      <div><span>id: </span>{{project.id}}</div>
-      <div>
-        <label>name:
-          <input
-            [(ngModel)]="project.name"
-            placeholder="name"/>
-        </label>
+      <div class="project__brief" style="width: 50%;">
+
+        <h2>{{project.name | uppercase}} Details</h2>
+        <div><span>id: </span>{{project.id}}</div>
+        <div>
+          <label>name:
+            <input
+              [(ngModel)]="project.name"
+              placeholder="name"/>
+          </label>
+        </div>
+        <p>{{project.details.brief}}</p>
+      </div>
+
+      <div class="" style="width: 50%;">
+
+        hero img
+
       </div>
 
     </div>
+
+
+
+
+  </section>
+
+  <section
+    *ngIf="project"
+    class="page__section page__section--style2">
+
+    <p>supporting images</p>
+
+  </section>
+
+  <section
+    *ngIf="project"
+    class="page__section page__section--style1">
+
+    <p>{{project.details.elaborate}}</p>
 
   </section>
 

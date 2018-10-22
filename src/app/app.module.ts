@@ -18,6 +18,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -51,6 +53,7 @@ import { ProjectComponent } from './project/project.component';
     MatSidenavModule,
     MatToolbarModule,
     MatExpansionModule,
+    MatGridListModule,
   ],
   providers: [{provide: RouteReuseStrategy, useClass: CustomReuseStrategy}],
   bootstrap: [AppComponent]

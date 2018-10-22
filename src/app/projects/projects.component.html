@@ -9,14 +9,17 @@
 
         <p>list of my heros:</p>
 
-        <ul class="projects">
-          <li
+        <mat-grid-list cols="4" rowHeight="2:1">
+          <mat-grid-tile
             *ngFor="let project of projects"
+            [colspan]="project.tile.cols"
+            [rowspan]="project.tile.rows"
+            [style.background]="project.tile.color"
             routerLink="/project/{{project.id}}"
             [class.selected]="hero === selectedHero">
-            <span class="badge">{{project.id}}: </span>{{project.name}}
-          </li>
-        </ul>
+            {{project.name}}
+          </mat-grid-tile>
+        </mat-grid-list>
 
       </div>
     </div>
