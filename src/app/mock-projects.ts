@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
     tile: {
       cols: 3,
       rows: 4,
-      color: 'pink'
+      color: '#C3002F'
     }
   },
   {
@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
     tile: {
       cols: 1,
       rows: 2,
-      color: 'lightblue'
+      color: '#DD0031'
     }
   },
   {
@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
     tile: {
       cols: 1,
       rows: 2,
-      color: 'pink'
+      color: '#C3002F'
     }
   },
   {
@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
     tile: {
       cols: 1,
       rows: 2,
-      color: 'lightblue'
+      color: '#DD0031'
     }
   },
   {
@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
     tile: {
       cols: 3,
       rows: 2,
-      color: 'pink'
+      color: '#C3002F'
     }
   },
   {
@@ -76,7 +76,7 @@ export const PROJECTS: Project[] = [
     tile: {
       cols: 2,
       rows: 4,
-      color: 'lightblue'
+      color: '#DD0031'
     }
   },
   {
@@ -89,7 +89,7 @@ export const PROJECTS: Project[] = [
     tile: {
       cols: 2,
       rows: 2,
-      color: 'pink'
+      color: '#C3002F'
     }
   },
   {
@@ -102,7 +102,7 @@ export const PROJECTS: Project[] = [
     tile: {
       cols: 2,
       rows: 3,
-      color: 'lightblue'
+      color: '#DD0031'
     }
   },
   {
@@ -115,7 +115,7 @@ export const PROJECTS: Project[] = [
     tile: {
       cols: 2,
       rows: 3,
-      color: 'pink'
+      color: '#C3002F'
     }
   },
   {
@@ -128,7 +128,7 @@ export const PROJECTS: Project[] = [
     tile: {
       cols: 2,
       rows: 2,
-      color: 'lightblue'
+      color: '#DD0031'
     }
   },
 ];

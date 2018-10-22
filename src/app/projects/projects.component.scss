@@ -1,6 +1,5 @@
-.projects {}
+@import "../../variables.scss";
 
-
-mat-grid-tile {
-  background: pink;
+.projects {
+  * { color: $color-white; }
 }
