@@ -11,10 +11,13 @@ import { ProjectComponent }   from './project/project.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+
   { path: 'home', component: CoverComponent, data: { state: 'cover' } },
   { path: 'about', component: AboutComponent, data: { state: 'about' } },
   { path: 'projects', component: ProjectsComponent, data: { state: 'projects' } },
   { path: 'project/:id', component: ProjectComponent, data: { state: 'project' } },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
+
 ];
 
 @NgModule({

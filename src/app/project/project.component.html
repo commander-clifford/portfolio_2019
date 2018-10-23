@@ -1,5 +1,16 @@
 <article *ngIf="project" class="project page">
 
+  <section class="action">
+
+    <button
+      class="action__link"
+      mat-stroked-button
+      routerLink="/project/{{nextProjectId}}">
+      Next <mat-icon>chevron_right</mat-icon>
+    </button>
+
+  </section>
+
   <section class="hero page__section page__section--style1">
 
       <div class="hero__brief hero__section">
@@ -18,7 +29,7 @@
 
       <div class=" hero__section">
 
-        <img class="hero__img" src="{{project.heroImgUrl}}" alt="{{project.name}}">
+        <img class="hero__img" src="{{project.imgs.heroImg}}" alt="{{project.name}}">
 
       </div>
 
@@ -26,16 +37,19 @@
 
   <section class="supporting page__section page__section--style2">
 
-    <div class="supporting__images" *ngIf="project.supportingImgs">
-      supportingImgs
+    <div class="supporting__images" *ngIf="project.imgs.supportingImgs">
+      <img
+        *ngFor="let supportingImg of project.imgs.supportingImgs"
+        src="{{supportingImg}}"
+        />
     </div>
 
-    <div class="supporting__images" *ngIf="!project.supportingImgs">
-      <img src="{{project.heroImgUrl}}" alt="">
-      <img src="{{project.heroImgUrl}}" alt="">
-      <img src="{{project.heroImgUrl}}" alt="">
-      <img src="{{project.heroImgUrl}}" alt="">
-      <img src="{{project.heroImgUrl}}" alt="">
+    <div class="supporting__images" *ngIf="!project.imgs.supportingImgs">
+      <img src="{{project.imgs.heroImg}}" alt="">
+      <img src="{{project.imgs.heroImg}}" alt="">
+      <img src="{{project.imgs.heroImg}}" alt="">
+      <img src="{{project.imgs.heroImg}}" alt="">
+      <img src="{{project.imgs.heroImg}}" alt="">
     </div>
 
 
@@ -51,13 +65,6 @@
   </section>
 
   <section class="action">
-
-    <!-- <button
-      class="action__link"
-      mat-stroked-button
-      routerLink="/project/{{prevProjectId}}">
-      <mat-icon>chevron_left</mat-icon> Previous
-    </button> -->
 
     <button
       class="action__link"

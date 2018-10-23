@@ -1,10 +1,22 @@
 import { Project } from './project';
 
 export const PROJECTS: Project[] = [
+
+  // TurboTax
+
   {
     id: 0,
     name: 'Intuit TurboTax',
-    heroImgUrl: './assets/hero-image.png',
+    imgs: {
+      heroImg: 'src/assets/turbotax__hero.png',
+      supportingImgs: [
+        'src/assets/turbotax__sup-1.png',
+        'src/assets/turbotax__sup-1.png',
+        'src/assets/turbotax__sup-1.png',
+        'src/assets/turbotax__sup-1.png',
+        'src/assets/turbotax__sup-1.png',
+      ],
+    },
     details: {
       brief: 'Front-End Development & Prototyping',
       elaborate: [
@@ -21,10 +33,21 @@ export const PROJECTS: Project[] = [
       color: '#C3002F'
     }
   },
+
+
+  // Fundraisr
+
   {
     id: 1,
     name: 'Fundraisr',
-    heroImgUrl: './assets/hero-image-2.png',
+    imgs: {
+      heroImg: './assets/fundraisr__hero.jpg',
+      supportingImgs: [
+        './assets/fundraisr__sup-1.png',
+        './assets/fundraisr__sup-2.png',
+      ],
+    },
+
     details: {
       brief: 'Web Design and Development',
       elaborate: [
@@ -37,10 +60,17 @@ export const PROJECTS: Project[] = [
       color: '#DD0031'
     }
   },
+
+
+  // Starboard
+
   {
     id: 2,
     name: 'Starboard',
-    heroImgUrl: './assets/hero-image.png',
+    imgs: {
+      heroImg: './assets/starboard__hero.png',
+    },
+
     details: {
       brief: "in-house developer tool",
       elaborate: [
@@ -53,12 +83,19 @@ export const PROJECTS: Project[] = [
       color: '#C3002F'
     }
   },
+
+
+  // Parallax Portfolio
+
   {
     id: 3,
     name: 'Parallax',
-    heroImgUrl: './assets/hero-image-2.png',
+    imgs: {
+      heroImg: './assets/parallax__hero.png',
+    },
+
     details: {
-      brief: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      brief: 'Web Design with heavy Parallax and custom photography',
       elaborate: [
         '1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         '2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
@@ -70,29 +107,25 @@ export const PROJECTS: Project[] = [
       color: '#DD0031'
     }
   },
+
+
+ // IBM
+
   {
     id: 4,
-    name: 'Logistic Data Tools',
-    heroImgUrl: './assets/hero-image-2.png',
-    details: {
-      brief: "a simple low-fi prototype built from project requirments",
-      elaborate: [
-        "This is a prototype built for a logistics widget"
+    name: 'Army Logistics Prototyping',
+    imgs: {
+      heroImg: './assets/logistics__hero.png',
+      supportingImgs: [
+        './assets/logistics__sup-1.png',
+        './assets/logistics__sup-1.png',
       ],
     },
-    tile: {
-      cols: 3,
-      rows: 2,
-      color: '#C3002F'
-    }
-  },
-  {
-    id: 5,
-    name: 'Logistics Portal',
-    heroImgUrl: './assets/hero-image.png',
+
     details: {
-      brief: 'a landing page for Military logistics tools',
+      brief: 'a landing page for Military logistics tools a simple low-fi prototype built from project requirments',
       elaborate: [
+        "This is a prototype built for a logistics widget",
         "While working with IBM on two Military logistics projects I had influence on several aspects of design and development. In this project I took a page that had one row of visually identical buttons and made it more intuitive. The first and most obvious modification was to break the utility functions out into their own utility navigation bar to symbolize their difference from the application navigation options."
       ],
     },
@@ -102,10 +135,44 @@ export const PROJECTS: Project[] = [
       color: '#DD0031'
     }
   },
+
+
+  // MOR
+
+  {
+    id: 5,
+    name: 'MOR Furniture',
+    imgs: {
+      heroImg: 'src/assets/mor__hero.png',
+      supportingImgs: [
+        'src/assets/mor__sup-1.png',
+      ],
+    },
+
+    details: {
+      brief: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      elaborate: [
+        '1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        '2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      ],
+    },
+    tile: {
+      cols: 2,
+      rows: 2,
+      color: '#C3002F'
+    }
+  },
+
+
+  // Loading Indicators
+
   {
     id: 6,
-    name: 'MOR Furniture',
-    heroImgUrl: './assets/hero-image-2.png',
+    name: 'Loading Indicators',
+    imgs: {
+      heroImg: './assets/loading-indicators__hero.png',
+    },
+
     details: {
       brief: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       elaborate: [
@@ -115,31 +182,26 @@ export const PROJECTS: Project[] = [
     },
     tile: {
       cols: 2,
-      rows: 2,
-      color: '#C3002F'
+      rows: 3,
+      color: '#DD0031'
     }
   },
+
+
+  // Lights Out
+
   {
     id: 7,
-    name: 'Loading Indicators',
-    heroImgUrl: './assets/hero-image.png',
-    details: {
-      brief: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      elaborate: [
-        '1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        '2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-      ],
-    },
-    tile: {
-      cols: 2,
-      rows: 3,
-      color: '#DD0031'
-    }
-  },
-  {
-    id: 8,
     name: 'Lights Out',
-    heroImgUrl: './assets/hero-image-2.png',
+    imgs: {
+      heroImg: './assets/lightsout__hero.png',
+      supportingImgs: [
+        './assets/lightsout__sup-1.jpg',
+        './assets/lightsout__sup-2.jpg',
+        './assets/lightsout__sup-3.png',
+      ]
+    },
+
     details: {
       brief: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       elaborate: [
@@ -153,10 +215,16 @@ export const PROJECTS: Project[] = [
       color: '#C3002F'
     }
   },
+
+
+  // Morphing Icons
+
   {
-    id: 9,
+    id: 8,
     name: 'Morphing Icons',
-    heroImgUrl: './assets/hero-image.png',
+    imgs: {
+      heroImg: './assets/morph__hero.png',
+    },
     details: {
       brief: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       elaborate: [
@@ -170,10 +238,16 @@ export const PROJECTS: Project[] = [
       color: '#DD0031'
     }
   },
+
+  // Style Tile
+
   {
-    id: 10,
+    id: 9,
     name: 'Style Tile',
-    heroImgUrl: './assets/hero-image.png',
+    imgs: {
+      heroImg: './assets/styletile__hero.jpg',
+    },
+
     details: {
       brief: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       elaborate: [
@@ -187,10 +261,16 @@ export const PROJECTS: Project[] = [
       color: '#DD0031'
     }
   },
+
+  // Responsive Forms
+
   {
-    id: 11,
+    id: 10,
     name: 'Responsive Forms',
-    heroImgUrl: './assets/hero-image.png',
+    imgs: {
+      heroImg: './assets/donationform__hero.png',
+    },
+
     details: {
       brief: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       elaborate: [
@@ -202,12 +282,59 @@ export const PROJECTS: Project[] = [
       cols: 2,
       rows: 3,
       color: '#DD0031'
+
+
+
     }
   },
+
+
+  // Simon Says
+
+  {
+    id: 11,
+    name: 'Simon Says',
+    imgs: {
+      heroImg: './assets/simon-says__hero.gif',
+      supportingImgs: [
+        './assets/simon-says__sup-1.png',
+        './assets/simon-says__sup-1.png',
+        './assets/simon-says__sup-1.png',
+        './assets/simon-says__sup-1.png',
+        './assets/simon-says__sup-1.png',
+      ]
+    },
+
+    details: {
+      brief: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      elaborate: [
+        '1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        '2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      ],
+    },
+    tile: {
+      cols: 2,
+      rows: 2,
+      color: '#DD0031'
+    }
+  },
+
+  // Bike Genre Illustrations
+  
   {
     id: 12,
-    name: 'Simon Says',
-    heroImgUrl: './assets/hero-image.png',
+    name: 'Bike Genre Illustrations',
+    imgs: {
+      heroImg: './assets/bike_bmx.png',
+      supportingImgs: [
+        './assets/bike_am.png',
+        './assets/bike_bmx.png',
+        './assets/bike_dh.png',
+        './assets/bike_fr.png',
+        './assets/bike_xc.png',
+      ]
+    },
+
     details: {
       brief: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       elaborate: [
