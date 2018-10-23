@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 img { max-width: 100%; height: auto; }
 
 .page {
+  overflow-x: hidden;
   margin: 2vh 2vw;
   width: 96vw;
   min-height: 90vh;
@@ -78,5 +79,24 @@ img { max-width: 100%; height: auto; }
     color: $color-white;
     font-family: 'VT323', monospace;
     font-size: 1.2em;
+  }
+}
+
+
+.instafeed {
+  &__card {
+    display: block;
+
+    img {
+      display: block;
+      max-width: unset;
+    }
+  }
+}
+
+.text {
+  &--fineprint {
+    font-style: italic;
+    font-size: 0.8em;
   }
 }
