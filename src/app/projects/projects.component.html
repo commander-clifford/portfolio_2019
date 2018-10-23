@@ -16,7 +16,7 @@
             routerLink="/project/{{project.id}}"
             [class.selected]="hero === selectedHero">
             <h3>{{project.name}}</h3>
-            <img src="{{project.heroImgUrl}}" alt="{{project.name}}" style="max-width:50%;height:auto;">
+            <img src="{{project.imgs.heroImg}}" alt="{{project.name}}" style="max-width:50%;height:auto;">
           </mat-grid-tile>
         </mat-grid-list>
 
