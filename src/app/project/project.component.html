@@ -1,12 +1,8 @@
-<article class="project page">
+<article *ngIf="project" class="project page">
 
-  <section
-    *ngIf="project"
-    class="page__section page__section--style1">
+  <section class="hero page__section page__section--style1">
 
-    <div class="display__flex">
-
-      <div class="project__brief" style="width: 50%;">
+      <div class="hero__brief hero__section">
 
         <h2>{{project.name | uppercase}} Details</h2>
         <div><span>id: </span>{{project.id}}</div>
@@ -20,32 +16,37 @@
         <p>{{project.details.brief}}</p>
       </div>
 
-      <div class="" style="width: 50%;">
+      <div class=" hero__section">
 
-        hero img
+        <img class="hero__img" src="{{project.heroImgUrl}}" alt="{{project.name}}">
 
       </div>
 
+  </section>
+
+  <section class="supporting page__section page__section--style2">
+
+    <div class="supporting__images" *ngIf="project.supportingImgs">
+      supportingImgs
+    </div>
+
+    <div class="supporting__images" *ngIf="!project.supportingImgs">
+      <img src="{{project.heroImgUrl}}" alt="">
+      <img src="{{project.heroImgUrl}}" alt="">
+      <img src="{{project.heroImgUrl}}" alt="">
+      <img src="{{project.heroImgUrl}}" alt="">
+      <img src="{{project.heroImgUrl}}" alt="">
     </div>
 
 
-
-
   </section>
 
   <section
-    *ngIf="project"
-    class="page__section page__section--style2">
+    class="details page__section page__section--style1">
 
-    <p>supporting images</p>
-
-  </section>
-
-  <section
-    *ngIf="project"
-    class="page__section page__section--style1">
-
-    <p>{{project.details.elaborate}}</p>
+    <p *ngFor="let elaborate of project.details.elaborate">{{elaborate}}</p>
+    <!-- <p>{{project.details.elaborate[0]}}</p>
+    <p>{{project.details.elaborate[1]}}</p> -->
 
   </section>
 
