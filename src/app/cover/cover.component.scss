@@ -1,12 +1,8 @@
 @import "../../variables.scss";
 
 .cover {
-  font-family: 'VT323', monospace;
-  // position: fixed;
   top: 0;
   left: 0;
-  // z-index: 9;
-
   width: 100vw;
   height: calc(100vh - 4em);
   display: flex;
@@ -17,8 +13,6 @@
     text-align: center;
     color: white;
   }
-
-
 
   &__headline {
     font-family: 'Press Start 2P';
@@ -44,8 +38,6 @@
 
   &__desc {
     font-size: 3vw;
-    // font-family: 'Special Elite';
-    font-family: 'VT323', monospace;
     font-weight: 200;
     color: white;
   }
@@ -67,7 +59,4 @@
     from { transform: translateY(0);}
     to   { transform: translateY(20px);}
   }
-
-
-
 }

@@ -9,7 +9,7 @@
         *ngIf="getState(o) != 'cover'"
         routerLink="/home"
         class="app__logo">
-        8bit
+        CLIFFORD
       </p>
     </div>
 
@@ -33,13 +33,15 @@
           mat-button color="primary"
           routerLink="/projects"
           routerLinkActive="app__link--active">
-          Heros
+          Portfolio
         </button>
       </nav>
     </div>
 
   </mat-toolbar>
 </div>
+
+<!-- TODO <app-nav> -->
 
 <main class="app__main" [@routerTransition]="getState(o)">
   <router-outlet #o="outlet"></router-outlet>
