@@ -75,6 +75,10 @@ img { max-width: 100%; height: auto; }
   align-items: center;
   padding: 2em;
 
+  &--top {
+    padding: 0 1em;
+  }
+
   &__link {
     border-color: transparent !important;
     color: $color-white;

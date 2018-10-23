@@ -26,16 +26,16 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProject();
-    this.nextProjectId = this.project.id +1;
-    this.prevProjectId = this.project.id -1;
-    console.log(this.project.id);
-    console.log(this.nextProjectId);
   }
 
   getProject(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.projectService.getProject(id)
       .subscribe(project => this.project = project);
+
+    this.nextProjectId = id +1;
+    this.prevProjectId = id -1;
+
   }
 
   goBack(): void {
