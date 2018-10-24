@@ -96,7 +96,7 @@ img { max-width: 100%; height: auto; }
 .instafeed {
   &__card {
     display: block;
-
+    border-right: 1px solid $color-dark-white;
     img {
       display: block;
       max-width: unset;
