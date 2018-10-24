@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 
 import { ActivatedRouteSnapshot, RouteReuseStrategy, DetachedRouteHandle } from '@angular/router';
 import { CustomReuseStrategy } from './route.reuse';
+import { OrderModule } from 'ngx-order-pipe';
+
 
 
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
@@ -52,6 +54,7 @@ import { MessagesComponent } from './messages/messages.component';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
+    OrderModule,
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,

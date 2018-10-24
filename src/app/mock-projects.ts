@@ -2,11 +2,48 @@ import { Project } from './project';
 
 export const PROJECTS: Project[] = [
 
+  // Windshield Wipers
+  {
+    id: 0,
+    name: 'Google Search',
+    imgs: {
+      heroImg: './assets/hero-image-2.png',
+    },
+    tile: {
+      cols: 2,
+      rows: 1,
+      color: '#C3002F'
+    },
+    details: {
+      client: 'Google',
+      brief: 'Prototyping',
+      elaborate: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',]
+    },
+  }
+  // Windshield Wipers
+  {
+    id: 1,
+    name: 'Windshield Wipers',
+    imgs: {
+      heroImg: './assets/hero-image.png',
+    },
+    tile: {
+      cols: 2,
+      rows: 1,
+      color: '#DD0031'
+    },
+    details: {
+      client: 'Google',
+      brief: 'Prototyping playability',
+      elaborate: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',]
+    },
+  }
+
 
   // TurboTax
 
   {
-    id: 0,
+    id: 2,
     name: 'Intuit TurboTax',
     imgs: {
       heroImg: './assets/turbotax__hero.png',
@@ -39,7 +76,7 @@ export const PROJECTS: Project[] = [
   // UberEats
 
   {
-    id: 1,
+    id: 3,
     name: 'Uber Eats Image Automator',
     imgs: {
       heroImg: './assets/uber-eats__hero.jpg',
@@ -61,7 +98,7 @@ export const PROJECTS: Project[] = [
   // Simon Says
 
   {
-    id: 2,
+    id: 4,
     name: 'Simon Says',
     imgs: {
       heroImg: './assets/simon-says__hero.gif',
@@ -91,7 +128,7 @@ export const PROJECTS: Project[] = [
   // Fundraisr
 
   {
-    id: 3,
+    id: 5,
     name: 'Fundraisr',
     imgs: {
       heroImg: './assets/fundraisr__hero.jpg',
@@ -117,7 +154,7 @@ export const PROJECTS: Project[] = [
   // Responsive Forms
 
   {
-    id: 4,
+    id: 6,
     name: 'Responsive Forms',
     imgs: {
       heroImg: './assets/donationform__hero.png',
@@ -143,7 +180,7 @@ export const PROJECTS: Project[] = [
   // Parallax Portfolio
 
   {
-    id: 5,
+    id: 7,
     name: 'Parallax',
     imgs: {
       heroImg: './assets/parallax__hero.png',
@@ -166,7 +203,7 @@ export const PROJECTS: Project[] = [
   // Lights Out
 
   {
-    id: 6,
+    id: 8,
     name: 'Lights Out',
     imgs: {
       heroImg: './assets/lightsout__hero.png',
@@ -194,7 +231,7 @@ export const PROJECTS: Project[] = [
   // Starboard
 
   {
-    id: 7,
+    id: 9,
     name: 'Starboard',
     imgs: {
       heroImg: './assets/starboard__hero.png',
@@ -216,7 +253,7 @@ export const PROJECTS: Project[] = [
   // Bike Genre Illustrations
 
   {
-    id: 8,
+    id: 10,
     name: 'Bike Genre Illustrations',
     imgs: {
       heroImg: './assets/bike_bmx.png',
@@ -246,7 +283,7 @@ export const PROJECTS: Project[] = [
   // Morphing Icons
 
   {
-    id: 12,
+    id: 11,
     name: 'Morphing Icons',
     imgs: {
       heroImg: './assets/morph__hero.png',
@@ -268,7 +305,7 @@ export const PROJECTS: Project[] = [
   // Style Tile
 
   {
-    id: 9,
+    id: 12,
     name: 'Style Tile',
     imgs: {
       heroImg: './assets/styletile__hero.jpg',
@@ -291,7 +328,7 @@ export const PROJECTS: Project[] = [
   // Loading Indicators
 
   {
-    id: 10,
+    id: 13,
     name: 'Loading Indicators',
     imgs: {
       heroImg: './assets/loading-indicators__hero.png',
@@ -314,7 +351,7 @@ export const PROJECTS: Project[] = [
   // IBM
 
   {
-    id: 11,
+    id: 14,
     name: 'Army Logistics Prototyping',
     imgs: {
       heroImg: './assets/logistics__hero.png',
@@ -338,10 +375,12 @@ export const PROJECTS: Project[] = [
     }
   },
 
+
+
   // MOR
 
   // {
-  //   id: 5,
+  //   id: 15,
   //   name: 'MOR Furniture',
   //   imgs: {
   //     heroImg: './assets/mor__hero.png',
@@ -364,5 +403,5 @@ export const PROJECTS: Project[] = [
   //   }
   // },
 
-  
+
 ];
