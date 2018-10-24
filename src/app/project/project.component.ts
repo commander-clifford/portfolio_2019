@@ -33,8 +33,8 @@ export class ProjectComponent implements OnInit {
     this.projectService.getProject(id)
       .subscribe(project => this.project = project);
 
-    this.nextProjectId = id +1;
-    this.prevProjectId = id -1;
+    this.nextProjectId = id -1;
+    this.prevProjectId = id +1;
 
   }
 

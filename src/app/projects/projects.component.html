@@ -11,7 +11,7 @@
       cols="4"
       rowHeight="2:1">
       <mat-grid-tile
-        *ngFor="let project of projects | orderBy: 'id'"
+        *ngFor="let project of projects | orderBy: 'id':true"
         class="projects__tile"
         [colspan]="project.tile.cols"
         [rowspan]="project.tile.rows"
@@ -20,16 +20,6 @@
         routerLink="/project/{{project.id}}"
         [class.selected]="hero === selectedHero"
         >
-        <!--
-
-
-        <h3>{{project.name}}</h3>
-        <img
-          class="intro__img"
-          src="{{project.imgs.heroImg}}"
-          alt="{{project.name}}">
-          -->
-
       </mat-grid-tile>
     </mat-grid-list>
 

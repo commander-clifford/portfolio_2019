@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../project';
 import { ProjectService } from '../project.service';
+import { OrderPipe } from 'ngx-order-pipe';
+
 
 @Component({
   selector: 'app-projects',
@@ -14,15 +16,15 @@ export class ProjectsComponent implements OnInit {
 
   selectedProject: Project;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(
+    private projectService: ProjectService,
+  ) {}
+
+
 
   ngOnInit() {
     this.getProjects();
   }
-
-  // onSelect(project: Project): void {
-  //   this.selectedProject = project;
-  // }
 
   getProjects(): void {
     this.projectService.getProjects()
