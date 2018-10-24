@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Location } from '@angular/common';
 import {Router} from "@angular/router";
 
 @Component({
@@ -15,7 +16,11 @@ export class CoverComponent implements OnInit {
 
   @HostListener("window:scroll", ['$event'])
   scrollMe(event) {
-    this.router.navigate(['/about']);
+    var scrollLimit = 16*1;
+    if (window.scrollY >= scrollLimit) {
+      this.router.navigate(['/about']);
+    }
+
   }
 
   ngOnInit() {}
