@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-cover',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoverComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private location: Location,
+    private router: Router,
+  ) {}
 
-  ngOnInit() {
+  @HostListener("window:scroll", ['$event'])
+  scrollMe(event) {
+    this.router.navigate(['/about']);
   }
+
+  ngOnInit() {}
 
 }

@@ -87,8 +87,6 @@ export const routerTransition = trigger('routerTransition', [
     ])
   ]),
 
-
-
   transition('* => cover', [
 
       group([
@@ -177,7 +175,7 @@ export const routerTransition = trigger('routerTransition', [
 
 
 
-
+////////
   transition('project <=> project', [
     query(':enter, :leave', style({ position: 'fixed', width:'100%' })
       , { optional: true }),
@@ -192,7 +190,7 @@ export const routerTransition = trigger('routerTransition', [
       ], { optional: true }),
     ])
   ]),
-  
+
   transition('* => project', [
     query(':enter, :leave', style({ position: 'fixed', width:'100%' })
       , { optional: true }),
