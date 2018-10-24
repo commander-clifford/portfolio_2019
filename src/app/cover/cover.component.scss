@@ -8,6 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  outline: none !important;
 
   &__content {
     text-align: center;
