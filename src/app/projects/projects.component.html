@@ -1,27 +1,37 @@
-<article class="about page">
+<article class="projects page">
 
-  <section class="page__section page__section--style1">
+  <section
+    class="page__section page__section--style1"
+    style="padding: 2em;">
 
-    <div class="intro">
-      <div class="intro__text">
+    <h2 class="page__headline">All the Projects</h2>
 
-        <h2 class="page__headline">All the Projects</h2>
+    <mat-grid-list
+      class="projects__list"
+      cols="4"
+      rowHeight="2:1">
+      <mat-grid-tile
+        *ngFor="let project of projects"
+        class="projects__tile"
+        [colspan]="project.tile.cols"
+        [rowspan]="project.tile.rows"
+        [style.backgroundColor]="project.tile.color"
+        [style.backgroundImage]="'url('+ project.imgs.heroImg +')'"
+        routerLink="/project/{{project.id}}"
+        [class.selected]="hero === selectedHero"
+        >
+        <!--
 
-        <mat-grid-list cols="4" rowHeight="2:1">
-          <mat-grid-tile
-            *ngFor="let project of projects"
-            [colspan]="project.tile.cols"
-            [rowspan]="project.tile.rows"
-            [style.background]="project.tile.color"
-            routerLink="/project/{{project.id}}"
-            [class.selected]="hero === selectedHero">
-            <h3>{{project.name}}</h3>
-            <img src="{{project.imgs.heroImg}}" alt="{{project.name}}" style="max-width:50%;height:auto;">
-          </mat-grid-tile>
-        </mat-grid-list>
 
-      </div>
-    </div>
+        <h3>{{project.name}}</h3>
+        <img
+          class="intro__img"
+          src="{{project.imgs.heroImg}}"
+          alt="{{project.name}}">
+          -->
+
+      </mat-grid-tile>
+    </mat-grid-list>
 
   </section>
 

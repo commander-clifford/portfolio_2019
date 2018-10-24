@@ -1,5 +1,18 @@
 @import "../../variables.scss";
 
 .projects {
-  * { color: $color-white; }
+
+  &__list {
+
+  }
+  &__tile {
+    cursor: pointer;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+  &__img {
+
+  }
 }
