@@ -112,6 +112,45 @@ img { max-width: 100%; height: auto; }
 }
 
 
+.flex {
+
+  .left {
+    margin-bottom: 4em;
+  }
+  .right {
+
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .flex {
+
+    .left {
+
+    }
+    .right {
+
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .left {
+      width: 50%;
+    }
+    .right {
+      margin-bottom: 0;
+      width: 40%;
+    }
+  }
+}
+
+
+
 
 
 
