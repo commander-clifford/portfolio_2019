@@ -4,7 +4,8 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: calc(100vh - 3em);
+  // height: calc(100vh - 3em);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +46,7 @@
   }
 
   &__link {
-    position: fixed;
+    position: absolute;
     top: 84vh;
     padding: 2em;
     color: inherit;

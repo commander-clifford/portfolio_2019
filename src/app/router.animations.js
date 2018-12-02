@@ -9,90 +9,13 @@ const query = (s,a,o={optional:true})=>q(s,a,o);
 
 export const routerTransition = trigger('routerTransition', [
 
-  transition('cover => *', [
 
-    // set
-    group([
-      // query(':leave .ara__cover-headline', style({ opacity: 0, transform: 'translateY(0px) scale(1)' }),{ optional: true }),
-      query(':enter, :leave',
-        style({ position: 'fixed', width:'100%', minHeight: '100%' })
-      ,{ optional: true }),
-
-      query(':leave .ara__fade-in', style({ opacity: 0 }),{ optional: true }),
-    ]),
-
-    // animate 1
-    group([
-
-      query(':leave .ara__cover-headline', stagger(100, [
-        animate('800ms 0ms cubic-bezier(.5,-0.5,.5,1)',
-          style({
-            transform: 'translateY(-200px)',
-          })),
-        ]), { optional: true }),
-
-      query(':enter', [
-        style({ transform: 'translateY(100%)' }),
-        animate('800ms 300ms ease-in-out', style({ transform: 'translateY(0%)' }))
-      ], { optional: true }),
-      query(':leave', [
-        style({ transform: 'translateY(0%)' }),
-        animate('800ms 300ms ease-in-out', style({ transform: 'translateY(-100%)' }))
-      ], { optional: true }),
-    ])
-  ]),
-
-  transition('about => projects', [
-    query(':enter, :leave', style({ position: 'fixed', width:'100%' })
-      , { optional: true }),
-    group([
-      query(':enter', [
-        style({ transform: 'translateX(100%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
-      ], { optional: true }),
-      query(':leave', [
-        style({ transform: 'translateX(0%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateX(-100%)' }))
-      ], { optional: true }),
-    ])
-  ]),
-
-  transition('projects => about', [
-    query(':enter, :leave', style({ position: 'fixed', width:'100%' })
-      , { optional: true }),
-    group([
-      query(':enter', [
-        style({ transform: 'translateX(-100%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
-      ], { optional: true }),
-      query(':leave', [
-        style({ transform: 'translateX(0%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateX(100%)' }))
-      ], { optional: true }),
-    ])
-  ]),
-
-  transition('project => projects', [
-    query(':enter, :leave', style({ position: 'fixed', width:'100%' })
-      , { optional: true }),
-    group([
-      query(':enter', [
-        style({ transform: 'translateX(-100%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
-      ], { optional: true }),
-      query(':leave', [
-        style({ transform: 'translateX(0%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateX(100%)' }))
-      ], { optional: true }),
-    ])
-  ]),
-
-  transition('* => cover', [
+  transition('* => home', [
 
       group([
         // query(':leave', style({ position: 'fixed', width:'100%' }),{ optional: true }),
         query(':enter', style({ opacity: 1, position: 'fixed', width:'100%' }),{ optional: true }),
-        query(':enter .ara__cover-headline', style({ opacity: 1, transform: 'translateY(100px) scale(0.9)' }),{ optional: true }),
+        query(':enter .ara__cover-headline', style({ opacity: 1, transform: 'translateY(40px) scale(1)' }),{ optional: true }),
         query(':enter .ara__fall-in', style({ opacity: 0, transform: 'translateY(-100px) scale(0.4)' }),{ optional: true }),
         query(':enter .ara__fade-in', style({ opacity: 0 }),{ optional: true }),
         query(':enter .main', style({ opacity: 0, position: 'absolute', width: '100%', transform: 'translateY(50%)' }),{ optional: true }),
@@ -127,7 +50,7 @@ export const routerTransition = trigger('routerTransition', [
           ]), { optional: true }),
 
         query(':enter .ara__cover-headline', stagger(100, [
-          animate('800ms 800ms cubic-bezier(0.85,3,0.5,-0.25)',
+          animate('800ms 800ms cubic-bezier(0.85,3,0.5,-0.5)',
             style({
               transform: 'translateY(0px) scale(1)',
             })),
@@ -174,6 +97,54 @@ export const routerTransition = trigger('routerTransition', [
     ]),
 
 
+  transition('* <=> *', [
+    query(':enter, :leave', style({ position: 'fixed', width:'100%' })
+      , { optional: true }),
+    group([
+      query(':enter', [
+        style({ transform: 'translateX(100%)' }),
+        animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
+      ], { optional: true }),
+      query(':leave', [
+        style({ transform: 'translateX(0%)' }),
+        animate('0.5s ease-in-out', style({ transform: 'translateX(-100%)' }))
+      ], { optional: true }),
+    ])
+  ]),
+
+  transition('projects => about', [
+    query(':enter, :leave', style({ position: 'fixed', width:'100%' })
+      , { optional: true }),
+    group([
+      query(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
+      ], { optional: true }),
+      query(':leave', [
+        style({ transform: 'translateX(0%)' }),
+        animate('0.5s ease-in-out', style({ transform: 'translateX(100%)' }))
+      ], { optional: true }),
+    ])
+  ]),
+
+  transition('project => projects', [
+    query(':enter, :leave', style({ position: 'fixed', width:'100%' })
+      , { optional: true }),
+    group([
+      query(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
+      ], { optional: true }),
+      query(':leave', [
+        style({ transform: 'translateX(0%)' }),
+        animate('0.5s ease-in-out', style({ transform: 'translateX(100%)' }))
+      ], { optional: true }),
+    ])
+  ]),
+
+
+
+
 
 ////////
   transition('project <=> project', [
@@ -206,4 +177,33 @@ export const routerTransition = trigger('routerTransition', [
     ])
   ]),
 
-])
+]);
+
+export const slideInOutAnimation = trigger('slideInOutAnimation', [
+
+  // state('new', style({
+    // position: 'absolute',
+    // width: '100%'
+  // })),
+
+  transition('* => next', [
+
+    // query(':enter, :leave', style({  })
+    //   , { optional: true }),
+
+    group([
+
+      query(':leave', [
+        style({ transform: 'scale(1)', opacity: 1, transform: 'translateX(0%)' }),
+        animate('0.5s ease-in-out', style({ transform: 'scale(0)', opacity: 0, transform: 'translateX(-25%)' }))
+      ], { optional: true }),
+
+      query(':enter', [
+        style({ transform: 'scale(0)', opacity: 0, transform: 'translateX(25%)' }),
+        animate('0.5s ease-in-out', style({ transform: 'scale(1)', opacity: 1, transform: 'translateX(0%)' }))
+      ], { optional: true }),
+
+    ])
+  ]),
+
+]);

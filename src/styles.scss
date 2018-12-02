@@ -22,8 +22,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+
     line-height: 1.5;
+    font-size: 1.2em;
     margin: 2em 0;
+    @media only screen and (min-width: 960px) {
+      font-size: 1.1em;
+    }
+
 }
 
 img { max-width: 100%; height: auto; }
@@ -40,6 +46,7 @@ img { max-width: 100%; height: auto; }
   min-height: 90vh;
   // background: rgba(255,255,255,0.1);
   &__section {
+    position: relative;
     // box-shadow: 0px 2px 8px 2px $color-dark-red;
     //
     // margin-bottom: 4rem;
@@ -53,6 +60,7 @@ img { max-width: 100%; height: auto; }
       padding: 2em 10vw;
       text-align: center;
     }
+
     &--style2 {
       background-image:
         radial-gradient(
@@ -61,6 +69,22 @@ img { max-width: 100%; height: auto; }
         );
       padding: 2em 10vw;
       text-align: center;
+    }
+    &--wa {
+      padding-top: 6em;
+    }
+
+    .actions {
+      position: absolute;
+      top: 0;
+      width: calc(100% - 2em);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding: 1em;
+      .action__link { color: rgba(0,0,0,.87) }
     }
 
     hr {
@@ -75,6 +99,7 @@ img { max-width: 100%; height: auto; }
 
 
 .action{
+
   display: flex;
   justify-content: flex-end;
   align-items: center;

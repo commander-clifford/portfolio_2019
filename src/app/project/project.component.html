@@ -1,44 +1,83 @@
-<article *ngIf="project" class="project page">
+<div class="actions">
+  <button
+    class="action__link"
+    *ngIf="prevProjectId < projects.length"
+    mat-raised-button
+    (click)="this.navigateProjects('prev')">
+    <mat-icon>chevron_left</mat-icon> prev project
+  </button>
+  <button
+    class="action__link"
+    *ngIf="prevProjectId >= projects.length"
+    mat-raised-button
+    routerLink="/projects/">
+    <mat-icon>chevron_left</mat-icon> back to projects
+  </button>
 
-  <section class="action action--top">
+  <button
+    class="action__link"
+    mat-raised-button
+    (click)="this.navigateProjects('next')"
+    *ngIf="!nextProjectId <= 0">
+    next project <mat-icon>chevron_right</mat-icon>
+  </button>
+  <button
+    class="action__link"
+    mat-raised-button
+    routerLink="/projects/"
+    *ngIf="nextProjectId <= 0">
+    back to projects
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
 
-    <button
-      class="action__link"
-      mat-stroked-button
-      routerLink="/project/{{prevProjectId}}">
-      <mat-icon>chevron_left</mat-icon> Previous Project
-    </button>
+<div >
 
-    <button
-      class="action__link"
-      mat-stroked-button
-      routerLink="/project/{{nextProjectId}}">
-      Next Project<mat-icon>chevron_right</mat-icon>
-    </button>
 
-  </section>
+<article
+  *ngIf="project"
+  class="project page" [@slideInOutAnimation]='mainState'>
 
-  <section class="hero page__section page__section--style1">
+  <section class=" page__section page__section--style1">
+
+    <div
+      class="hero"
+      *ngIf="project.id">
+
 
       <div class="hero__brief hero__section">
 
-        <h2>{{project.name | uppercase}} Details</h2>
-        <div><span>id: </span>{{project.id}}</div>
-        <div>
+
+        <h2 [innerHtml]="project.name | uppercase"></h2>
+
+
+
+        <p [innerHtml]="project.id"></p>
+
+
+        <!-- <div>
           <label>name:
             <input
               [(ngModel)]="project.name"
               placeholder="name"/>
           </label>
-        </div>
-        <p>{{project.details.brief}}</p>
+        </div> -->
+
+
+          <p [innerHtml]="project.details.brief"></p>
+
+
       </div>
 
       <div class=" hero__section">
 
-        <img class="hero__img" src="{{project.imgs.heroImg}}" alt="{{project.name}}">
+
+          <img class="hero__img" src="{{project.imgs.heroImg}}" alt="{{project.name}}">
+
 
       </div>
+
+    </div>
 
   </section>
 
@@ -71,22 +110,5 @@
 
   </section>
 
-  <section class="action">
-
-    <button
-      class="action__link"
-      mat-stroked-button
-      routerLink="/project/{{prevProjectId}}">
-      <mat-icon>chevron_left</mat-icon> Previous Project
-    </button>
-
-    <button
-      class="action__link"
-      mat-stroked-button
-      routerLink="/project/{{nextProjectId}}">
-      Next Project<mat-icon>chevron_right</mat-icon>
-    </button>
-
-  </section>
-
 </article>
+</div>

@@ -34,9 +34,33 @@
 
   .details {
     padding-top: 4em;
-    padding-bottom: 4em; 
+    padding-bottom: 4em;
     p {}
   }
 
+}
 
+.actions {
+  position: relative;
+
+  z-index: 9;
+  top: 0;
+  width: calc(100% - 2em);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1em;
+
+  @media only screen and (min-width: 680px) {
+    position: absolute;
+  }
+
+
+
+
+  .action__link {
+    margin-left: 1em;
+    color: rgba(0,0,0,.87)
+  }
 }

@@ -1,20 +1,21 @@
 <!-- TODO <app-nav> -->
 <div
   class="app__toolbar"
+  *ngIf="getState(o) != 'home'"
   [ngClass]="{cover: getState(o) === 'cover'}">
 
   <mat-toolbar class="app__mtoolbar">
 
     <div class="">
       <p
-        *ngIf="getState(o) != 'cover'"
         routerLink="/home"
         class="app__logo">
-        CLIFFORD
+        <!-- CLIFFORD -->
+        LOREMIPSUM
       </p>
     </div>
 
-    <div class="">
+    <!-- <div class="">
       <nav class="app__nav">
         <button
           *ngIf="getState(o) != 'cover'"
@@ -24,12 +25,15 @@
           <mat-icon>navigate_before</mat-icon>
         </button>
         <button
+          *ngIf="getState(o) != 'home'"
           class="app__link hidden-small"
           mat-button color="primary"
           routerLink="/about"
           routerLinkActive="app__link--active">
-          About</button>
+          Home
+        </button>
         <button
+          *ngIf="getState(o) != 'projects' && getState(o) != 'project'"
           class="app__link hidden-small"
           mat-button color="primary"
           routerLink="/projects"
@@ -37,13 +41,18 @@
           Portfolio
         </button>
       </nav>
-    </div>
+    </div> -->
 
   </mat-toolbar>
+
 </div>
 
 <!-- <app-messages></app-messages> -->
 
-<main class="app__main" [@routerTransition]="getState(o)">
+<main
+  [ngClass]="getState(o)"
+  class="app__main"
+  [@routerTransition]="getState(o)">
+  <!-- [@routerTransition]="o.isActivated ? o.activatedRoute : ''"> -->
   <router-outlet #o="outlet"></router-outlet>
 </main>
