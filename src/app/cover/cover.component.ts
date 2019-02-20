@@ -36,12 +36,12 @@ export class CoverComponent implements OnInit {
     let cH = document.getElementById('cover').clientHeight;
     if(sy>cH){return}
     let p = sy/cH;
-    let y = ((cH*p)/3);
+    let y = ((cH*p)/1.8);
 
     const HEADLINE = document.getElementById('headline');
     TweenMax.to(HEADLINE, 0, {
       y: y,
-      scale: (1+(p/2)),
+      scale: (1-(p/2.5)),
       ease: Power4.easeInOut
     });
     const SUBHEADLINE = document.getElementById('subheadline');

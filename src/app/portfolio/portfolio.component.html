@@ -1,0 +1,38 @@
+<article class="portfolio page">
+
+  <section
+    class="page__section page__section--style1"
+    style="padding: 2em;">
+
+    <h2 class="page__headline">All the Projects</h2>
+
+    <p>
+      Thanks for checking out my projects!
+      <br>
+      <br>
+      Here you'll find out about a few of the things I'm working on. I'm updating this part as I go, so be sure to contact me about anything specific.
+      <br>
+      <br>
+      (open during construction)
+    </p>
+
+    <mat-grid-list
+      class="portfolio__list"
+      cols="4"
+      rowHeight="2:1">
+      <mat-grid-tile
+        *ngFor="let project of projects | orderBy: 'id':true"
+        class="portfolio__tile"
+        [colspan]="project.tile.cols"
+        [rowspan]="project.tile.rows"
+        [style.backgroundColor]="project.tile.color"
+        [style.backgroundImage]="'url('+ project.imgs.heroImg +')'"
+        routerLink="/projects/{{project.id}}"
+        [class.selected]="hero === selectedHero"
+        >
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </section>
+
+</article>

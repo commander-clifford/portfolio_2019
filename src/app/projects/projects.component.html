@@ -1,28 +1,30 @@
-<article class="projects page">
+<!-- <nav class="navbar">
+  <div class="navbar-section">
+    <a *ngFor="let project of projects; index as i"
+      class="btn btn-link"
+      routerLinkActive="active"
+      [routerLink]="i"
+    >{{project.name}}</a>
+  </div>
+</nav> -->
 
-  <section
-    class="page__section page__section--style1"
-    style="padding: 2em;">
+<div [@routerTransition]="routeTrigger$ | async" class="container">
+  <nav class="float-right">
+    <a [routerLink]="prev$ | async" [class.disabled]="(itemChange$ | async) === 0"
+      class="btn btn-secondary btn-action btn-lg">
+      back
+    </a>
+    <a
+      [routerLink]="next$ | async"
 
-    <h2 class="page__headline">All the Projects</h2>
+      class="btn btn-secondary btn-action btn-lg">
+      next
+    </a>
+  </nav>
 
-    <mat-grid-list
-      class="projects__list"
-      cols="4"
-      rowHeight="2:1">
-      <mat-grid-tile
-        *ngFor="let project of projects | orderBy: 'id':true"
-        class="projects__tile"
-        [colspan]="project.tile.cols"
-        [rowspan]="project.tile.rows"
-        [style.backgroundColor]="project.tile.color"
-        [style.backgroundImage]="'url('+ project.imgs.heroImg +')'"
-        routerLink="/project/{{project.id}}"
-        [class.selected]="hero === selectedHero"
-        >
-      </mat-grid-tile>
-    </mat-grid-list>
+  <router-outlet></router-outlet>
 
-  </section>
+</div>
 
-</article>
+
+<!-- [class.disabled]="(itemChange$ | async) === items.length - 1" -->

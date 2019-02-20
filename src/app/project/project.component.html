@@ -1,4 +1,6 @@
-<div class="actions">
+
+
+<!-- <div class="actions">
   <button
     class="action__link"
     *ngIf="prevProjectId < projects.length"
@@ -29,51 +31,30 @@
     back to projects
     <mat-icon>chevron_right</mat-icon>
   </button>
-</div>
+</div> -->
 
 <div >
 
 
 <article
-  *ngIf="project"
-  class="project page" [@slideInOutAnimation]='mainState'>
+  class="project page">
 
   <section class=" page__section page__section--style1">
 
     <div
-      class="hero"
-      *ngIf="project.id">
-
+      class="hero">
 
       <div class="hero__brief hero__section">
 
-
         <h2 [innerHtml]="project.name | uppercase"></h2>
-
-
-
-        <p [innerHtml]="project.id"></p>
-
-
-        <!-- <div>
-          <label>name:
-            <input
-              [(ngModel)]="project.name"
-              placeholder="name"/>
-          </label>
-        </div> -->
-
-
-          <p [innerHtml]="project.details.brief"></p>
-
+        <p [innerHtml]="'Client: '+project.details.client"></p>
+        <p [innerHtml]="project.details.brief"></p>
 
       </div>
 
       <div class=" hero__section">
 
-
           <img class="hero__img" src="{{project.imgs.heroImg}}" alt="{{project.name}}">
-
 
       </div>
 
@@ -83,32 +64,39 @@
 
   <section class="supporting page__section page__section--style2">
 
-    <div class="supporting__images" *ngIf="project.imgs.supportingImgs">
-      <img
-        *ngFor="let supportingImg of project.imgs.supportingImgs"
-        src="{{supportingImg}}"
-        />
-    </div>
+    <div class="flex">
 
-    <div class="supporting__images" *ngIf="!project.imgs.supportingImgs">
-      <img src="{{project.imgs.heroImg}}" alt="">
-      <img src="{{project.imgs.heroImg}}" alt="">
-      <img src="{{project.imgs.heroImg}}" alt="">
-      <img src="{{project.imgs.heroImg}}" alt="">
-      <img src="{{project.imgs.heroImg}}" alt="">
-    </div>
+      <div class="left">
 
+        <div class="supporting__images" *ngIf="project.imgs.supportingImgs">
+          <img
+            *ngFor="let supportingImg of project.imgs.supportingImgs"
+            src="{{supportingImg}}"
+            />
+        </div>
+
+        <div class="supporting__images" *ngIf="!project.imgs.supportingImgs">
+          <img src="{{project.imgs.heroImg}}" alt="">
+        </div>
+
+      </div>
+
+      <div class="right">
+
+        <p *ngFor="let elaborate of project.details.elaborate">{{elaborate}}</p>
+
+      </div>
+
+    </div>
 
   </section>
 
-  <section
+  <!-- <section
     class="details page__section page__section--style1">
 
     <p *ngFor="let elaborate of project.details.elaborate">{{elaborate}}</p>
-    <!-- <p>{{project.details.elaborate[0]}}</p>
-    <p>{{project.details.elaborate[1]}}</p> -->
 
-  </section>
+  </section> -->
 
 </article>
 </div>

@@ -2,6 +2,7 @@
 @import "variables.scss";
 
 html, body { height: 100%; }
+
 body {
   margin: 0;
   font-family: 'Nanum Myeongjo', serif;
@@ -22,18 +23,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-
-    line-height: 1.5;
-    font-size: 1.2em;
-    margin: 2em 0;
-    @media only screen and (min-width: 960px) {
-      font-size: 1.1em;
-    }
-
+  line-height: 1.5;
+  font-size: 1.2em;
+  margin: 2em 0;
+  @media only screen and (min-width: 960px) {
+    font-size: 1.1em;
+  }
 }
 
 img { max-width: 100%; height: auto; }
-
 
 .page {
   overflow-x: hidden;
@@ -97,7 +95,6 @@ img { max-width: 100%; height: auto; }
   }
 }
 
-
 .action{
 
   display: flex;
@@ -117,7 +114,6 @@ img { max-width: 100%; height: auto; }
   }
 }
 
-
 .instafeed {
   &__card {
     display: block;
@@ -136,48 +132,58 @@ img { max-width: 100%; height: auto; }
   }
 }
 
-
 .flex {
+
+  @include lg {
+    display: flex;
+    justify-content: space-between;
+    // align-items: baseline;
+  }
 
   .left {
     margin-bottom: 4em;
+    @include lg {
+      width: 50%;
+    }
+
   }
   .right {
 
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .flex {
-
-    .left {
-
-    }
-    .right {
-
-    }
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-
-    .left {
-      width: 50%;
-    }
-    .right {
+    @include lg {
       margin-bottom: 0;
       width: 40%;
     }
+
   }
 }
 
-
-
-
-
+// @media only screen and (min-width: 960px) {
+//   .flex {
+//
+//     .left {
+//
+//     }
+//     .right {
+//
+//     }
+//   }
+// }
+//
+// @media only screen and (min-width: 1024px) {
+//   .flex {
+//     // display: flex;
+//     // justify-content: space-between;
+//     // align-items: baseline;
+//
+//     .left {
+//       // width: 50%;
+//     }
+//     .right {
+//       // margin-bottom: 0;
+//       // width: 40%;
+//     }
+//   }
+// }
 
 @media only screen and (max-width: 399px) {
   .hidden-small { display: none;}

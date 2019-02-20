@@ -1,4 +1,10 @@
-// @import "../../variables.scss";
+@import "../../variables.scss";
+// :host {
+//   display: block;
+//   position: absolute;
+//   margin-right: 20px;
+// }
+
 .project {
 
   .hero {
@@ -21,12 +27,22 @@
   .supporting {
 
     &__images {
+
       display: flex;
       justify-content: space-around;
       align-items: center;
 
+      @include lg {
+        flex-direction: column;
+      }
+
+
       img {
         width: 15%;
+        @include lg {
+          width: auto;
+          margin-bottom: 1em;
+        }
       }
 
     }

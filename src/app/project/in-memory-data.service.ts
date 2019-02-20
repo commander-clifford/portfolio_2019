@@ -11,13 +11,13 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 0,
         name: 'Intuit TurboTax',
         imgs: {
-          heroImg: 'src/assets/turbotax__hero.png',
+          heroImg: './assets/turbotax__hero.png',
           supportingImgs: [
-            'src/assets/turbotax__sup-1.png',
-            'src/assets/turbotax__sup-1.png',
-            'src/assets/turbotax__sup-1.png',
-            'src/assets/turbotax__sup-1.png',
-            'src/assets/turbotax__sup-1.png',
+            './assets/turbotax__sup-1.png',
+            './assets/turbotax__sup-1.png',
+            './assets/turbotax__sup-1.png',
+            './assets/turbotax__sup-1.png',
+            './assets/turbotax__sup-1.png',
           ],
         },
         details: {
