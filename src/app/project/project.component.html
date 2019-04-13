@@ -33,28 +33,41 @@
   </button>
 </div> -->
 
-<div >
-
 
 <article
-  class="project page">
+  class="project page"
+  >
 
   <section class=" page__section page__section--style1">
 
     <div
-      class="hero">
+      class="hero"
+      >
 
       <div class="hero__brief hero__section">
-
-        <h2 [innerHtml]="project.name | uppercase"></h2>
-        <p [innerHtml]="'Client: '+project.details.client"></p>
-        <p [innerHtml]="project.details.brief"></p>
-
+        <h2 class="project__title" [innerHtml]="project.name | uppercase"></h2>
+        <p class="project__client" [innerHtml]="project.details.client"></p>
+        <p class="project__role" [innerHtml]="project.details.role"></p>
+        <p class="project__brief" [innerHtml]="project.details.brief"></p>
       </div>
 
       <div class=" hero__section">
 
-          <img class="hero__img" src="{{project.imgs.heroImg}}" alt="{{project.name}}">
+        <!-- <a *ngIf="!project.prototype" [href]="project.details.url" target="_blank" mat-button> -->
+          <img *ngIf="!project.prototype"class="hero__img" src="{{project.imgs.heroImg}}" alt="{{project.name}}">
+        <!-- </a> -->
+        <a *ngIf="!project.prototype" [href]="project.details.url" target="_blank" mat-button>{{project.details.buttonText}}</a>
+        <!-- <div class="visit_link" *ngIf="!project.prototype">
+          <a mat-button href="project.details.url | safe: 'resourceUrl'"><i>Visit site</i></a>
+        </div> -->
+
+
+        <iframe *ngIf="project.prototype" [src]="project.prototype.url | safe: 'resourceUrl'" [width]="project.prototype.width" [height]="project.prototype.height"></iframe>
+        <br>
+        <div class="live_demo" *ngIf="project.prototype">
+          <i>This is a live demo!</i>
+        </div>
+
 
       </div>
 
@@ -66,24 +79,27 @@
 
     <div class="flex">
 
-      <div class="left">
+      <div *ngIf="project.imgs.supportingImgs" class="left">
 
         <div class="supporting__images" *ngIf="project.imgs.supportingImgs">
-          <img
-            *ngFor="let supportingImg of project.imgs.supportingImgs"
-            src="{{supportingImg}}"
-            />
+          <a *ngFor="let supportingImg of project.imgs.supportingImgs" href="{{supportingImg}}" target="_blank">
+            <img
+              src="{{supportingImg}}"
+              />
+          </a>
         </div>
 
-        <div class="supporting__images" *ngIf="!project.imgs.supportingImgs">
+        <!-- <div class="supporting__images" *ngIf="!project.imgs.supportingImgs">
           <img src="{{project.imgs.heroImg}}" alt="">
-        </div>
+        </div> -->
 
       </div>
 
-      <div class="right">
+      <div [class.right]="project.imgs.supportingImgs" style="margin: 0 auto;">
 
-        <p *ngFor="let elaborate of project.details.elaborate">{{elaborate}}</p>
+        <span class="project__elaborate" *ngFor="let elaborate of project.details.elaborate">
+          <p [innerHtml]="elaborate"></p>
+        </span>
 
       </div>
 
@@ -99,4 +115,3 @@
   </section> -->
 
 </article>
-</div>

@@ -4,6 +4,7 @@ export interface Project {
   imgs: object;
   tile: object;
   details: object;
+  prototype: object;
 }
 
 

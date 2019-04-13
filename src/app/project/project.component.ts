@@ -20,7 +20,8 @@ export class ProjectComponent {
 
     route: ActivatedRoute,
     projectService: ProjectService,
-    projectsRouting: ProjectsRoutingService
+    projectsRouting: ProjectsRoutingService,
+
 
   ) {
 

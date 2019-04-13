@@ -13,7 +13,7 @@
     align-items: center;
 
     &__section {
-      width: 50%;
+      width: 46%;
     }
 
     &__brief {
@@ -39,6 +39,7 @@
 
       img {
         width: 15%;
+        max-height: 320px;
         @include lg {
           width: auto;
           margin-bottom: 1em;
@@ -53,6 +54,44 @@
     padding-bottom: 4em;
     p {}
   }
+
+
+  &__title {
+    margin-bottom: 0;
+    @include md {
+      font-size: 4vw;
+    }
+    @include lg {
+      font-size: 4vw;
+    }
+  }
+  &__cr {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  &__client,
+  &__role {
+    margin: 0;
+
+    @include md {
+      font-size: 1vw;
+    }
+    @include lg {
+      font-size: 1.1vw;
+    }
+  }
+
+  &__elaborate,
+  &__brief {
+    @include md {
+      font-size: 1.1vw;
+    }
+    @include lg {
+      font-size: 1.2vw;
+    }
+  }
+
 
 }
 
@@ -79,4 +118,23 @@
     margin-left: 1em;
     color: rgba(0,0,0,.87)
   }
+}
+
+.live_demo,
+.visit_link {
+  box-sizing: border-box;
+  width: 320px;
+  padding: 1em;
+  background-image:
+    radial-gradient(
+      $color-red,
+      $color-dark-red
+    );
+  color: white;
+}
+.live_demo {
+  margin: -4px auto 0;
+}
+.visit_link {
+  margin: 0 auto 0;
 }
