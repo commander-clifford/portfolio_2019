@@ -10,6 +10,8 @@ import { Location } from '@angular/common';
 })
 export class AppComponent {
 
+  bcolor:boolean = false;
+
   constructor(
     private location: Location
   ) { }

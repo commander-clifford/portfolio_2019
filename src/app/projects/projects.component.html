@@ -8,21 +8,45 @@
   </div>
 </nav> -->
 
-<div [@routerTransition]="routeTrigger$ | async" class="container">
-  <nav class="float-right">
-    <a [routerLink]="prev$ | async" [class.disabled]="(itemChange$ | async) === 0"
-      class="btn btn-secondary btn-action btn-lg">
-      back
-    </a>
-    <a
-      [routerLink]="next$ | async"
+<div [@routerTransition]="routeTrigger$ | async" class="container projects">
 
-      class="btn btn-secondary btn-action btn-lg">
+  <nav class="projects__nav page__section page__section--style2">
+    <button
+      [routerLink]="prev$ | async"
+      [class.disabled]="(itemChange$ | async) === 0"
+      class="btn btn-secondary btn-action btn-lg"
+      mat-button
+      >
+      back
+    </button>
+    <button
+      [routerLink]="next$ | async"
+      class="btn btn-secondary btn-action btn-lg"
+      mat-button
+      >
       next
-    </a>
+    </button>
   </nav>
 
   <router-outlet></router-outlet>
+
+  <!-- <nav class="projects__nav page__section page__section--style1">
+    <button
+      [routerLink]="prev$ | async"
+      [class.disabled]="(itemChange$ | async) === 0"
+      class="btn btn-secondary btn-action btn-lg"
+      mat-button
+      >
+      back
+    </button>
+    <button
+      [routerLink]="next$ | async"
+      class="btn btn-secondary btn-action btn-lg"
+      mat-button
+      >
+      next
+    </button>
+  </nav> -->
 
 </div>
 

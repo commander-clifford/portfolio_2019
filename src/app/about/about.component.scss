@@ -1,6 +1,8 @@
 @import "../../variables.scss";
 @import "../../fontawesome.scss";
-
+:host {
+  display: block;
+}
 .about {
 
 // intro section
@@ -24,6 +26,7 @@
 }
 
 .resume {
+  cursor: pointer;
   max-width: 480px;
 
   background-color: #fafafa;

@@ -63,9 +63,17 @@
 
   }
 
+  &__sidenav {
+    padding: 70px 16px 0px;
+    // background-color: transparent;
+  }
+
   &__main {
     &.project,
-    &.projects {
+    &.projects,
+    &.portfolio,
+    &.resume,
+    &.about {
       padding-top: 4em;
     }
   }

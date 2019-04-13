@@ -1,4 +1,4 @@
-<app-cover></app-cover>
+<!-- <app-cover></app-cover> -->
 
 <article id="about" class="about page">
 
@@ -8,7 +8,7 @@
 
         <h2 class="page__headline">Hi! I'm Clifford</h2>
 
-        <p>I am a creative technologist, interaction designer and a bit of&nbsp;a&nbsp;dreamer.</p>
+        <p>I am a creative technologist, experience designer and a bit of&nbsp;a&nbsp;dreamer.</p>
 
       </div>
     </div>
@@ -42,7 +42,12 @@
           </div>
           <div class="right">
 
-            <div id="resume" class="resume">
+            <div
+              id="resume"
+              class="resume"
+              (click)="this.router.navigate(['/resume/'])"
+              matTooltip="Open Resume Page"
+              >
 
               <h1 class="resume_headline">Clifford Ryan Nelson</h1>
 
@@ -69,7 +74,7 @@
 
               <!-- -_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
-              <h2 class="resume_sub-headline">Recent Experience</h2>
+              <h2 class="resume_sub-headline">Recent Positions</h2>
 
               <ul class="un-list experience-list">
 
@@ -145,12 +150,13 @@
       <div class="left">
         <p>I've been contracting with some of the best companies in the world. I really appreciate the opportunity I have had to see the industry from many different perspectives. I have done a lot of contract work, but I will ultimately be in search of a long term platform to focus my efforts on. One where I can contribute while also mentoring junior technologists.</p>
         <hr>
-        <p>Part designer, part developer, all of the above. From production development to designing with code, I've done it all.</p>
+        <p>Part designer, part developer, all of the above. From production development to designing with code, I can do it all.</p>
       </div>
 
       <div class="right">
-        <p>Professional points:</p>
-        <mat-accordion>
+        <!-- <p>Professional points:</p> -->
+        <p>
+          <mat-accordion>
 
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -195,7 +201,8 @@
             </p>
           </mat-expansion-panel>
 
-        </mat-accordion>
+          </mat-accordion>
+        </p>
       </div>
 
     </div>
@@ -205,6 +212,27 @@
   <section id="instafeed-2" class="instafeed"></section>
 
   <section class="page__section page__section--style1">
+
+    <h2 class="page__headline">Portfolio</h2>
+
+    Check out some of the
+    <a
+      routerLink="/portfolio"
+      routerLinkActive="app__link--active"
+      >
+      things I've been up to
+    </a>
+
+    <br>
+    <br>
+    <p class="text--fineprint">Totally sweet preview gallery coming soon :)</p>
+
+
+
+
+  </section>
+
+  <section class="page__section page__section--style2">
 
     <h2 class="page__headline">Let's Connect</h2>
 

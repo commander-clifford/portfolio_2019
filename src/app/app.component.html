@@ -1,57 +1,85 @@
-<!-- TODO <app-nav> -->
-<div
-  class="app__toolbar"
-  *ngIf="getState(o) != 'home'"
-  [ngClass]="{cover: getState(o) === 'cover'}">
 
-  <mat-toolbar class="app__mtoolbar">
 
-    <div class="">
-      <p
-        routerLink="/home"
-        class="app__logo">
-        CLIFFORD
-      </p>
-    </div>
+  <!-- TODO <app-nav> -->
+  <div
+    class="app__toolbar"
+    *ngIf="getState(o) != 'home' "
+    [ngClass]="{cover: getState(o) === 'cover'}">
 
-    <!-- <div class="">
-      <nav class="app__nav">
-        <button
-          *ngIf="getState(o) != 'cover'"
-          class="app__link app__link--back"
-          mat-button color="primary"
-          (click)="goBack()">
-          <mat-icon>navigate_before</mat-icon>
-        </button>
-        <button
-          *ngIf="getState(o) != 'home'"
-          class="app__link hidden-small"
-          mat-button color="primary"
-          routerLink="/about"
-          routerLinkActive="app__link--active">
-          Home
-        </button>
-        <button
-          *ngIf="getState(o) != 'projects' && getState(o) != 'project'"
-          class="app__link hidden-small"
-          mat-button color="primary"
-          routerLink="/projects"
-          routerLinkActive="app__link--active">
-          Portfolio
-        </button>
-      </nav>
-    </div> -->
+    <mat-toolbar class="app__mtoolbar">
 
-  </mat-toolbar>
+      <div class="">
+        <p
+          routerLink="/home"
+          class="app__logo">
+          CLIFFORD.CODES
+        </p>
 
-</div>
+      </div>
 
-<!-- <app-messages></app-messages> -->
+      <button
+        (click)="drawer.toggle(); this.bcolor = !this.bcolor;"
+        mat-icon-button
+        [style.color]="this.bcolor ? 'black' : 'white'"
+        >
+        <mat-icon>menu</mat-icon>
+      </button>
 
-<main
-  [ngClass]="getState(o)"
-  class="app__main"
-  [@routerTransition]="getState(o)">
-  <!-- [@routerTransition]="o.isActivated ? o.activatedRoute : ''"> -->
-  <router-outlet #o="outlet"></router-outlet>
-</main>
+      <!-- <div class="">
+        <nav class="app__nav">
+          <button
+            *ngIf="getState(o) != 'cover'"
+            class="app__link app__link--back"
+            mat-button color="primary"
+            (click)="goBack()">
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <button
+            *ngIf="getState(o) != 'home'"
+            class="app__link hidden-small"
+            mat-button color="primary"
+            routerLink="/about"
+            routerLinkActive="app__link--active">
+            Home
+          </button>
+          <button
+            *ngIf="getState(o) != 'projects' && getState(o) != 'project'"
+            class="app__link hidden-small"
+            mat-button color="primary"
+            routerLink="/projects"
+            routerLinkActive="app__link--active">
+            Portfolio
+          </button>
+        </nav>
+      </div> -->
+
+    </mat-toolbar>
+
+  </div>
+
+
+
+  <mat-drawer-container class="example-container" autosize>
+
+
+  <!-- <app-messages></app-messages> -->
+
+  <main
+    [ngClass]="getState(o)"
+    class="app__main"
+    [@routerTransition]="getState(o)">
+    <!-- [@routerTransition]="o.isActivated ? o.activatedRoute : ''"> -->
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
+
+  <mat-drawer #drawer class="app__sidenav" mode="over" position="end">
+
+    <app-navigation
+      (click)="drawer.toggle(); this.bcolor = !this.bcolor;"
+      >
+    </app-navigation>
+
+  </mat-drawer>
+
+
+</mat-drawer-container>

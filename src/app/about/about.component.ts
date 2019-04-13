@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 
 import 'instafeed';
 import * as Instafeed from 'instafeed';
@@ -16,7 +17,8 @@ export class AboutComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private router: Router,
   ) { }
 
   ngOnInit() {
