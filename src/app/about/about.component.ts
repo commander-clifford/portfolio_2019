@@ -3,6 +3,10 @@ import { Location } from '@angular/common';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 
+import { Project } from '../project/project';
+import { ProjectService } from '../project/project.service';
+import { OrderPipe } from 'ngx-order-pipe';
+
 import 'instafeed';
 import * as Instafeed from 'instafeed';
 
@@ -15,14 +19,22 @@ import * as Instafeed from 'instafeed';
 })
 export class AboutComponent implements OnInit {
 
+  projects: object;
+  selectedProject: Project;
+
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     private router: Router,
+    private projectService: ProjectService,
   ) { }
 
-  ngOnInit() {
+  getProjects(): void {
+    this.projects = this.projectService.getProjects();
+  }
 
+  ngOnInit() {
+    this.getProjects();
     // https://www.npmjs.com/package/instafeed
     var feed1 = new Instafeed({
       get: 'user',

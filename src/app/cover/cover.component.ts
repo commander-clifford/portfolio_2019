@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
-import {Router} from "@angular/router";
 import $ from "jquery";
 import {
   Draggable,

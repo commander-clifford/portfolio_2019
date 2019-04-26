@@ -51,7 +51,7 @@ export const routerTransition = trigger('routerTransition', [
         // ], { optional: true }),
 
         query(':enter', [
-          animate('800ms 800ms cubic-bezier(0,0,.5,1)',
+          animate('1800ms 00ms cubic-bezier(0,0,.5,1)',
             style({ opacity: 1 })
           )
         ], { optional: true }),
@@ -93,7 +93,7 @@ export const routerTransition = trigger('routerTransition', [
 
     ]),
 
-    transition('* <=> *', [
+  transition('* <=> *', [
       query(':enter, :leave', style({ position: 'fixed', width:'100%' })
         , { optional: true }),
       group([
@@ -108,20 +108,7 @@ export const routerTransition = trigger('routerTransition', [
       ])
     ]),
 
-  // transition('* <=> *', [
-  //     query(':enter, :leave', style({ position: 'fixed', width:'100%' })
-  //       , { optional: true }),
-  //     group([
-  //       query(':enter', [
-  //         style({ transform: 'translateX(20%)' }),
-  //         animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
-  //       ], { optional: true }),
-  //       query(':leave', [
-  //         style({ transform: 'translateX(0%)' }),
-  //         animate('0.5s ease-in-out', style({ transform: 'translateX(-20%)' }))
-  //       ], { optional: true }),
-  //     ])
-  //   ]),
+
 
 
 
@@ -193,6 +180,25 @@ export const routerTransition = trigger('routerTransition', [
   //     ], { optional: true }),
   //   ])
   // ]),
+
+  /**
+
+  transition('* <=> *', [
+      query(':enter, :leave', style({ position: 'fixed', width:'100%' })
+        , { optional: true }),
+      group([
+        query(':enter', [
+          style({ transform: 'translateX(20%)' }),
+          animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
+        ], { optional: true }),
+        query(':leave', [
+          style({ transform: 'translateX(0%)' }),
+          animate('0.5s ease-in-out', style({ transform: 'translateX(-20%)' }))
+        ], { optional: true }),
+      ])
+    ]),
+
+    */
 
 ]);
 

@@ -27,10 +27,13 @@ export const PROJECTS: Project[] = [
   // },
 
 
+
+
+
   // Google Search
 
   {
-    id: 14,
+    id: 15,
     name: 'Doodle Space',
     imgs: {
       heroImg: './assets/hp.png',
@@ -57,8 +60,8 @@ export const PROJECTS: Project[] = [
   // Windshield Wipers
 
   {
-    id: 13,
-    name: 'Windshield Wipers',
+    id: 14,
+    name: 'Windshield Wipers Game',
     imgs: {
       heroImg: './assets/windshield-wipers-hero.png',
       supportingImgs: [
@@ -89,7 +92,7 @@ export const PROJECTS: Project[] = [
   // TurboTax
 
   {
-    id: 12,
+    id: 13,
     name: 'Intuit TurboTax',
     imgs: {
       heroImg: './assets/turbotax__hero.png',
@@ -125,8 +128,8 @@ export const PROJECTS: Project[] = [
   // UberEats
 
   {
-    id: 11,
-    name: 'Image Automator',
+    id: 12,
+    name: 'Food Pic Automator',
     imgs: {
       heroImg: './assets/uber-eats__hero.jpg',
     },
@@ -149,6 +152,34 @@ export const PROJECTS: Project[] = [
       ],
     },
 
+  },
+
+  // Slider
+
+  {
+    id: 11,
+    name: 'Uber Slider',
+    imgs: {
+      heroImg: './assets/uber-slider__hero.png',
+      supportingImgs: ['./assets/uber-slider__hero.png'],
+    },
+    prototype: {
+      url: 'http://clifford.codes/uber_slider/',
+      width: 320,
+      height: 500,
+    },
+    tile: {
+      cols: 2,
+      rows: 2,
+      color: '#C3002F'
+    },
+    details: {
+      buttonText: null,
+      client: 'Uber',
+      role: 'Design Engineer',
+      brief: 'An interview test. Translate a Framer motion prototype into a deliverable asset.',
+      elaborate: [],
+    },
   },
 
   // Simon Says
