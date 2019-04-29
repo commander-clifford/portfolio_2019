@@ -34,7 +34,6 @@ import { MessagesComponent } from './messages/messages.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { SimonSaysComponent } from './project/simon-says/simon-says.component';
 import { SafePipe } from './safe.pipe';
 
 @NgModule({
@@ -49,7 +48,6 @@ import { SafePipe } from './safe.pipe';
     PortfolioComponent,
     ResumeComponent,
     NavigationComponent,
-    SimonSaysComponent,
     SafePipe
   ],
   imports: [
