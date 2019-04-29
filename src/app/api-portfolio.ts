@@ -1,4 +1,4 @@
-import { Project } from './project';
+import { Project } from './project/project';
 
 export const PROJECTS: Project[] = [
 
@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
   // Blank
 
   // {
-  //   id: 15,
+  //   id: 17,
   //   name: "",
   //   imgs: {
   //     heroImg: "",
@@ -28,12 +28,10 @@ export const PROJECTS: Project[] = [
 
 
 
-
-
   // Google Search
 
   {
-    id: 15,
+    id: 16,
     name: 'Doodle Space',
     imgs: {
       heroImg: './assets/hp.png',
@@ -60,7 +58,7 @@ export const PROJECTS: Project[] = [
   // Windshield Wipers
 
   {
-    id: 14,
+    id: 15,
     name: 'Windshield Wipers Game',
     imgs: {
       heroImg: './assets/windshield-wipers-hero.png',
@@ -92,7 +90,7 @@ export const PROJECTS: Project[] = [
   // TurboTax
 
   {
-    id: 13,
+    id: 14,
     name: 'Intuit TurboTax',
     imgs: {
       heroImg: './assets/turbotax__hero.png',
@@ -128,7 +126,7 @@ export const PROJECTS: Project[] = [
   // UberEats
 
   {
-    id: 12,
+    id: 13,
     name: 'Food Pic Automator',
     imgs: {
       heroImg: './assets/uber-eats__hero.jpg',
@@ -157,7 +155,7 @@ export const PROJECTS: Project[] = [
   // Slider
 
   {
-    id: 11,
+    id: 12,
     name: 'Uber Slider',
     imgs: {
       heroImg: './assets/uber-slider__hero.png',
@@ -180,6 +178,42 @@ export const PROJECTS: Project[] = [
       brief: 'An interview test. Translate a Framer motion prototype into a deliverable asset.',
       elaborate: [],
     },
+  },
+
+  // Music Browser
+
+  {
+    id: 11,
+    name: 'Music Browser',
+    imgs: {
+      heroImg: './assets/',
+      supportingImgs: [
+        './assets/',
+      ]
+    },
+    prototype: {
+      url: 'http://clifford.codes/music-browser/',
+      width: 320,
+      height: 500,
+    },
+    details: {
+      buttonText:'',
+
+      client: "AKQA",
+      role: "Senior Creative Developer",
+      url: 'http://clifford.codes/music-browser/',
+      brief: 'An entrance skills test. Translate a PSD into a screen responsive experience without using libraries or frameworks like Angular, jQuery or Bootstrap.',
+      elaborate: [
+        '',
+        '',
+      ],
+    },
+    tile: {
+      cols: 1,
+      rows: 3,
+      color: '#DD0031'
+    },
+
   },
 
   // Simon Says
@@ -441,7 +475,7 @@ export const PROJECTS: Project[] = [
   // Style Tile
 
   {
-    id: 0,
+    id: 2,
     name: 'Style Tile',
     imgs: {
       heroImg: './assets/styletile__hero.jpg',
@@ -501,7 +535,7 @@ export const PROJECTS: Project[] = [
   // IBM
 
   {
-    id: 2,
+    id: 0,
     name: 'Army Logistics Prototyping',
     imgs: {
       heroImg: './assets/logistics__hero.png',
