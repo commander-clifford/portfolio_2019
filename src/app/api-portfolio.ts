@@ -193,19 +193,78 @@ export const PROJECTS: Project[] = [
     },
     prototype: {
       url: 'http://clifford.codes/music-browser/',
-      width: 320,
-      height: 500,
+      width: 480,
+      height: 768,
     },
     details: {
-      buttonText:'',
-
+      buttonText: null,
       client: "AKQA",
       role: "Senior Creative Developer",
       url: 'http://clifford.codes/music-browser/',
-      brief: 'An entrance skills test. Translate a PSD into a screen responsive experience without using libraries or frameworks like Angular, jQuery or Bootstrap.',
+      githubUrl: 'https://github.com/commander-clifford/music_browser',
+      codepenUrl: null,
+      brief: 'An entrance skills test for AKQA',
       elaborate: [
+        '. Translate a PSD into a screen responsive experience without using libraries or frameworks like Angular, jQuery or Bootstrap.',
         '',
-        '',
+      ],
+      sections: [
+        {
+          title: 'Requirments',
+          img: null,
+          list: [
+            `No libraries or frameworks`,
+            `No bootstrap or foundation grids`,
+            `Use .scss precompiler`,
+            `Use JS to build funcion for changing viewports`,
+            `Write meaningfull comments and commit messages`
+            ],
+          description: 'Translate a PSD into a screen responsive experience without using libraries or frameworks like Angular, jQuery or Bootstrap.',
+        },
+        {
+          title: 'Mobile',
+          img: {
+            url: './assets/music-browser__mobile.png',
+            alt: 'Horizontil Tabet',
+            width: 375,
+            height: 660,
+          },
+          list: null,
+          description: 'Minimum width real estate',
+        },
+        {
+          title: 'Tabet',
+          img: {
+            url: './assets/music-browser__ipad.png',
+            alt: 'Horizontil Tabet',
+            width: 1024,
+            height: 768,
+          },
+          list: [`item 1`,`item 2`,`item 3`],
+          description: 'Translate a PSD into a screen responsive experience without using libraries or frameworks like Angular, jQuery or Bootstrap.',
+        },
+        {
+          title: 'Horizontil Tabet',
+          img: {
+            url: './assets/music-browser__ipad--horz.png',
+            alt: 'Horizontil Tabet',
+            width: 1024,
+            height: 768,
+          },
+          list: [`item 1`,`item 2`,`item 3`],
+          description: 'Translate a PSD into a screen responsive experience without using libraries or frameworks like Angular, jQuery or Bootstrap.',
+        },
+        {
+          title: 'Full Screen',
+          img: {
+            url: './assets/music-browser__full.png',
+            alt: 'Horizontil Tabet',
+            width: 1366,
+            height: 768,
+          },
+          list: [`item 1`,`item 2`,`item 3`],
+          description: 'Translate a PSD into a screen responsive experience without using libraries or frameworks like Angular, jQuery or Bootstrap.',
+        },
       ],
     },
     tile: {

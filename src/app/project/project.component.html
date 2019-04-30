@@ -38,20 +38,64 @@
   class="project page"
   >
 
-  <section class=" page__section page__section--style1">
 
-    <div
-      class="hero"
-      >
 
-      <div class="hero__brief hero__section">
-        <h2 class="project__title" [innerHtml]="project.name | uppercase"></h2>
-        <p class="project__client" [innerHtml]="project.details.client"></p>
-        <p class="project__role" [innerHtml]="project.details.role"></p>
-        <p class="project__brief" [innerHtml]="project.details.brief"></p>
+  <section class="page__section page__section--style1 page__section--flex">
+
+      <div class="project__brief hero__brief">
+        <h2 class="brief__title" [innerHtml]="project.name | uppercase"></h2>
+        <!-- <p class="brief__client" [innerHtml]="project.details.client"></p> -->
+        <!-- <p class="brief__role" [innerHtml]="project.details.role"></p> -->
+        <p class="brief__brief" [innerHtml]="project.details.brief"></p>
       </div>
 
-      <div class=" hero__section">
+      <div class="project__connect">
+
+        <a
+          *ngIf="project.prototype"
+          class="connect__link live_demo"
+          target="_blank"
+          mat-stroked-button
+          [href]="project.details.url"
+          >
+          <i class="material-icons">open_in_new</i>
+          {{project.details.buttonText ? project.details.buttonText : 'demo'}}
+        </a>
+
+        <a
+          *ngIf="project.details.githubUrl"
+          class="connect__link"
+          mat-stroked-button
+          [href]="project.details.githubUrl"
+          target="_blank"
+          [style.]
+          >
+          <span class="social__icon icon-github"></span>
+          GitHub
+        </a>
+
+        <a
+          *ngIf="project.details.codepenUrl"
+          class="connect__link"
+          mat-stroked-button
+          [href]="project.details.codepenUrl"
+          target="_blank"
+          >
+          <span class="social__icon icon-codepen"></span>
+          CodePen
+        </a>
+
+      </div>
+
+  </section>
+
+  <section class="page__section page__section--style-grad">
+
+    <div
+      class="project__hero"
+      >
+
+      <div class="">
 
         <!-- <a *ngIf="!project.prototype" [href]="project.details.url" target="_blank" mat-button> -->
           <img *ngIf="!project.prototype"class="hero__img" src="{{project.imgs.heroImg}}" alt="{{project.name}}">
@@ -64,9 +108,9 @@
 
         <iframe *ngIf="project.prototype" [src]="project.prototype.url | safe: 'resourceUrl'" [width]="project.prototype.width" [height]="project.prototype.height"></iframe>
         <br>
-        <div class="live_demo" *ngIf="project.prototype">
+        <!-- <div class="live_demo" *ngIf="project.prototype">
           <i>This is a live demo!</i>
-        </div>
+        </div> -->
 
 
       </div>
@@ -75,7 +119,49 @@
 
   </section>
 
-  <section class="supporting page__section page__section--style2">
+  <section
+    *ngFor="let section of project.details.sections; let i = index"
+    class="project__section page__section page__section--flex"
+    >
+    <div class="section__title">
+      <h2>{{section.title}}</h2>
+    </div>
+    <div class="section__content">
+      <img
+        *ngIf="section.img"
+        [src]="section.img.url"
+        [alt]="section.img.atl"
+        [width]="section.img.width"
+        [height]="section.img.height"
+        >
+      <p
+        *ngIf="section.description"
+        [innerHtml]="section.description">
+      </p>
+      <ul *ngIf="section.list">
+        <li
+          *ngFor="let item of section.list; let i = index"
+          [innerHtml]="section.list[i]">
+        </li>
+      </ul>
+
+      <ul>
+
+      </ul>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section class="supporting page__section page__section">
 
     <div class="flex">
 
