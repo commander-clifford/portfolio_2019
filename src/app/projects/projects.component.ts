@@ -23,6 +23,8 @@ export class ProjectsComponent {
   id: number;
   projects: Project[] = [];
   project: Project;
+  prevProject: Project;
+  nextProject: Project;
   projectChange$: Observable<number>;
   next$: Observable<number>;
   prev$: Observable<number>;
