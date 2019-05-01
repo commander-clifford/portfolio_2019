@@ -44,41 +44,38 @@
 
       <div class="project__brief hero__brief">
         <h2 class="brief__title" [innerHtml]="project.name | uppercase"></h2>
-        <!-- <p class="brief__client" [innerHtml]="project.details.client"></p> -->
-        <!-- <p class="brief__role" [innerHtml]="project.details.role"></p> -->
-        <p class="brief__brief" [innerHtml]="project.details.brief"></p>
+        <p class="brief__brief" [innerHtml]="project.brief"></p>
       </div>
 
       <div class="project__connect">
 
         <a
-          *ngIf="project.prototype"
+          *ngIf="project.url"
           class="connect__link live_demo"
           target="_blank"
           mat-stroked-button
-          [href]="project.details.url"
+          [href]="project.url"
           >
           <i class="material-icons">open_in_new</i>
-          {{project.details.buttonText ? project.details.buttonText : 'demo'}}
+          {{project.buttonText ? project.buttonText : 'live'}}
         </a>
 
         <a
-          *ngIf="project.details.githubUrl"
+          *ngIf="project.githubUrl"
           class="connect__link"
           mat-stroked-button
-          [href]="project.details.githubUrl"
+          [href]="project.githubUrl"
           target="_blank"
-          [style.]
           >
           <span class="social__icon icon-github"></span>
           GitHub
         </a>
 
         <a
-          *ngIf="project.details.codepenUrl"
+          *ngIf="project.codepenUrl"
           class="connect__link"
           mat-stroked-button
-          [href]="project.details.codepenUrl"
+          [href]="project.codepenUrl"
           target="_blank"
           >
           <span class="social__icon icon-codepen"></span>
@@ -97,20 +94,10 @@
 
       <div class="">
 
-        <!-- <a *ngIf="!project.prototype" [href]="project.details.url" target="_blank" mat-button> -->
-          <img *ngIf="!project.prototype"class="hero__img" src="{{project.imgs.heroImg}}" alt="{{project.name}}">
-        <!-- </a> -->
-        <a *ngIf="!project.prototype" [href]="project.details.url" target="_blank" mat-button>{{project.details.buttonText}}</a>
-        <!-- <div class="visit_link" *ngIf="!project.prototype">
-          <a mat-button href="project.details.url | safe: 'resourceUrl'"><i>Visit site</i></a>
-        </div> -->
+        <img *ngIf="!project.demo"class="hero__img" src="{{project.hero.url}}" alt="{{project.hero.alt}}" [width]="project.hero.width" [height]="project.hero.height">
 
 
-        <iframe *ngIf="project.prototype" [src]="project.prototype.url | safe: 'resourceUrl'" [width]="project.prototype.width" [height]="project.prototype.height"></iframe>
-        <br>
-        <!-- <div class="live_demo" *ngIf="project.prototype">
-          <i>This is a live demo!</i>
-        </div> -->
+        <iframe *ngIf="project.demo" [src]="project.demo.url | safe: 'resourceUrl'" [width]="project.demo.width" [height]="project.demo.height"></iframe>
 
 
       </div>
@@ -120,7 +107,7 @@
   </section>
 
   <section
-    *ngFor="let section of project.details.sections; let i = index"
+    *ngFor="let section of project.sections; let i = index"
     class="project__section page__section page__section--flex"
     >
     <div class="section__title">
@@ -161,7 +148,7 @@
 
 
 
-  <section class="supporting page__section page__section">
+  <section *ngIf="false" class="supporting page__section page__section">
 
     <div class="flex">
 
@@ -176,14 +163,14 @@
         </div>
 
         <!-- <div class="supporting__images" *ngIf="!project.imgs.supportingImgs">
-          <img src="{{project.imgs.heroImg}}" alt="">
+          <img src="{{project.thumbnail.url}}" alt="">
         </div> -->
 
       </div>
 
       <div [class.right]="project.imgs.supportingImgs" style="margin: 0 auto;">
 
-        <span class="project__elaborate" *ngFor="let elaborate of project.details.elaborate">
+        <span class="project__elaborate" *ngFor="let elaborate of project.elaborate">
           <p [innerHtml]="elaborate"></p>
         </span>
 
@@ -196,7 +183,7 @@
   <!-- <section
     class="details page__section page__section--style1">
 
-    <p *ngFor="let elaborate of project.details.elaborate">{{elaborate}}</p>
+    <p *ngFor="let elaborate of project.elaborate">{{elaborate}}</p>
 
   </section> -->
 
