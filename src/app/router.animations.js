@@ -98,12 +98,12 @@ export const routerTransition = trigger('routerTransition', [
         , { optional: true }),
       group([
         query(':enter', [
-          style({ opacity: 0.4, transform: 'translateY(20px)' }),
+          style({ opacity: 0.9, transform: 'translateY(12px)' }),
           animate('400ms ease-in-out', style({ opacity: 1, transform: 'translateY(0%)' }))
         ], { optional: true }),
         query(':leave', [
           style({ opacity: 1, transform: 'translateY(0%)' }),
-          animate('400ms ease-in-out', style({ opacity: 0.4, transform: 'translateY(-20px)' }))
+          animate('400ms ease-in-out', style({ opacity: 0.4, transform: 'translateY(-12px)' }))
         ], { optional: true }),
       ])
     ]),

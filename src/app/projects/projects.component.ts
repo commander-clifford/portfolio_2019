@@ -43,10 +43,19 @@ export class ProjectsComponent {
       this.id = Number(this.id);
     });
 
-    this.projects = projectService.getProjects(); console.log('PROJECTS.COMP this.projects',this.projects);
-    this.project = projectService.getProject(this.id); console.log('PROJECTS.COMP this.project',this.project);
-    this.nextProject = projectService.getProject(this.id+1); console.log('PROJECTS.COMP this.project',this.project);
-    this.prevProject = projectService.getProject(this.id-1); console.log('PROJECTS.COMP this.project',this.project);
+    this.projects = projectService.getProjects();
+    console.log('PROJECTS.COMP this.projects',this.projects);
+
+    this.project = projectService.getProject(this.id);
+    console.log('PROJECTS.COMP this.project',this.project);
+
+    this.nextProject = projectService.getProject(this.id+1);
+    this.nextProject = this.nextProject ? this.nextProject : null;
+    console.log('-------- PROJECTS.COMP NEXT.project',this.nextProject);
+
+    this.prevProject = projectService.getProject(this.id-1);
+    this.prevProject = this.prevProject ? this.prevProject : null;
+    console.log('-------- PROJECTS.COMP PREV.project',this.prevProject);
 
     this.projectChange$ = projectsRouting.projectChange$;
 
@@ -80,5 +89,10 @@ export class ProjectsComponent {
           }
         })),
       );
+  }
+
+  getState(outlet) {
+    let state = outlet.activatedRouteData.state;
+    return outlet.activatedRouteData.state;
   }
 }
