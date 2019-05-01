@@ -17,14 +17,14 @@
       class="btn btn-secondary btn-action btn-lg"
       mat-button
       >
-      back
+      back {{prevProject.name}}
     </button>
     <button
       [routerLink]="next$ | async"
       class="btn btn-secondary btn-action btn-lg"
       mat-button
       >
-      next
+      next {{nextProject.name}}
     </button>
   </nav>
 

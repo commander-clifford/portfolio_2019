@@ -8,7 +8,6 @@ import { ProjectsRoutingService } from './projects-routing.service';
 import { Observable } from 'rxjs/Observable';
 import { ActivatedRoute } from '@angular/router';
 
-
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -21,6 +20,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export class ProjectsComponent {
 
+  id: number;
   projects: Project[] = [];
   project: Project;
   projectChange$: Observable<number>;
@@ -34,19 +34,21 @@ export class ProjectsComponent {
     projectsRouting: ProjectsRoutingService
   ) {
 
-    const { id } = route.snapshot.params;
+    route.url.subscribe(() => {
+      let url = route.snapshot.firstChild._routerState.url;
+      let sub = url.lastIndexOf('/');
+      this.id = url.substring(sub + 1);
+      this.id = Number(this.id);
+    });
 
-    this.projects = projectService.getProjects();
-    // this.project = projectService.getProject(id);
-
-    // console.log('PROJECTS.COMP this.project',this.project);
-    console.log('PROJECTS.COMP this.projects',this.projects);
-    // projectService.getProjects().subscribe(projects => this.projects = projects);
+    this.projects = projectService.getProjects(); console.log('PROJECTS.COMP this.projects',this.projects);
+    this.project = projectService.getProject(this.id); console.log('PROJECTS.COMP this.project',this.project);
+    this.nextProject = projectService.getProject(this.id+1); console.log('PROJECTS.COMP this.project',this.project);
+    this.prevProject = projectService.getProject(this.id-1); console.log('PROJECTS.COMP this.project',this.project);
 
     this.projectChange$ = projectsRouting.projectChange$;
 
     this.setupRouting();
-
 
   }
 
