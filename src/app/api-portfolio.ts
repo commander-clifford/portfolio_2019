@@ -5,74 +5,74 @@ export const PROJECTS: Project[] = [
 
   // Blank
 
-  {
-    id: 17,
-    name: 'Template',
-    thumbnail: {
-      url: './assets/template--thumbnail.png',
-      alt: 'thumbnail name',
-    },
-    brief: 'This is a project template',
-    url: 'http://clifford.codes/',
-    githubUrl: 'https://github.com/commander-clifford/',
-    codepenUrl: 'https://codepen.io/commander-clifford/',
-    buttonText: null,
-    demo: {
-      url: 'http://clifford.codes/simon-says',
-      width: 320,
-      height: 480,
-    },
-    hero: null,
-    sections: [
-      {
-        title: 'Section 1',
-        img: null,
-        description: 'Description of project Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        list: [
-          `list item 1`,
-          `list item 2`,
-          `list item 3`,
-          `list item 4`,
-          `list item 5`,
-        ],
-      },
-      {
-        title: 'Section 2',
-        img: {
-          url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
-          width: 375,
-          height: 764,
-        },
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        list: null,
-
-      },
-      {
-        title: 'Section 3',
-        img: {
-          url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
-          width: 1024,
-          height: 768,
-        },
-        description: 'Lorem ipsum dolor sit amet',
-        list: null,
-
-      },
-      {
-        title: 'Section 4',
-        img: null,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-        list: null,
-      },
-    ],
-    tile: {
-      cols: 1,
-      rows: 3,
-      color: '#DD0031'
-    },
-  },
+  // {
+  //   id: 17,
+  //   name: 'Template',
+  //   thumbnail: {
+  //     url: './assets/template--thumbnail.png',
+  //     alt: 'thumbnail name',
+  //   },
+  //   brief: 'This is a project template',
+  //   url: 'http://clifford.codes/',
+  //   githubUrl: 'https://github.com/commander-clifford/',
+  //   codepenUrl: 'https://codepen.io/commander-clifford/',
+  //   buttonText: null,
+  //   demo: {
+  //     url: '',
+  //     width: 320,
+  //     height: 480,
+  //   },
+  //   hero: null,
+  //   sections: [
+  //     {
+  //       title: 'Section 1',
+  //       img: null,
+  //       description: 'Description of project Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  //       list: [
+  //         `list item 1`,
+  //         `list item 2`,
+  //         `list item 3`,
+  //         `list item 4`,
+  //         `list item 5`,
+  //       ],
+  //     },
+  //     {
+  //       title: 'Section 2',
+  //       img: {
+  //         url: './assets/mobile-device.png',
+  //         alt: 'Horizontil Tabet',
+  //         width: 375,
+  //         height: 764,
+  //       },
+  //       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  //       list: null,
+  //
+  //     },
+  //     {
+  //       title: 'Section 3',
+  //       img: {
+  //         url: './assets/tablet--horz.png',
+  //         alt: 'Horizontil Tabet',
+  //         width: 1024,
+  //         height: 768,
+  //       },
+  //       description: 'Lorem ipsum dolor sit amet',
+  //       list: null,
+  //
+  //     },
+  //     {
+  //       title: 'Section 4',
+  //       img: null,
+  //       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+  //       list: null,
+  //     },
+  //   ],
+  //   tile: {
+  //     cols: 1,
+  //     rows: 3,
+  //     color: '#DD0031'
+  //   },
+  // },
 
   // Google Search
 
