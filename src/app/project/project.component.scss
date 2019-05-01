@@ -8,6 +8,8 @@
 
 .project {
 
+  p,ul { text-align: left; }
+
   &__brief {
     text-align: left !important;
     // float: left;
@@ -43,6 +45,7 @@
   &__section {
     .section {
       &__title {
+        font-size: 1.5em;
         font-weight: bold;
       }
       &__content {
@@ -60,7 +63,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-image:
+      radial-gradient(
+        $color-white,
+        $color-dark-white
+      );
   }
 
   .supporting {

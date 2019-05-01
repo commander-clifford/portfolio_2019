@@ -5,6 +5,10 @@
 }
 .about {
 
+  p {
+    margin: 0 auto;
+  }
+
 // intro section
 .intro {
 
@@ -26,6 +30,8 @@
 }
 
 .resume {
+  font-family: 'Nanum Myeongjo', serif;
+  // *{font-family: inherit;}
   cursor: pointer;
   max-width: 480px;
 

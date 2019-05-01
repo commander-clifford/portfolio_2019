@@ -10,7 +10,7 @@
 
 <div [@routerTransition]="routeTrigger$ | async" class="container projects">
 
-  <nav class="projects__nav page__sectio">
+  <nav class="projects__nav">
     <button
       [routerLink]="prev$ | async"
       [class.disabled]="(itemChange$ | async) === 0"
