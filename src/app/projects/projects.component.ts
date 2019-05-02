@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
 import { ProjectService } from '../project/project.service';
 import { ProjectsRoutingService } from './projects-routing.service';
 import { Observable } from 'rxjs/Observable';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -31,17 +31,15 @@ export class ProjectsComponent {
   routeTrigger$: Observable<object>;
 
   constructor(
-    route: ActivatedRoute,
+    router: Router,
     projectService: ProjectService,
     projectsRouting: ProjectsRoutingService
   ) {
 
-    route.url.subscribe(() => {
-      let url = route.snapshot.firstChild._routerState.url;
-      let sub = url.lastIndexOf('/');
-      this.id = url.substring(sub + 1);
-      this.id = Number(this.id);
-    });
+    let url = router.routerState.snapshot.url;
+    let sub = url.lastIndexOf('/');
+    let tid = url.substring(sub + 1);
+    this.id = parseInt(tid);
 
     this.projects = projectService.getProjects();
     console.log('PROJECTS.COMP this.projects',this.projects);
