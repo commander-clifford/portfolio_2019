@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
       url: './assets/hp-1.png',
       alt: 'Google homepage prototype',
     },
-    brief: 'Prototyping for the Google Doodle team',
+    brief: 'Exploring the Google Doodle universe',
     url: null,
     githubUrl: null,
     codepenUrl: null,
@@ -97,45 +97,39 @@ export const PROJECTS: Project[] = [
     },
     sections: [
       {
-        title: 'Section 1',
+        title: 'Overview',
         img: null,
-        description: 'While working for Google on the Doodle team as a creative technologist I built a prototype of the Google ecosystem Including but not limited too the homepage the search results page and gmail.',
+        description: 'While working with the Doodle team, at Google, I helped explore new ideas on how to evolve the Doodle platform.',
+        list: null,
+      },
+      {
+        title: 'Prototyping',
+        img: {
+          url: './assets/hp-1.png',
+          alt: 'this is just a prototype',
+          width: 375,
+          height: null,
+        },
+        description: 'To help expore and express these ideas I built a faux Google ecosystem including but not limited too the homepage, the search results page, and gmail.',
+        list: null,
+      },
+      {
+        title: 'Delightful',
+        img: {
+          url: './assets/google-search-transition.gif',
+          alt: 'google-search-transition',
+          width: 1024,
+          height: null,
+        },
+        description: 'In this project I was given plenty of creative freedom. These transitions were not a requirement for any of the explorations we ran, but they are certainly delightful.',
         list: [
-          `list item 1`,
-          `list item 2`,
-          `list item 3`,
-          `list item 4`,
-          `list item 5`,
+          `I am not responsible for creating the artwork`,
         ],
       },
       {
-        title: 'Section 2',
-        img: {
-          url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
-          width: 375,
-          height: 764,
-        },
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        list: null,
-
-      },
-      {
-        title: 'Section 3',
-        img: {
-          url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
-          width: 1024,
-          height: 768,
-        },
-        description: 'Lorem ipsum dolor sit amet',
-        list: null,
-
-      },
-      {
-        title: 'Section 4',
+        title: 'Summary',
         img: null,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+        description: 'I used Angular, Material, and GSAP to create this experience.',
         list: null,
       },
     ],
@@ -160,55 +154,60 @@ export const PROJECTS: Project[] = [
     githubUrl: null,
     codepenUrl: null,
     buttonText:'Play game',
-    demo: {
-      url: 'http://clifford.codes/windshield-wipers/',
-      width: 1024,
-      height: 768,
+    demo: null,
+    // {
+    //   url: 'http://clifford.codes/windshield-wipers/',
+    //   width: 1024,
+    //   height: 768,
+    // },
+    hero: {
+
+      url: './assets/windshield-wipers-hero2.png',
+      alt: 'windshield wipers poster',
+      width: 512,
+      height: null,
     },
-    hero: null,
     sections: [
       {
-        title: 'Section 1',
+        title: 'Requirements',
         img: null,
-        description: 'One of the key requirements was to make the game playable while encouraging the user to not just blast the spacebar. This is how the power indicator was conceptualized. Too many swipe of the wipers will quickly drain the power and leave one defenseless again the oncoming rain particles.',
-        list: [
-          `list item 1`,
-          `list item 2`,
-          `list item 3`,
-          `list item 4`,
-          `list item 5`,
-        ],
-      },
-      {
-        title: 'Section 2',
-        img: {
-          url: './assets/windshield-wiper-1.png',
-          alt: 'Horizontil Tabet',
-          width: 375,
-          height: 764,
-        },
-        description: 'Another motivator is the point system. The goal is to motivate the player to wait to swipe till the last moment, to increase excitement, the longer the spot is on screen the more the spot is worth.',
+        description: `How might we make windshield wipers a game for an upcoming Doodle to celebrate the inventor of windshield wipers.`,
         list: null,
-
       },
       {
-        title: 'Section 3',
+        title: 'Interaction',
+        img: {
+          url: './assets/wwindicator.gif',
+          alt: 'Horizontil Tabet',
+          width: 280,
+          height: 280,
+        },
+        description: `How can we encourage the user to sparingly use the windshield wipers. It won't be very fun if the user just continually blasts the spacebar. This is how the power indicator was conceptualized. Too many activations too quickly will drain the power and leave the player momentarily defenseless against the oncoming rain particles.`,
+        list: null,
+      },
+      {
+        title: 'Motivators',
+        img: {
+          url: './assets/windshield-wipers-points.png',
+          alt: 'windshield wiper points',
+          width: 512,
+          height: 369,
+        },
+        description: 'How might we encourage the player to wait till the last moment to swipe. To increase excitement, the longer the spot is on screen the more the spot is worth.',
+        list: null,
+      },
+      {
+        title: 'Iterations',
         img: {
           url: './assets/windshield-wiper-2.png',
           alt: 'Horizontil Tabet',
           width: 1024,
           height: 768,
         },
-        description: 'This was an exercise of prototyping for playability, several iterations were iterated through to create this playable version of this windshield wiper emulation game.',
+        description: 'This was an exercise of prototyping for playability, several ideas were iterated through.',
         list: null,
+      },
 
-      },
-      {
-        title: 'Section 4',
-        img: null,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-        list: null,
-      },
     ],
     tile: {
       cols: 2,
@@ -399,7 +398,7 @@ export const PROJECTS: Project[] = [
     buttonText: null,
     demo: {
       url: 'http://clifford.codes/uber_slider/',
-      width: 320,
+      width: 360,
       height: 480,
     },
     hero: null,
@@ -437,6 +436,16 @@ export const PROJECTS: Project[] = [
         },
         description: 'Tablet layout interpretation',
         list: null,
+      },
+      {
+        title: 'Notes',
+        img: null,
+        description: null,
+        list: [
+          `Designed for full screen`,
+          `The motion in the demo above is skewed because it's calculating the entire window width`,
+          `This could be updated to calculate the parent container instead`,
+        ],
       },
     ],
     tile: {

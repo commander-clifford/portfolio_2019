@@ -47,6 +47,7 @@
       &__title {
         font-size: 1.5em;
         font-weight: bold;
+        h1,h2,h3,h4,h5,h6 {margin-top: 0;}
       }
       &__content {
         display: flex;
@@ -55,6 +56,8 @@
         justify-content: flex-end;
         flex-direction: column;
         width: 50%;
+        p {margin-top: 0;}
+        img {margin-bottom: 1em;}
       }
     }
   }

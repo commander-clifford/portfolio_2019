@@ -38,8 +38,6 @@
   class="project page"
   >
 
-
-
   <section class="page__section page__section--style1 page__section--flex">
 
       <div class="project__brief hero__brief">
@@ -88,17 +86,13 @@
 
   <section class="page__section page__section--style-trans">
 
-    <div
-      class="project__hero"
-      >
+    <div class="project__hero">
 
       <div class="">
 
         <img *ngIf="!project.demo"class="hero__img" src="{{project.hero.url}}" alt="{{project.hero.alt}}" [width]="project.hero.width" [height]="project.hero.height">
 
-
         <iframe *ngIf="project.demo" [src]="project.demo.url | safe: 'resourceUrl'" [width]="project.demo.width" [height]="project.demo.height"></iframe>
-
 
       </div>
 
@@ -131,22 +125,9 @@
           [innerHtml]="section.list[i]">
         </li>
       </ul>
-
-      <ul>
-
-      </ul>
     </div>
 
   </section>
-
-
-
-
-
-
-
-
-
 
   <section *ngIf="false" class="supporting page__section page__section">
 
