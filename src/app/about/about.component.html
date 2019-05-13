@@ -8,7 +8,7 @@
 
         <h2 class="page__headline">Hi! I'm Clifford</h2>
 
-        <p>I am a creative technologist, experience designer and a bit of&nbsp;a&nbsp;dreamer.</p>
+        <p>I am a creative technologist, experience designer and a visionary.</p>
 
       </div>
     </div>
@@ -237,7 +237,7 @@
             (click)="this.router.navigate(['/projects/'+project.id])"
           >
             <div class="tile__media">
-              <img class="tile__img" [src]="project.imgs.heroImg" />
+              <img class="tile__img" [src]="project.thumbnail.url" />
             </div>
             <div class="tile__details">
               <div
@@ -475,7 +475,7 @@
 
   </section>
 
-  <section class="page__section page__section--style2">
+  <section class="page__section">
 
     <h2 class="page__headline">Let's Connect</h2>
 

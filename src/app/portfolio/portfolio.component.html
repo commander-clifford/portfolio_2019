@@ -26,7 +26,7 @@
         [colspan]="project.tile.cols"
         [rowspan]="project.tile.rows"
         [style.backgroundColor]="project.tile.color"
-        [style.backgroundImage]="'url('+ project.imgs.heroImg +')'"
+        [style.backgroundImage]="'url('+ project.thumbnail.url +')'"
         routerLink="/projects/{{project.id}}"
         [class.selected]="hero === selectedHero"
         >

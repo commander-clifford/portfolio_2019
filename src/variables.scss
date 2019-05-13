@@ -1,14 +1,15 @@
 @import "mixins.scss";
 
-@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive|Nanum+Myeongjo|Press+Start+2P|Teko');
+@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive|Nanum+Myeongjo|Press+Start+2P|Teko|Open+Sans|Raleway:200,300,400');
+
 // Press+Start+2P 8bit font on cover and nav
 // Nanum+Myeongjo body style serif
 // Teko headline block font
 
 // reds
 $color-red: #DD0031;
-$color-light-red: lighten($color-red,15%);
-$color-dark-red: darken($color-red,15%); // $color-dark-red: #C3002F;
+$color-light-red: lighten($color-red,22%);
+$color-dark-red: darken($color-red,12%); // $color-dark-red: #C3002F;
 
 // whites
 $color-white: #FFFFFF;

@@ -5,14 +5,23 @@ html, body { height: 100%; }
 
 body {
   margin: 0;
-  font-family: 'Nanum Myeongjo', serif;
+  // font-family: 'Nanum Myeongjo', serif;
+  font-family: 'Raleway', serif;
+  font-weight: 300;
   background: $color-dark-red;
   background-attachment: fixed;
-  background-image:
-    radial-gradient(
-      $color-red,
-      $color-dark-red
-    );
+  // background-image:
+  //   radial-gradient(
+  //     $color-red,
+  //     $color-dark-red
+  //   );
+
+    background-image:
+      linear-gradient(217deg, rgba($color-dark-red, 1), rgba($color-dark-red, 0.0) 77%),
+      linear-gradient(127deg, rgba($color-red, 1), rgba($color-red, 0.0) 77%),
+      linear-gradient(336deg, rgba($color-light-red, 1), rgba($color-light-red, 0.0) 77%);
+
+
   padding: 0;
 
   h1, h2, h3, h4, h5, h6 {
@@ -24,7 +33,7 @@ body {
   p {
     line-height: 1.5;
     font-size: 1.2em;
-    margin: 2em auto;
+    // margin: 2em auto;
     max-width: 680px;
     @media only screen and (min-width: 960px) {
       font-size: 1.1em;
@@ -33,9 +42,15 @@ body {
 
   iframe {
     border: none;
+    max-width: 100%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
-
+  .material-icons {
+    font-size: 1.2em;
+  }
   .mat-drawer-container {
     background-color: transparent;
   }
@@ -43,6 +58,8 @@ body {
   img { max-width: 100%; height: auto; }
 
   .page {
+
+
     overflow-x: hidden;
     margin: 2vh 2vw;
     width: 96vw;
@@ -53,29 +70,82 @@ body {
     min-height: 90vh;
     // background: rgba(255,255,255,0.1);
     &__section {
+      padding: 4em 20vw;
+      text-align: center;
       position: relative;
+      background-image:
+        radial-gradient(
+          $color-dark-white,
+          transparent
+        );
       // box-shadow: 0px 2px 8px 2px $color-dark-red;
       //
       // margin-bottom: 4rem;
 
-      &--style1 {
+
+      &:nth-of-type(odd) {
         background-image:
           radial-gradient(
             $color-white,
             $color-dark-white
           );
-        padding: 2em 10vw;
-        text-align: center;
       }
 
-      &--style2 {
+      &:nth-of-type(even) {
         background-image:
           radial-gradient(
             lighten($color-dark-white, 8%),
             darken($color-dark-white,4%)
           );
-        padding: 2em 10vw;
-        text-align: center;
+      }
+
+      &--flex {
+        display: flex;
+        justify-content: space-between;
+
+        div:last-of-type {
+
+
+        }
+
+      }
+      // &--style1 {
+      //   background-image:
+      //     radial-gradient(
+      //       $color-white,
+      //       $color-dark-white
+      //     );
+      //   text-align: center;
+      // }
+      //
+      // &--style2 {
+      //   background-image:
+      //     radial-gradient(
+      //       lighten($color-dark-white, 8%),
+      //       darken($color-dark-white,4%)
+      //     );
+      //   text-align: center;
+      // }
+      &--style-trans {
+        background: transparent !important;
+      }
+      &--style-grad {
+        // background:
+        //   linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+        //   linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+        //   linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%) !important;
+
+        // background:
+          // linear-gradient(217deg, rgba(#D90404, 0.8), rgba(#D90404, 0.0) 77%),
+          // linear-gradient(217deg, rgba(#FFB548, 0.77), rgba(#FFB548, 0.0) 77%),
+          // linear-gradient(127deg, rgba($color-red, 0.97), rgba($color-red, 0.0) 77%),
+          // linear-gradient(336deg, rgba(yellow, 0.77), rgba(yellow, 0.0) 77%) !important;
+
+        background:
+        //   // linear-gradient(217deg, rgba(#D90404, 0.8), rgba(#D90404, 0.0) 77%),
+          linear-gradient(217deg, rgba($color-red, 0.57), rgba($color-red, 0.0) 77%),
+          linear-gradient(127deg, rgba($color-dark-red, 0.77), rgba($color-dark-red, 0.0) 77%),
+          linear-gradient(336deg, rgba($color-red, 1), rgba($color-red, 0.0) 77%) !important;
       }
       &--wa {
         padding-top: 6em;
