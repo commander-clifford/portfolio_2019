@@ -36,6 +36,10 @@ import { ResumeComponent } from './resume/resume.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SafePipe } from './safe.pipe';
 
+// import { GoogleAnalyticsModule, GA_TOKEN } from 'googleanalytics-angular';
+import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +55,11 @@ import { SafePipe } from './safe.pipe';
     SafePipe
   ],
   imports: [
+    AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    GoogleAnalyticsModule.forRoot(),
     HttpClientModule,
     HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
@@ -59,11 +68,6 @@ import { SafePipe } from './safe.pipe';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    OrderModule,
-    FormsModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
     MatButtonToggleModule,
     MatButtonModule,
     MatCardModule,
@@ -75,8 +79,12 @@ import { SafePipe } from './safe.pipe';
     MatToolbarModule,
     MatExpansionModule,
     MatGridListModule,
+    OrderModule,
   ],
-  providers: [{provide: RouteReuseStrategy, useClass: CustomReuseStrategy}],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: CustomReuseStrategy },
+    { provide: GA_TOKEN, useValue: 'UA-139887211-2' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
