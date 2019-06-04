@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
   //       title: 'Section 2',
   //       img: {
   //         url: './assets/mobile-device.png',
-  //         alt: 'Horizontil Tabet',
+  //         alt: 'Horizontal Tablet',
   //         width: 375,
   //         height: 764,
   //       },
@@ -52,7 +52,7 @@ export const PROJECTS: Project[] = [
   //       title: 'Section 3',
   //       img: {
   //         url: './assets/tablet--horz.png',
-  //         alt: 'Horizontil Tabet',
+  //         alt: 'Horizontal Tablet',
   //         width: 1024,
   //         height: 768,
   //       },
@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
           width: 375,
           height: null,
         },
-        description: 'To help explore and express these ideas I built a faux Google ecosystem including but not limited too the homepage, the search results page, and gmail.',
+        description: 'To help explore and express these ideas, I built a faux Google ecosystem. This includes, but is not limited too, the homepage, the search results page, and gmail. ',
         list: null,
       },
       {
@@ -129,7 +129,7 @@ export const PROJECTS: Project[] = [
       {
         title: 'Summary',
         img: null,
-        description: 'I used Angular, Material, and GSAP to create this experience.',
+        description: 'I used Angular, Material, GSAP and a pinch of magic to create these experiences.',
         list: null,
       },
     ],
@@ -178,7 +178,7 @@ export const PROJECTS: Project[] = [
         title: 'Interaction',
         img: {
           url: './assets/wwindicator.gif',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 280,
           height: 280,
         },
@@ -200,7 +200,7 @@ export const PROJECTS: Project[] = [
         title: 'Iterations',
         img: {
           url: './assets/windshield-wiper-2.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -254,7 +254,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -266,7 +266,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -343,7 +343,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -355,7 +355,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -419,7 +419,7 @@ export const PROJECTS: Project[] = [
         title: 'Mobile First',
         img: {
           url: './assets/uber-slider-mobile.png',
-          alt: 'Tabet',
+          alt: 'Tablet',
           width: 375,
           height: 764,
         },
@@ -430,7 +430,7 @@ export const PROJECTS: Project[] = [
         title: 'Tablet',
         img: {
           url: './assets/uber-slider-tablet-horz.png',
-          alt: 'Tabet',
+          alt: 'Tablet',
           width: 1024,
           height: 715,
         },
@@ -492,7 +492,7 @@ export const PROJECTS: Project[] = [
         title: 'Mobile',
         img: {
           url: './assets/music-browser__mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -503,7 +503,7 @@ export const PROJECTS: Project[] = [
         title: 'Tablet',
         img: {
           url: './assets/music-browser__ipad-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -514,7 +514,7 @@ export const PROJECTS: Project[] = [
         title: 'Horizontal Tablet',
         img: {
           url: './assets/music-browser__ipad-device--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 715,
         },
@@ -525,7 +525,7 @@ export const PROJECTS: Project[] = [
         title: 'Full Desktop',
         img: {
           url: './assets/music-browser__full.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1366,
           height: 768,
         },
@@ -579,7 +579,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -591,7 +591,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -655,7 +655,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -667,7 +667,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -734,7 +734,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -746,7 +746,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -805,7 +805,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -817,7 +817,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -881,7 +881,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -893,7 +893,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -961,7 +961,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -973,7 +973,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -1034,7 +1034,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -1046,7 +1046,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -1119,7 +1119,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -1131,7 +1131,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -1196,7 +1196,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -1208,7 +1208,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -1272,7 +1272,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -1284,7 +1284,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
@@ -1348,7 +1348,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 2',
         img: {
           url: './assets/mobile-device.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 375,
           height: 764,
         },
@@ -1360,7 +1360,7 @@ export const PROJECTS: Project[] = [
         title: 'Section 3',
         img: {
           url: './assets/tablet--horz.png',
-          alt: 'Horizontil Tabet',
+          alt: 'Horizontal Tablet',
           width: 1024,
           height: 768,
         },
