@@ -1314,12 +1314,12 @@ export const PROJECTS: Project[] = [
 
   {
     id: 0,
-    name: 'Army Logistics Prototyping',
+    name: 'An IBM Project',
     thumbnail: {
       url: './assets/logistics__hero.png',
-      alt: 'Army Logistics Prototyping',
+      alt: 'Military Logistics Landing Page',
     },
-    brief: 'a landing page for Military logistics tools and a simple low-fi prototype built from a projects functional requirements',
+    brief: 'A landing page, or \'Portal Page\', for Military logistics tools ',
     url: null,
     githubUrl: null,
     codepenUrl: null,
@@ -1333,47 +1333,41 @@ export const PROJECTS: Project[] = [
     },
     sections: [
       {
-        title: 'Section 1',
+        title: 'Overview',
         img: null,
-        description: 'Description of project Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        list: [
-          `list item 1`,
-          `list item 2`,
-          `list item 3`,
-          `list item 4`,
-          `list item 5`,
-        ],
+        description: 'While working with IBM on two Military logistics projects I had influence on several aspects of design and development. ',
+        list: null,
       },
       {
-        title: 'Section 2',
-        img: {
-          url: './assets/mobile-device.png',
-          alt: 'Horizontal Tablet',
-          width: 375,
-          height: 764,
-        },
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        title: 'Design',
+        // img: {
+        //   url: './assets/mobile-device.png',
+        //   alt: 'Horizontal Tablet',
+        //   width: 375,
+        //   height: 764,
+        // },
+        description: 'In this project I took a page that had one row of visually identical buttons and made it more intuitive. The first and most obvious modification was to break the utility functions out into their own utility navigation bar to symbolize their difference from the application navigation options.',
         list: null,
 
       },
       {
-        title: 'Section 3',
-        img: {
-          url: './assets/tablet--horz.png',
-          alt: 'Horizontal Tablet',
-          width: 1024,
-          height: 768,
-        },
-        description: 'Lorem ipsum dolor sit amet',
+        title: 'Develop',
+        // img: {
+        //   url: './assets/tablet--horz.png',
+        //   alt: 'Horizontal Tablet',
+        //   width: 1024,
+        //   height: 768,
+        // },
+        description: '',
         list: null,
 
       },
-      {
-        title: 'Section 4',
-        img: null,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-        list: null,
-      },
+      // {
+      //   title: 'Section 4',
+      //   img: null,
+      //   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      //   list: null,
+      // },
     ],
     tile: {
       cols: 2,
@@ -1381,6 +1375,7 @@ export const PROJECTS: Project[] = [
       color: '#DD0031'
     },
 
+    // and a simple low-fi prototype built from a projects functional requirements
     // "This is a prototype built for a logistics widget",
     // "While working with IBM on two Military logistics projects I had influence on several aspects of design and development. In this project I took a page that had one row of visually identical buttons and made it more intuitive. The first and most obvious modification was to break the utility functions out into their own utility navigation bar to symbolize their difference from the application navigation options."
     // './assets/logistics__sup-1.png',
