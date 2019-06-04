@@ -16,8 +16,6 @@ export class AppComponent {
     private location: Location
   ) { }
 
-
-
   getState(outlet) {
     let state = outlet.activatedRouteData.state;
     return outlet.activatedRouteData.state;

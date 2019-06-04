@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
           width: 375,
           height: null,
         },
-        description: 'To help expore and express these ideas I built a faux Google ecosystem including but not limited too the homepage, the search results page, and gmail.',
+        description: 'To help explore and express these ideas I built a faux Google ecosystem including but not limited too the homepage, the search results page, and gmail.',
         list: null,
       },
       {

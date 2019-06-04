@@ -174,11 +174,22 @@ body {
     }
   }
 
-  .resume {
+  // .resume {
+  //   .mat-content {
+  //     display: block;
+  //   }
+  // }
+  // .about {
     .mat-content {
       display: block;
+      flex-direction: column;
     }
-  }
+    .mat-expansion-panel-content {
+      font-weight: 300;
+      line-height: 1.8;
+      // padding: 4em 1em;
+    }
+  // }
 
   .action{
 
@@ -223,7 +234,7 @@ body {
       justify-content: space-between;
     }
 
-    @include lg {
+    @include xl {
       display: flex;
       justify-content: space-between;
       // align-items: baseline;
@@ -231,14 +242,14 @@ body {
 
     .left {
       margin-bottom: 4em;
-      @include lg {
+      @include xl {
         width: 50%;
       }
 
     }
     .right {
 
-      @include lg {
+      @include xl {
         margin-bottom: 0;
         width: 46%;
       }
