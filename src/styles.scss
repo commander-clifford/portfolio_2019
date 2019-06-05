@@ -70,7 +70,6 @@ body {
     min-height: 90vh;
     // background: rgba(255,255,255,0.1);
     &__section {
-      padding: 4em 20vw;
       text-align: center;
       position: relative;
       background-image:
@@ -78,10 +77,11 @@ body {
           $color-dark-white,
           transparent
         );
-      // box-shadow: 0px 2px 8px 2px $color-dark-red;
-      //
-      // margin-bottom: 4rem;
 
+      padding: 2em;
+      @include md {
+        padding: 4em 20vw;
+      }
 
       &:nth-of-type(odd) {
         background-image:
@@ -99,14 +99,21 @@ body {
           );
       }
 
-      &--flex {
-        display: flex;
-        justify-content: space-between;
-
-        div:last-of-type {
-
-
+      &--hero {
+        padding: 0.5em;
+        @include md {
+          padding: 4em 20vw;
         }
+      }
+
+      &--flex {
+        display: block;
+        @include md {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        div:last-of-type {}
 
       }
       // &--style1 {

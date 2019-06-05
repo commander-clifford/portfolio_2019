@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
+
 import { HttpClientModule }    from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './project/in-memory-data.service';
+
+import { ContenfulApiService }  from './contenful-api.service';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -83,7 +87,8 @@ import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: CustomReuseStrategy },
-    { provide: GA_TOKEN, useValue: 'UA-139887211-2' }
+    { provide: GA_TOKEN, useValue: 'UA-139887211-2' },
+    ContenfulApiService,
   ],
   bootstrap: [AppComponent]
 })

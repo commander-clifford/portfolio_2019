@@ -20,20 +20,22 @@ import { Router } from '@angular/router';
 
 export class ProjectsComponent {
 
-  id: number;
-  projects: Project[] = [];
-  project: Project;
-  prevProject: Project;
-  nextProject: Project;
-  projectChange$: Observable<number>;
-  next$: Observable<number>;
-  prev$: Observable<number>;
-  routeTrigger$: Observable<object>;
+  private id: number;
+  private projects: Project[] = [];
+  private project: Project;
+  private prevProject: Project;
+  private nextProject: Project;
+  private projectChange$: Observable<number>;
+  private next$: Observable<number>;
+  private prev$: Observable<number>;
+  private routeTrigger$: Observable<object>;
 
   constructor(
-    router: Router,
-    projectService: ProjectService,
-    projectsRouting: ProjectsRoutingService
+
+    private router: Router,
+    private projectService: ProjectService,
+    private projectsRouting: ProjectsRoutingService,
+
   ) {
 
     let url = router.routerState.snapshot.url;

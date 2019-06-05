@@ -17,14 +17,26 @@
 
     .brief {
       &__title {
-        font-size: 4em;
+        font-size: 2em;
         line-height: 1;
+        @include md {
+          font-size: 4em;
+        }
+        @include lg {
+          font-size: 4em;
+        }
       }
       &__client {}
       &__role {}
       &__brief {
         font-family: 'Teko', sans-serif;
-        font-size: 1.5em;
+        font-size: 1.4em;
+        @include md {
+          font-size: 2em;
+        }
+        @include lg {
+          font-size: 2em;
+        }
       }
     }
   }
@@ -51,11 +63,13 @@
       }
       &__content {
         display: flex;
-        display: flex;
         // align-items: flex-end;
         justify-content: flex-end;
         flex-direction: column;
-        width: 50%;
+        width: 100%;
+        @include md {
+          width: 50%;
+        }
         p {margin-top: 0;}
         img {margin-bottom: 1em;}
       }
@@ -68,7 +82,11 @@
     align-items: center;
     width: fit-content;
     margin: 0 auto;
-    padding: 1em;
+    padding: 0.5em;
+    @include md {
+      padding: 1em;
+    }
+
     border-radius: 0.5em;
     background-image:
       radial-gradient(
@@ -109,41 +127,42 @@
   }
 
 
-  &__title {
-    margin-bottom: 0;
-    @include md {
-      font-size: 4vw;
-    }
-    @include lg {
-      font-size: 4vw;
-    }
-  }
+  // &__title {
+  //   margin-bottom: 0;
+  //   @include md {
+  //     font-size: 4vw;
+  //   }
+  //   @include lg {
+  //     font-size: 4vw;
+  //   }
+  // }
+
   &__cr {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
   }
-  &__client,
-  &__role {
-    margin: 0;
+  // &__client,
+  // &__role {
+  //   margin: 0;
+  //
+  //   @include md {
+  //     font-size: 1vw;
+  //   }
+  //   @include lg {
+  //     font-size: 1.1vw;
+  //   }
+  // }
 
-    @include md {
-      font-size: 1vw;
-    }
-    @include lg {
-      font-size: 1.1vw;
-    }
-  }
-
-  &__elaborate,
-  &__brief {
-    @include md {
-      font-size: 1.1vw;
-    }
-    @include lg {
-      font-size: 1.2vw;
-    }
-  }
+  // &__elaborate,
+  // &__brief {
+  //   @include md {
+  //     font-size: 1.1vw;
+  //   }
+  //   @include lg {
+  //     font-size: 1.2vw;
+  //   }
+  // }
 
 
 }

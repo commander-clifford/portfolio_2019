@@ -15,7 +15,24 @@
       <br>
       (open during construction)
     </p>
+-----
+  projects:
+    <ul class="u-listReset">
+      <li *ngFor="let project of projects_cda">
+        {{ project.fields.title }}
+        {{project.fields.hero}}
+        <!-- <img ngSrc="project.fields.hero.file" alt=""> -->
+      </li>
+    </ul>
 
+    types:
+    <ul class="u-listReset">
+      <li *ngFor="let c of ctypes">
+        {{ c.name }}
+        <!-- <img ngSrc="project.fields.hero.file" alt=""> -->
+      </li>
+    </ul>
+-----
     <mat-grid-list
       class="portfolio__list"
       cols="4"
