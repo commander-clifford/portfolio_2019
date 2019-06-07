@@ -24,7 +24,9 @@ body {
 
   padding: 0;
 
-  h1, h2, h3, h4, h5, h6 {
+  * {font-family: 'Raleway', serif;}
+
+  h1, h2, h3, h4, h5, h6, mat-card-title {
     font-family: 'Teko', sans-serif;
     text-transform: uppercase;
     font-weight: 100;

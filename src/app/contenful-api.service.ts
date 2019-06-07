@@ -10,6 +10,7 @@ const CONFIG = {
 @Injectable({
   providedIn: 'root'
 })
+
 export class ContenfulApiService {
 
   private cdaClient = createClient({
@@ -21,17 +22,7 @@ export class ContenfulApiService {
 
   constructor() { }
 
-  fetchContentTypes(query?: object): Promise<Entry<any>[]> {
-    console.log('fetchContentTypes');
-    return this.cdaClient.getContentTypes()
-    .then((response) => response.items)
-    .catch((error) => {
-      console.log('\nError occurred while fetching Content Types:')
-      console.error(error)
-    })
-  }
-
-  getProjets(query?: object): Promise<Entry<any>[]> {
+  getProjects(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
       content_type: 'project',
       order: '-fields.displayOrder',

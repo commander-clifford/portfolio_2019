@@ -4,35 +4,13 @@
     class="page__section page__section--style1"
     style="padding: 2em;">
 
-    <h2 class="page__headline">All the Projects</h2>
+    <p style="text-align:center; margin: 3em auto;">(open during construction) I'm plugging this into Contentful CMS</p>
 
-    <p>
-      Thanks for checking out my projects!
-      <br>
-      <br>
-      Here you'll find out about a few of the things I'm working on. I'm updating this part as I go, so be sure to contact me about anything specific.
-      <br>
-      <br>
-      (open during construction)
-    </p>
------
-  projects:
-    <ul class="u-listReset">
-      <li *ngFor="let project of projects_cda">
-        {{ project.fields.title }}
-        {{project.fields.hero}}
-        <!-- <img ngSrc="project.fields.hero.file" alt=""> -->
-      </li>
-    </ul>
+    <div *ngFor="let project of projects_cda">
+      <app-project-card [project]="project"></app-project-card>
+    </div>
 
-    types:
-    <ul class="u-listReset">
-      <li *ngFor="let c of ctypes">
-        {{ c.name }}
-        <!-- <img ngSrc="project.fields.hero.file" alt=""> -->
-      </li>
-    </ul>
------
+    <!-- TODO: cut -->
     <mat-grid-list
       class="portfolio__list"
       cols="4"
@@ -49,6 +27,7 @@
         >
       </mat-grid-tile>
     </mat-grid-list>
+    <!-- TODO: cut -->
 
   </section>
 

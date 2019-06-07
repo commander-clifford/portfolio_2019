@@ -104,6 +104,17 @@
     *ngFor="let section of project.sections; let i = index"
     class="project__section page__section page__section--flex"
     >
+    <app-project-section
+      [section]="section"
+    >
+    </app-project-section>
+
+  </section>
+
+  <section
+    *ngFor="let section of project.sections; let i = index"
+    class="project__section page__section page__section--flex"
+    >
     <div class="section__title">
       <h2>{{section.title}}</h2>
     </div>

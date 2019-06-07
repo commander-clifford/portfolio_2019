@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Project } from './project';
 import { ProjectService } from './project.service';
 import { ProjectsRoutingService } from '../projects/projects-routing.service';
+import { ContenfulApiService } from '../contenful-api.service';
+import { Entry } from 'contentful';
 
 @Component({
   selector: 'app-project',
@@ -12,16 +14,18 @@ import { ProjectsRoutingService } from '../projects/projects-routing.service';
 export class ProjectComponent {
 
   project: Project;
-  projectService;
+  // projectService;
   nextProjectId;
   prevProjectId;
 
+  private projects_cda: Entry<any>[] = []; // define a private class property to the class which defines that this component will include a collection of several projects
+
   constructor(
 
-    route: ActivatedRoute,
-    projectService: ProjectService,
-    projectsRouting: ProjectsRoutingService,
-
+    private route: ActivatedRoute,
+    private projectService: ProjectService,
+    private projectsRouting: ProjectsRoutingService,
+    private contentfulApiService: ContenfulApiService,
 
   ) {
 
@@ -34,6 +38,19 @@ export class ProjectComponent {
 
     this.nextProjectId = id -1;
     this.prevProjectId = id +1;
+
+    this.getProjects();
+
+  }
+
+  getProjects(): void {
+
+    // the contenful way
+    this.contentfulApiService.getProjects().then(projects_cda => this.projects_cda = projects_cda);
+
+    // this.contentfulApiService.fetchContentTypes().then(ctypes => this.ctypes = ctypes);
+
+    console.log('-------',this.projects_cda);
 
   }
 

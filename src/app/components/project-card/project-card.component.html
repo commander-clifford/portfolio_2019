@@ -1,0 +1,28 @@
+<mat-card [routerLink]="'/projects/'+project.slug">
+
+  <img
+    mat-card-image
+    [src]="project.hero.fields.file.url"
+    [alt]="project.hero.fields.description"
+    [height]="project.hero.fields.file.details.image.height"
+    [width]="project.hero.fields.file.details.image.width"
+  >
+
+  <section>
+
+    <mat-card-header>
+      <mat-card-title [innerHTML]="project.title"></mat-card-title>
+      <mat-card-subtitle [innerHTML]="project.subtitle"></mat-card-subtitle>
+    </mat-card-header>
+   
+    <mat-card-content [innerHTML]="project.description"></mat-card-content>
+
+    <mat-card-actions>
+      <button mat-icon-button aria-label="Explore this project">
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </mat-card-actions>
+
+  </section>
+
+</mat-card>

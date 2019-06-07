@@ -42,6 +42,8 @@ import { SafePipe } from './safe.pipe';
 
 // import { GoogleAnalyticsModule, GA_TOKEN } from 'googleanalytics-angular';
 import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { ProjectSectionComponent } from './components/project-section/project-section.component';
 
 
 @NgModule({
@@ -56,7 +58,9 @@ import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
     PortfolioComponent,
     ResumeComponent,
     NavigationComponent,
-    SafePipe
+    SafePipe,
+    ProjectCardComponent,
+    ProjectSectionComponent
   ],
   imports: [
     AppRoutingModule,
