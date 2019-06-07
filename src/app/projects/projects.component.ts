@@ -38,28 +38,28 @@ export class ProjectsComponent {
 
   ) {
 
-    let url = router.routerState.snapshot.url;
-    let sub = url.lastIndexOf('/');
-    let tid = url.substring(sub + 1);
-    this.id = parseInt(tid);
+    // let url = router.routerState.snapshot.url;
+    // let sub = url.lastIndexOf('/');
+    // let tid = url.substring(sub + 1);
+    // this.id = parseInt(tid);
+    //
+    // this.projects = projectService.getProjects();
+    // console.log('PROJECTS.COMP this.projects',this.projects);
+    //
+    // this.project = projectService.getProject(this.id);
+    // console.log('PROJECTS.COMP this.project',this.project);
+    //
+    // this.nextProject = projectService.getProject(this.id+1);
+    // this.nextProject = this.nextProject ? this.nextProject : null;
+    // console.log('-------- PROJECTS.COMP NEXT.project',this.nextProject);
+    //
+    // this.prevProject = projectService.getProject(this.id-1);
+    // this.prevProject = this.prevProject ? this.prevProject : null;
+    // console.log('-------- PROJECTS.COMP PREV.project',this.prevProject);
+    //
+    // this.projectChange$ = projectsRouting.projectChange$;
 
-    this.projects = projectService.getProjects();
-    console.log('PROJECTS.COMP this.projects',this.projects);
-
-    this.project = projectService.getProject(this.id);
-    console.log('PROJECTS.COMP this.project',this.project);
-
-    this.nextProject = projectService.getProject(this.id+1);
-    this.nextProject = this.nextProject ? this.nextProject : null;
-    console.log('-------- PROJECTS.COMP NEXT.project',this.nextProject);
-
-    this.prevProject = projectService.getProject(this.id-1);
-    this.prevProject = this.prevProject ? this.prevProject : null;
-    console.log('-------- PROJECTS.COMP PREV.project',this.prevProject);
-
-    this.projectChange$ = projectsRouting.projectChange$;
-
-    this.setupRouting();
+    // this.setupRouting();
 
   }
 

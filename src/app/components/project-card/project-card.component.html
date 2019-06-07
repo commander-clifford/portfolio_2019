@@ -1,4 +1,4 @@
-<mat-card [routerLink]="'/projects/'+project.slug">
+<mat-card [routerLink]="'/projects/'+projectSys.id">
 
   <img
     mat-card-image
@@ -14,7 +14,6 @@
       <mat-card-title [innerHTML]="project.title"></mat-card-title>
       <mat-card-subtitle [innerHTML]="project.subtitle"></mat-card-subtitle>
     </mat-card-header>
-   
     <mat-card-content [innerHTML]="project.description"></mat-card-content>
 
     <mat-card-actions>

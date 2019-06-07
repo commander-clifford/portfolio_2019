@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent, data: { state: 'portfolio' } },
   { path: 'projects', component: ProjectsComponent, data: { state: 'projects' },
       children: [
-        { path: '', redirectTo: '0', pathMatch: 'full'},
+        { path: '', redirectTo: '/', pathMatch: 'full'},
         { path: ':id', component: ProjectComponent, data: { state: 'project' } },
       ]
   },

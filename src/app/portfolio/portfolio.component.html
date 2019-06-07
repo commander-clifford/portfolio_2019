@@ -1,33 +1,12 @@
 <article class="portfolio page">
 
-  <section
-    class="page__section page__section--style1"
-    style="padding: 2em;">
+  <section class="page__section">
 
     <p style="text-align:center; margin: 3em auto;">(open during construction) I'm plugging this into Contentful CMS</p>
 
     <div *ngFor="let project of projects_cda">
       <app-project-card [project]="project"></app-project-card>
     </div>
-
-    <!-- TODO: cut -->
-    <mat-grid-list
-      class="portfolio__list"
-      cols="4"
-      rowHeight="2:1">
-      <mat-grid-tile
-        *ngFor="let project of projects | orderBy: 'id':true"
-        class="portfolio__tile"
-        [colspan]="project.tile.cols"
-        [rowspan]="project.tile.rows"
-        [style.backgroundColor]="project.tile.color"
-        [style.backgroundImage]="'url('+ project.thumbnail.url +')'"
-        routerLink="/projects/{{project.id}}"
-        [class.selected]="hero === selectedHero"
-        >
-      </mat-grid-tile>
-    </mat-grid-list>
-    <!-- TODO: cut -->
 
   </section>
 

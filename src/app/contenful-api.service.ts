@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import * as contentful from 'contentful';
 import { createClient, Entry } from 'contentful';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 const CONFIG = {
   space: '7ajvyg0idzck',
@@ -22,13 +24,22 @@ export class ContenfulApiService {
 
   constructor() { }
 
-  getProjects(query?: object): Promise<Entry<any>[]> {
+  public getProjects(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
       content_type: 'project',
       order: '-fields.displayOrder',
       limit: 10,
     }, query))
-    .then(res => res.items);
+    .then(response => response.items);
+  }
+
+  public getProject(id?: string): Promise<Entry<any>[]> {
+    console.log('service id',id);
+    return this.cdaClient.getEntries(Object.assign({
+      content_type: 'project',
+      'sys.id': id,
+    }))
+    .then(response => response.items)
   }
 
 }

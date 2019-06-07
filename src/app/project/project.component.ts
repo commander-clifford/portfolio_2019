@@ -13,45 +13,42 @@ import { Entry } from 'contentful';
 })
 export class ProjectComponent {
 
-  project: Project;
+  // project: Project;
   // projectService;
-  nextProjectId;
-  prevProjectId;
+  // nextProjectId;
+  // prevProjectId;
 
-  private projects_cda: Entry<any>[] = []; // define a private class property to the class which defines that this component will include a collection of several projects
+  private project: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
 
   constructor(
 
     private route: ActivatedRoute,
-    private projectService: ProjectService,
+    // private projectService: ProjectService,
     private projectsRouting: ProjectsRoutingService,
     private contentfulApiService: ContenfulApiService,
 
   ) {
 
     const { id } = route.snapshot.params;
+    console.log('Define ID',id);
 
-    this.project = projectService.getProject(id);
-    console.log('project.component loading',this.project.name);
+    // this.project = projectService.getProject(id);
+    // console.log('project.component loading',this.project.name);
 
-    projectsRouting.projectChange$.next(+id);
+    // projectsRouting.projectChange$.next(+id);
 
-    this.nextProjectId = id -1;
-    this.prevProjectId = id +1;
+    // this.nextProjectId = id -1;
+    // this.prevProjectId = id +1;
 
-    this.getProjects();
+    this.getProject(id);
 
   }
 
-  getProjects(): void {
-
-    // the contenful way
-    this.contentfulApiService.getProjects().then(projects_cda => this.projects_cda = projects_cda);
-
-    // this.contentfulApiService.fetchContentTypes().then(ctypes => this.ctypes = ctypes);
-
-    console.log('-------',this.projects_cda);
-
+  getProject(id): void {
+    console.log('-- go get',id);
+    this.contentfulApiService.getProject(id)
+      .then(project => this.project = project[0])
+      .then(project => console.log('GOT',this.project))
   }
 
 

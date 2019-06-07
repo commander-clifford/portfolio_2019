@@ -1,22 +1,24 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Entry } from 'contentful';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 @Component({
   selector: 'app-project-section',
   templateUrl: './project-section.component.html',
   styleUrls: ['./project-section.component.scss']
 })
+
 export class ProjectSectionComponent implements OnInit {
 
-  @Input() section: object;
+  @Input() section: Entry<any>;
   private sectionSys: object;
+  private body: string;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
 
-    // console.log('-----section- ',this.section);
-    // this.sectionSys = this.section.sys;
-    // this.section = this.section.fields;
+    this.body = documentToHtmlString(this.section.fields.content);
 
   }
 

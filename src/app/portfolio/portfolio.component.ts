@@ -11,10 +11,9 @@ import { Entry } from 'contentful';
   styleUrls: ['./portfolio.component.scss']
 })
 
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit { 
 
   private projects_cda: Entry<any>[] = []; // define a private class property to the class which defines that this component will include a collection of several projects
-  private ctypes: Entry<any>[] = []; // define a private class property to the class which defines that this component will include a collection of several projects
   projects: object;
   selectedProject: Project;
 
@@ -25,21 +24,15 @@ export class PortfolioComponent implements OnInit {
     this.getProjects();
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   getProjects(): void {
 
     // the fake way
-    // this.projects = this.projectService.getProjects();
+    this.projects = this.projectService.getProjects();
 
     // the contenful way
     this.contentfulApiService.getProjects().then(projects_cda => this.projects_cda = projects_cda);
-
-    // this.contentfulApiService.fetchContentTypes().then(ctypes => this.ctypes = ctypes);
-
-    console.log('-------',this.projects_cda);
 
   }
 

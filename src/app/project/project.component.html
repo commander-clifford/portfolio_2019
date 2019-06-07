@@ -1,39 +1,3 @@
-
-
-<!-- <div class="actions">
-  <button
-    class="action__link"
-    *ngIf="prevProjectId < projects.length"
-    mat-raised-button
-    (click)="this.navigateProjects('prev')">
-    <mat-icon>chevron_left</mat-icon> prev project
-  </button>
-  <button
-    class="action__link"
-    *ngIf="prevProjectId >= projects.length"
-    mat-raised-button
-    routerLink="/projects/">
-    <mat-icon>chevron_left</mat-icon> back to projects
-  </button>
-
-  <button
-    class="action__link"
-    mat-raised-button
-    (click)="this.navigateProjects('next')"
-    *ngIf="!nextProjectId <= 0">
-    next project <mat-icon>chevron_right</mat-icon>
-  </button>
-  <button
-    class="action__link"
-    mat-raised-button
-    routerLink="/projects/"
-    *ngIf="nextProjectId <= 0">
-    back to projects
-    <mat-icon>chevron_right</mat-icon>
-  </button>
-</div> -->
-
-
 <article
   class="project page"
   >
@@ -41,28 +5,28 @@
   <section class="page__section page__section--style1 page__section--flex">
 
       <div class="project__brief hero__brief">
-        <h2 class="brief__title" [innerHtml]="project.name | uppercase"></h2>
-        <p class="brief__brief" [innerHtml]="project.brief"></p>
+        <h2 class="brief__title" [innerHtml]="project.fields.title | uppercase"></h2>
+        <p class="brief__brief" [innerHtml]="project.fields.subtitle"></p>
       </div>
 
       <div class="project__connect">
 
         <a
-          *ngIf="project.url"
+          *ngIf="project.fields.url"
           class="connect__link live_demo"
           target="_blank"
           mat-stroked-button
-          [href]="project.url"
+          [href]="project.fields.url"
           >
           <i class="material-icons">open_in_new</i>
-          {{project.buttonText ? project.buttonText : 'live'}}
+          {{project.fields.buttonText ? project.fields.buttonText : 'live'}}
         </a>
 
         <a
-          *ngIf="project.githubUrl"
+          *ngIf="project.fields.githubUrl"
           class="connect__link"
           mat-stroked-button
-          [href]="project.githubUrl"
+          [href]="project.fields.githubUrl"
           target="_blank"
           >
           <span class="social__icon icon-github"></span>
@@ -70,10 +34,10 @@
         </a>
 
         <a
-          *ngIf="project.codepenUrl"
+          *ngIf="project.fields.codepenUrl"
           class="connect__link"
           mat-stroked-button
-          [href]="project.codepenUrl"
+          [href]="project.fields.codepenUrl"
           target="_blank"
           >
           <span class="social__icon icon-codepen"></span>
@@ -90,9 +54,14 @@
 
       <div class="">
 
-        <img *ngIf="!project.demo"class="hero__img" src="{{project.hero.url}}" alt="{{project.hero.alt}}" [width]="project.hero.width" [height]="project.hero.height">
+        <img *ngIf="!project.fields.liveUrl || !project.fields.showDemoOnScreen"class="hero__img" src="{{project.fields.hero.fields.file.url}}" alt="{{project.fields.hero.fields.description}}" [width]="480" [height]="400">
 
-        <iframe *ngIf="project.demo" [src]="project.demo.url | safe: 'resourceUrl'" [width]="project.demo.width" [height]="project.demo.height"></iframe>
+        <iframe
+          *ngIf="project.fields.liveUrl && project.fields.showDemoOnScreen"
+          [width]="project.fields.liveHeroWidth"
+          [height]="project.fields.liveHeroHeight"
+          [src]="project.fields.liveUrl | safe: 'resourceUrl'">
+        </iframe>
 
       </div>
 
@@ -100,69 +69,37 @@
 
   </section>
 
-  <section
-    *ngFor="let section of project.sections; let i = index"
+  <app-project-section
     class="project__section page__section page__section--flex"
-    >
-    <app-project-section
-      [section]="section"
-    >
-    </app-project-section>
+    *ngFor="let section of project.fields.sections"
+    [section]="section"
+  >
+  </app-project-section>
 
-  </section>
-
-  <section
-    *ngFor="let section of project.sections; let i = index"
-    class="project__section page__section page__section--flex"
-    >
-    <div class="section__title">
-      <h2>{{section.title}}</h2>
-    </div>
-    <div class="section__content">
-      <img
-        *ngIf="section.img"
-        [src]="section.img.url"
-        [alt]="section.img.atl"
-        [width]="section.img.width"
-        [height]="section.img.height"
-        >
-      <p
-        *ngIf="section.description"
-        [innerHtml]="section.description">
-      </p>
-      <ul *ngIf="section.list">
-        <li
-          *ngFor="let item of section.list; let i = index"
-          [innerHtml]="section.list[i]">
-        </li>
-      </ul>
-    </div>
-
-  </section>
-
+  <!-- TODO: Cut below -->
   <section *ngIf="false" class="supporting page__section page__section">
 
     <div class="flex">
 
-      <div *ngIf="project.imgs.supportingImgs" class="left">
+      <div *ngIf="project.fields.imgs.supportingImgs" class="left">
 
-        <div class="supporting__images" *ngIf="project.imgs.supportingImgs">
-          <a *ngFor="let supportingImg of project.imgs.supportingImgs" href="{{supportingImg}}" target="_blank">
+        <div class="supporting__images" *ngIf="project.fields.imgs.supportingImgs">
+          <a *ngFor="let supportingImg of project.fields.imgs.supportingImgs" href="{{supportingImg}}" target="_blank">
             <img
               src="{{supportingImg}}"
               />
           </a>
         </div>
 
-        <!-- <div class="supporting__images" *ngIf="!project.imgs.supportingImgs">
-          <img src="{{project.thumbnail.url}}" alt="">
+        <!-- <div class="supporting__images" *ngIf="!project.fields.imgs.supportingImgs">
+          <img src="{{project.fields.thumbnail.url}}" alt="">
         </div> -->
 
       </div>
 
-      <div [class.right]="project.imgs.supportingImgs" style="margin: 0 auto;">
+      <div [class.right]="project.fields.imgs.supportingImgs" style="margin: 0 auto;">
 
-        <span class="project__elaborate" *ngFor="let elaborate of project.elaborate">
+        <span class="project__elaborate" *ngFor="let elaborate of project.fields.elaborate">
           <p [innerHtml]="elaborate"></p>
         </span>
 
@@ -171,12 +108,6 @@
     </div>
 
   </section>
-
-  <!-- <section
-    class="details page__section page__section--style1">
-
-    <p *ngFor="let elaborate of project.elaborate">{{elaborate}}</p>
-
-  </section> -->
+  <!-- TODO: Cut above -->
 
 </article>
