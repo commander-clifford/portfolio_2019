@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent, data: { state: 'projects' },
       children: [
         { path: '', redirectTo: '/', pathMatch: 'full'},
-        { path: ':id', component: ProjectComponent, data: { state: 'project' } },
+        { path: ':slug', component: ProjectComponent, data: { state: 'project' } },
       ]
   },
 

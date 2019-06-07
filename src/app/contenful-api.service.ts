@@ -33,11 +33,10 @@ export class ContenfulApiService {
     .then(response => response.items);
   }
 
-  public getProject(id?: string): Promise<Entry<any>[]> {
-    console.log('service id',id);
+  public getProject(slug?: string): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
       content_type: 'project',
-      'sys.id': id,
+      'fields.slug[in]': slug,
     }))
     .then(response => response.items)
   }

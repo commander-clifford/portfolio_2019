@@ -32,8 +32,9 @@ export class PortfolioComponent implements OnInit { 
     this.projects = this.projectService.getProjects();
 
     // the contenful way
-    this.contentfulApiService.getProjects().then(projects_cda => this.projects_cda = projects_cda);
-
+    this.contentfulApiService.getProjects()
+      .then(projects_cda => this.projects_cda = projects_cda)
+      .then(projects_cda => console.log('Portfolio pieces',projects_cda));
   }
 
 }

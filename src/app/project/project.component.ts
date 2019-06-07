@@ -29,8 +29,8 @@ export class ProjectComponent {
 
   ) {
 
-    const { id } = route.snapshot.params;
-    console.log('Define ID',id);
+    const { slug } = route.snapshot.params;
+    console.log('Define ID',slug);
 
     // this.project = projectService.getProject(id);
     // console.log('project.component loading',this.project.name);
@@ -40,13 +40,13 @@ export class ProjectComponent {
     // this.nextProjectId = id -1;
     // this.prevProjectId = id +1;
 
-    this.getProject(id);
+    this.getProject(slug);
 
   }
 
-  getProject(id): void {
-    console.log('-- go get',id);
-    this.contentfulApiService.getProject(id)
+  getProject(slug): void {
+    console.log('-- go get',slug);
+    this.contentfulApiService.getProject(slug)
       .then(project => this.project = project[0])
       .then(project => console.log('GOT',this.project))
   }
