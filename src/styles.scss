@@ -85,6 +85,10 @@ body {
         padding: 4em 20vw;
       }
 
+      &--full-width {
+        padding: 4em;
+      }
+
       &:nth-of-type(odd) {
         background-image:
           radial-gradient(

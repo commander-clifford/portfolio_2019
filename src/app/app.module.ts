@@ -44,6 +44,7 @@ import { SafePipe } from './safe.pipe';
 import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectSectionComponent } from './components/project-section/project-section.component';
+import { WhirligigComponent } from './components/whirligig/whirligig.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { ProjectSectionComponent } from './components/project-section/project-se
     NavigationComponent,
     SafePipe,
     ProjectCardComponent,
-    ProjectSectionComponent
+    ProjectSectionComponent,
+    WhirligigComponent
   ],
   imports: [
     AppRoutingModule,

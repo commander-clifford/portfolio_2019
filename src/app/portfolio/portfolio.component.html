@@ -1,12 +1,29 @@
 <article class="portfolio page">
 
-  <section class="page__section">
+  <section class="page__section page__section--full-width">
 
-    <p style="text-align:center; margin: 3em auto;">(open during construction) I'm plugging this into Contentful CMS</p>
+    <div *ngIf="!isDataAvailable">
 
-    <div *ngFor="let project of projects_cda">
-      <app-project-card [project]="project"></app-project-card>
+      <div class="indicators-container growy-three-circles">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+        <span class="circle three"></span>
+      </div>
+
     </div>
+
+    <div *ngIf="isDataAvailable">
+
+      <app-whirligig [projects_cda]="projects_cda"></app-whirligig>
+
+      <!-- <hr>
+
+      <div *ngFor="let project of projects_cda">
+        <app-project-card [project]="project"></app-project-card>
+      </div> -->
+
+    </div>
+
 
   </section>
 

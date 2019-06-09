@@ -1,0 +1,37 @@
+<section class="contain">
+
+  <div class="row">
+    <div class="row__inner">
+
+      <!-- dummy tile for spacing -->
+      <div class="tile" style="width: 60px;"></div>
+
+      <div
+        *ngFor="let project of projects_cda"
+        class="tile"
+      >
+        <div class="tile__media">
+          <img
+            mat-card-image
+            [src]="project.fields.hero.fields.file.url"
+            [alt]="project.fields.hero.fields.description"
+            [height]="project.fields.hero.fields.file.details.image.height"
+            [width]="project.fields.hero.fields.file.details.image.width"
+          >
+        </div>
+
+        <div class="tile__details" [routerLink]="'/projects/'+project.fields.slug">
+          <div
+            class="tile__title">
+            <p [innerHtml]="project.fields.title"></p>
+            <p [innerHtml]="project.fields.subtitle"></p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
