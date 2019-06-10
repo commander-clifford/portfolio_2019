@@ -57,19 +57,16 @@ body {
     background-color: transparent;
   }
 
-  img { max-width: 100%; height: auto; }
-
   .page {
 
 
     overflow-x: hidden;
-    margin: 2vh 2vw;
-    width: 96vw;
-    min-height: 90vh;
+
+    // min-height: 90vh;
 
     margin: 0;
     width: 100%;
-    min-height: 90vh;
+
     // background: rgba(255,255,255,0.1);
     &__section {
       text-align: center;
@@ -86,7 +83,20 @@ body {
       }
 
       &--full-width {
-        padding: 4em;
+        padding: 0;
+        @include sm {
+          padding: 1em;
+        }
+        @include md {
+          padding: 2em;
+        }
+        @include lg {
+          padding: 3em;
+        }
+        @include xl {
+          padding: 4em;
+        }
+
       }
 
       &:nth-of-type(odd) {
@@ -302,4 +312,9 @@ body {
     .hidden-small { display: none;}
   }
 
+}
+
+img {
+  // max-width: 100%;
+  height: auto;
 }

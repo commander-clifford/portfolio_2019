@@ -1,37 +1,14 @@
-<section class="contain">
+<ngu-carousel
+  #myCarousel
+  [inputs]="carouselTile"
+  [dataSource]="projects_cda"
+  >
 
-  <div class="row">
-    <div class="row__inner">
+  <ngu-tile *nguCarouselDef="let project">
+    <app-project-card [project]="project"></app-project-card>
+  </ngu-tile>
 
-      <!-- dummy tile for spacing -->
-      <div class="tile" style="width: 60px;"></div>
+  <button NguCarouselPrev mat-icon-button class="button leftRs"><mat-icon>navigate_before</mat-icon></button>
+  <button NguCarouselNext mat-icon-button class="button rightRs"><mat-icon>navigate_next</mat-icon></button>
 
-      <div
-        *ngFor="let project of projects_cda"
-        class="tile"
-      >
-        <div class="tile__media">
-          <img
-            mat-card-image
-            [src]="project.fields.hero.fields.file.url"
-            [alt]="project.fields.hero.fields.description"
-            [height]="project.fields.hero.fields.file.details.image.height"
-            [width]="project.fields.hero.fields.file.details.image.width"
-          >
-        </div>
-
-        <div class="tile__details" [routerLink]="'/projects/'+project.fields.slug">
-          <div
-            class="tile__title">
-            <p [innerHtml]="project.fields.title"></p>
-            <p [innerHtml]="project.fields.subtitle"></p>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-</section>
+</ngu-carousel>

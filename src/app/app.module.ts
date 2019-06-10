@@ -5,6 +5,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './project/in-memory-data.service';
 
 import { ContenfulApiService }  from './contenful-api.service';
+import { NguCarouselModule } from '@ngu/carousel';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -45,6 +46,7 @@ import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectSectionComponent } from './components/project-section/project-section.component';
 import { WhirligigComponent } from './components/whirligig/whirligig.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -62,7 +64,8 @@ import { WhirligigComponent } from './components/whirligig/whirligig.component';
     SafePipe,
     ProjectCardComponent,
     ProjectSectionComponent,
-    WhirligigComponent
+    WhirligigComponent,
+    FooterComponent
   ],
   imports: [
     AppRoutingModule,
@@ -89,6 +92,7 @@ import { WhirligigComponent } from './components/whirligig/whirligig.component';
     MatToolbarModule,
     MatExpansionModule,
     MatGridListModule,
+    NguCarouselModule,
     OrderModule,
   ],
   providers: [

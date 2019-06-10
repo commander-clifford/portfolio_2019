@@ -36,7 +36,7 @@ export class PortfolioComponent implements OnInit { 
     this.contentfulApiService.getProjects()
       .then(projects_cda => this.projects_cda = projects_cda)
       .then(projects_cda => console.log('Portfolio pieces',projects_cda))
-      .then(this.loadPage());
+      .then(() => this.loadPage());
   }
 
   loadPage(){

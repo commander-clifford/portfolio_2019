@@ -1,4 +1,27 @@
 mat-card {
+
+  mat-card-title {
+    font-size: 2em;
+    text-align: left;
+  }
+
+  mat-card-subtitle {
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  mat-card-content {
+    text-align: left;
+    margin: 0 16px;
+  }
+
+  mat-card-actions {
+    text-align: right;
+  }
+  
+}
+
+mat-card.sideways {
   position: relative;
   height: 25vh;
   width: 80%;
@@ -14,21 +37,6 @@ mat-card {
     width: 25%;
     height: auto;
     margin: 0 2em 0 0;
-  }
-
-  mat-card-title {
-    font-size: 2em;
-    text-align: left;
-  }
-
-  mat-card-subtitle {
-    font-size: 1.2em;
-    text-align: left;
-  }
-
-  mat-card-content {
-    text-align: left;
-    margin: 0 16px;
   }
 
   mat-card-actions {

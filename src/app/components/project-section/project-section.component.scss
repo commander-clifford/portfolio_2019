@@ -3,16 +3,27 @@
 
 .section {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   width: 100%;
+
+  flex-direction: column;
+  justify-content: center;
+
+  @include md {
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 
   &__title {
     font-size: 2em;
     font-weight: bold;
+    text-align: left;
   }
   &__content {
-    width: 60%;
     text-align: left;
+    width: 90%;
+
+    @include md {
+      width: 60%;
+    }
   }
 }

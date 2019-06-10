@@ -66,6 +66,10 @@
         $color-white,
         $color-dark-white
       );
+
+    img {
+      max-width: 100%;
+    }
   }
 
   .supporting {

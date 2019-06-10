@@ -20,7 +20,7 @@
   .indicators-container {
     position: relative;
     margin: 0 auto;
-    height: 20vh;
+    height: 60vh;
   }
 
   .growy-three-circles {
@@ -51,11 +51,11 @@
   @keyframes pulse {
     0% {
       transform: scale(1);
-      opacity: 1;
+      background-color: $color-primary;
     }
     100% {
       transform: scale(0.8);
-      opacity: 0.8;
+      background-color: $color-light-red;
     }
   }
 
