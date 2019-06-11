@@ -4,6 +4,20 @@
 
   <section class="page__section page__section--style1 page__section--flex">
 
+    <div *ngIf="!isDataAvailable" [style.width]="'100%'">
+
+      <div class="indicators-container">
+        <div class="indicators growy-three-circles">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+          <span class="circle three"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <div *ngIf="isDataAvailable">
+
       <div class="project__brief hero__brief">
         <h2 class="brief__title" [innerHtml]="project.fields.title | uppercase"></h2>
         <p class="brief__brief" [innerHtml]="project.fields.subtitle"></p>
@@ -46,68 +60,40 @@
 
       </div>
 
-  </section>
-
-  <section class="page__section page__section--hero page__section--style-trans">
-
-    <div class="project__hero">
-
-      <div class="">
-
-        <img *ngIf="!project.fields.liveUrl || !project.fields.showDemoOnScreen"class="hero__img" src="{{project.fields.hero.fields.file.url}}" alt="{{project.fields.hero.fields.description}}" [width]="480" [height]="400">
-
-        <iframe
-          *ngIf="project.fields.liveUrl && project.fields.showDemoOnScreen"
-          [width]="project.fields.liveHeroWidth"
-          [height]="project.fields.liveHeroHeight"
-          [src]="project.fields.liveUrl | safe: 'resourceUrl'">
-        </iframe>
-
-      </div>
-
     </div>
 
   </section>
 
-  <app-project-section
-    class="project__section page__section page__section--flex"
-    *ngFor="let section of project.fields.sections"
-    [section]="section"
-  >
-  </app-project-section>
+  <div *ngIf="isDataAvailable">
+    <section
+       *ngIf="isDataAvailable"
+       class="page__section page__section--hero page__section--style-trans">
 
-  <!-- TODO: Cut below -->
-  <section *ngIf="false" class="supporting page__section page__section">
+      <div class="project__hero">
 
-    <div class="flex">
+        <div class="">
 
-      <div *ngIf="project.fields.imgs.supportingImgs" class="left">
+          <img *ngIf="!project.fields.liveUrl || !project.fields.showDemoOnScreen"class="hero__img" src="{{project.fields.hero.fields.file.url}}" alt="{{project.fields.hero.fields.description}}" [width]="480" [height]="400">
 
-        <div class="supporting__images" *ngIf="project.fields.imgs.supportingImgs">
-          <a *ngFor="let supportingImg of project.fields.imgs.supportingImgs" href="{{supportingImg}}" target="_blank">
-            <img
-              src="{{supportingImg}}"
-              />
-          </a>
+          <iframe
+            *ngIf="project.fields.liveUrl && project.fields.showDemoOnScreen"
+            [width]="project.fields.liveHeroWidth"
+            [height]="project.fields.liveHeroHeight"
+            [src]="project.fields.liveUrl | safe: 'resourceUrl'">
+          </iframe>
+
         </div>
 
-        <!-- <div class="supporting__images" *ngIf="!project.fields.imgs.supportingImgs">
-          <img src="{{project.fields.thumbnail.url}}" alt="">
-        </div> -->
-
       </div>
 
-      <div [class.right]="project.fields.imgs.supportingImgs" style="margin: 0 auto;">
+    </section>
 
-        <span class="project__elaborate" *ngFor="let elaborate of project.fields.elaborate">
-          <p [innerHtml]="elaborate"></p>
-        </span>
-
-      </div>
-
-    </div>
-
-  </section>
-  <!-- TODO: Cut above -->
+    <app-project-section
+      class="project__section page__section page__section--flex"
+      *ngFor="let section of project.fields.sections"
+      [section]="section"
+    >
+    </app-project-section>
+  </div>
 
 </article>

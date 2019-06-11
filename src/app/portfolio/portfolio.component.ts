@@ -14,9 +14,9 @@ import { Entry } from 'contentful';
 export class PortfolioComponent implements OnInit { 
 
   private projects_cda: Entry<any>[] = []; // define a private class property to the class which defines that this component will include a collection of several projects
-  projects: object;
-  selectedProject: Project;
-  isDataAvailable: boolean = false;
+  private projects: object;
+  private selectedProject: Project;
+  private isDataAvailable: boolean = false;
 
   constructor(
     private projectService: ProjectService,
@@ -40,7 +40,7 @@ export class PortfolioComponent implements OnInit { 
   }
 
   loadPage(){
-    console.log('BOOM');
+
     setTimeout(function(){
       this.isDataAvailable = true;
     }.bind(this), 400*4);

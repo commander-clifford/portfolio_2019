@@ -1,6 +1,6 @@
 <article class="portfolio page">
 
-  <section class="page__section page__section--full-width">
+  <section class="page__section page__section--full-width" style="min-height: 60vh;">
 
     <div *ngIf="!isDataAvailable">
 
@@ -14,7 +14,9 @@
 
     <div *ngIf="isDataAvailable">
 
-      <app-whirligig [projects_cda]="projects_cda"></app-whirligig>
+      <app-whirligig
+        [projects_cda]="projects_cda">
+      </app-whirligig>
 
       <!-- <hr>
 

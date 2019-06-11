@@ -18,7 +18,10 @@ export class ProjectComponent {
   // nextProjectId;
   // prevProjectId;
 
+  private isDataAvailable: boolean = false;
   private project: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
+  private projectPrev: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
+  private projectNext: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
 
   constructor(
 
@@ -42,13 +45,44 @@ export class ProjectComponent {
 
     this.getProject(slug);
 
+
+
   }
 
   getProject(slug): void {
     console.log('-- go get',slug);
-    this.contentfulApiService.getProject(slug)
-      .then(project => this.project = project[0])
+    this.contentfulApiService.getProjectBySlug(slug)
+      .then(project => this.project = project)
       .then(project => console.log('GOT',this.project))
+      .then(project => console.log('GOT',this.project.fields.displayOrder))
+      .then(() => this.getPrevProject(this.project.fields.displayOrder-1))
+      .then(() => this.getNextProject(this.project.fields.displayOrder+1))
+      .then(() => this.loadPage())
+  }
+
+
+
+
+  getPrevProject(id): void {
+    console.log('getPrevProject',id);
+    this.contentfulApiService.getProjectByOrderId(id)
+    .then(projectPrev => this.projectPrev = projectPrev)
+    .then(projectPrev => console.log('GOT-',this.projectPrev))
+  }
+  getNextProject(id): void {
+    console.log('getNextProject',id);
+    this.contentfulApiService.getProjectByOrderId(id)
+    .then(projectNext => this.projectNext = projectNext)
+    .then(projectNext => console.log('GOT+',this.projectNext))
+  }
+
+
+
+
+  loadPage(){
+    setTimeout(function(){
+      this.isDataAvailable = true;
+    }.bind(this), 400*2);
   }
 
 
