@@ -55,8 +55,8 @@ export class ProjectComponent {
       .then(project => this.project = project)
       .then(project => console.log('GOT',this.project))
       .then(project => console.log('GOT',this.project.fields.displayOrder))
-      .then(() => this.getPrevProject(this.project.fields.displayOrder-1))
-      .then(() => this.getNextProject(this.project.fields.displayOrder+1))
+      // .then(() => this.getPrevProject(this.project.fields.displayOrder-1))
+      // .then(() => this.getNextProject(this.project.fields.displayOrder+1))
       .then(() => this.loadPage())
   }
 

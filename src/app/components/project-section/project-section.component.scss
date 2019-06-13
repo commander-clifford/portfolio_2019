@@ -9,6 +9,7 @@
   justify-content: center;
 
   @include md {
+    flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
   }

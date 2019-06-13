@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { filter, map, share, pairwise, startWith } from 'rxjs/operators';
-import { Project } from '../project/project';
 import { routerTransition } from '../router.animations';
 import { RouterOutlet } from '@angular/router';
 import { ProjectService } from '../project/project.service';
@@ -24,21 +23,12 @@ import { Entry } from 'contentful';
 export class ProjectsComponent {
 
   private isDataAvailable: boolean = false;
-  private project: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
-  private projectPrev: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
-  private projectNext: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
-
-  private id: number;
-  private projects: Project[] = [];
-  // private project: Project;
-  private prevProject: Project;
-  private nextProject: Project;
-  private projectChange$: Observable<number>;
-  private next$: Observable<number>;
-  private prev$: Observable<number>;
-  private routeTrigger$: Observable<object>;
+  private project: Entry<any>;
+  private projectPrev: Entry<any>;
+  private projectNext: Entry<any>;
 
   constructor(
+
     private route: ActivatedRoute,
     private router: Router,
     private projectService: ProjectService,
@@ -47,34 +37,11 @@ export class ProjectsComponent {
 
   ) {
 
-    // const { slug } = route.snapshot.params;
-    // console.log('S Define ID',slug);
-
     let url = router.routerState.snapshot.url;
     let sub = url.lastIndexOf('/');
     let slug = url.substring(sub + 1);
-    console.log('S Define ID',slug);
-    // console.log('this.data',this.data);
 
     this.getProject(slug);
-    //
-    // this.projects = projectService.getProjects();
-    // console.log('PROJECTS.COMP this.projects',this.projects);
-    //
-    // this.project = projectService.getProject(this.id);
-    // console.log('PROJECTS.COMP this.project',this.project);
-    //
-    // this.nextProject = projectService.getProject(this.id+1);
-    // this.nextProject = this.nextProject ? this.nextProject : null;
-    // console.log('-------- PROJECTS.COMP NEXT.project',this.nextProject);
-    //
-    // this.prevProject = projectService.getProject(this.id-1);
-    // this.prevProject = this.prevProject ? this.prevProject : null;
-    // console.log('-------- PROJECTS.COMP PREV.project',this.prevProject);
-    //
-    // this.projectChange$ = projectsRouting.projectChange$;
-
-    // this.setupRouting();
 
   }
 
@@ -94,7 +61,9 @@ export class ProjectsComponent {
     this.contentfulApiService.getProjectByOrderId(id)
     .then(projectPrev => this.projectPrev = projectPrev)
     .then(projectPrev => console.log('GOT-',this.projectPrev))
+
   }
+  
   getNextProject(id): void {
     console.log('getNextProject',id);
     this.contentfulApiService.getProjectByOrderId(id)
@@ -110,34 +79,9 @@ export class ProjectsComponent {
 
   ngOnInit(){}
 
-  private setupRouting() {
-    this.prev$ = this.projectChange$
-      .pipe(
-        map(index => index === 0 ? index : index - 1),
-        share()
-      );
-    this.next$ = this.projectChange$
-      .pipe(
-        map(index => index === this.projects.length - 1 ? index : index + 1),
-        share()
-      );
-
-    this.routeTrigger$ = this.projectChange$
-      .pipe(
-        startWith(0),
-        pairwise(),
-        map(([prev, curr]) => ({
-          value: curr,
-          params: {
-            offsetEnter: prev > curr ? 100 : -100,
-            offsetLeave: prev > curr ? -100 : 100
-          }
-        })),
-      );
-  }
-
   getState(outlet) {
     let state = outlet.activatedRouteData.state;
     return outlet.activatedRouteData.state;
   }
+
 }
