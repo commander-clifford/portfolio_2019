@@ -50,6 +50,11 @@ body {
     }
   }
 
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
   .material-icons {
     font-size: 1.2em;
   }

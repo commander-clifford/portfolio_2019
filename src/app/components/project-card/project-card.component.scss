@@ -17,8 +17,14 @@ mat-card {
 
   mat-card-actions {
     text-align: right;
+    button {
+      mat-icon {
+        transform: translate(-6px, -4px);
+        font-size: 26px;
+      }
+    }
   }
-  
+
 }
 
 mat-card.sideways {

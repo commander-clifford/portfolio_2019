@@ -47,6 +47,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { ProjectSectionComponent } from './components/project-section/project-section.component';
 import { WhirligigComponent } from './components/whirligig/whirligig.component';
 import { FooterComponent } from './footer/footer.component';
+import { SanitizeHtmlPipe } from './sanitize-html.pipe';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { FooterComponent } from './footer/footer.component';
     ProjectCardComponent,
     ProjectSectionComponent,
     WhirligigComponent,
-    FooterComponent
+    FooterComponent,
+    SanitizeHtmlPipe
   ],
   imports: [
     AppRoutingModule,
