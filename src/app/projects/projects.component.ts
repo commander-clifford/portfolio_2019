@@ -63,7 +63,7 @@ export class ProjectsComponent {
     .then(projectPrev => console.log('GOT-',this.projectPrev))
 
   }
-  
+
   getNextProject(id): void {
     console.log('getNextProject',id);
     this.contentfulApiService.getProjectByOrderId(id)
@@ -74,7 +74,7 @@ export class ProjectsComponent {
   loadPage(){
     setTimeout(function(){
       this.isDataAvailable = true;
-    }.bind(this), 400*2);
+    }.bind(this), 400*0);
   }
 
   ngOnInit(){}
