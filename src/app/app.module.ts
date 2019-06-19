@@ -48,6 +48,8 @@ import { ProjectSectionComponent } from './components/project-section/project-se
 import { WhirligigComponent } from './components/whirligig/whirligig.component';
 import { FooterComponent } from './footer/footer.component';
 import { SanitizeHtmlPipe } from './sanitize-html.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -96,6 +98,7 @@ import { SanitizeHtmlPipe } from './sanitize-html.pipe';
     MatGridListModule,
     NguCarouselModule,
     OrderModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: CustomReuseStrategy },
