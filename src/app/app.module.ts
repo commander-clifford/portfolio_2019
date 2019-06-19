@@ -38,6 +38,7 @@ import { SafePipe } from './safe.pipe';
 
 // import { GoogleAnalyticsModule, GA_TOKEN } from 'googleanalytics-angular';
 import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
+import { InstagramFeedComponent } from './components/instagram-feed/instagram-feed.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
     PortfolioComponent,
     ResumeComponent,
     NavigationComponent,
-    SafePipe
+    SafePipe,
+    InstagramFeedComponent
   ],
   imports: [
     AppRoutingModule,
