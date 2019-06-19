@@ -24,7 +24,9 @@ body {
 
   padding: 0;
 
-  h1, h2, h3, h4, h5, h6 {
+  * {font-family: 'Raleway', serif;}
+
+  h1, h2, h3, h4, h5, h6, mat-card-title {
     font-family: 'Teko', sans-serif;
     text-transform: uppercase;
     font-weight: 100;
@@ -48,6 +50,11 @@ body {
     }
   }
 
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
   .material-icons {
     font-size: 1.2em;
   }
@@ -55,22 +62,18 @@ body {
     background-color: transparent;
   }
 
-  img { max-width: 100%; height: auto; }
-
   .page {
 
 
     overflow-x: hidden;
-    margin: 2vh 2vw;
-    width: 96vw;
-    min-height: 90vh;
+
+    // min-height: 90vh;
 
     margin: 0;
     width: 100%;
-    min-height: 90vh;
+
     // background: rgba(255,255,255,0.1);
     &__section {
-      padding: 4em 20vw;
       text-align: center;
       position: relative;
       background-image:
@@ -78,10 +81,28 @@ body {
           $color-dark-white,
           transparent
         );
-      // box-shadow: 0px 2px 8px 2px $color-dark-red;
-      //
-      // margin-bottom: 4rem;
 
+      padding: 2em;
+      @include md {
+        padding: 4em 20vw;
+      }
+
+      &--full-width {
+        padding: 0;
+        @include sm {
+          padding: 1em;
+        }
+        @include md {
+          padding: 2em;
+        }
+        @include lg {
+          padding: 3em;
+        }
+        @include xl {
+          padding: 4em;
+        }
+
+      }
 
       &:nth-of-type(odd) {
         background-image:
@@ -99,14 +120,21 @@ body {
           );
       }
 
-      &--flex {
-        display: flex;
-        justify-content: space-between;
-
-        div:last-of-type {
-
-
+      &--hero {
+        padding: 0.5em;
+        @include md {
+          padding: 4em 20vw;
         }
+      }
+
+      &--flex {
+        display: block;
+        @include md {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        div:last-of-type {}
 
       }
       // &--style1 {
@@ -289,4 +317,9 @@ body {
     .hidden-small { display: none;}
   }
 
+}
+
+img {
+  // max-width: 100%;
+  height: auto;
 }

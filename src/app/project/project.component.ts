@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Project } from './project';
 import { ProjectService } from './project.service';
 import { ProjectsRoutingService } from '../projects/projects-routing.service';
+import { ContenfulApiService } from '../contenful-api.service';
+import { Entry } from 'contentful';
 
 @Component({
   selector: 'app-project',
@@ -11,30 +13,76 @@ import { ProjectsRoutingService } from '../projects/projects-routing.service';
 })
 export class ProjectComponent {
 
-  project: Project;
-  projectService;
-  nextProjectId;
-  prevProjectId;
+  // project: Project;
+  // projectService;
+  // nextProjectId;
+  // prevProjectId;
+
+  private isDataAvailable: boolean = false;
+  private project: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
+  private projectPrev: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
+  private projectNext: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
 
   constructor(
 
-    route: ActivatedRoute,
-    projectService: ProjectService,
-    projectsRouting: ProjectsRoutingService,
-
+    private route: ActivatedRoute,
+    // private projectService: ProjectService,
+    private projectsRouting: ProjectsRoutingService,
+    private contentfulApiService: ContenfulApiService,
 
   ) {
 
-    const { id } = route.snapshot.params;
+    const { slug } = route.snapshot.params;
+    console.log('Define ID',slug);
 
-    this.project = projectService.getProject(id);
-    console.log('project.component loading',this.project.name);
+    // this.project = projectService.getProject(id);
+    // console.log('project.component loading',this.project.name);
 
-    projectsRouting.projectChange$.next(+id);
+    // projectsRouting.projectChange$.next(+id);
 
-    this.nextProjectId = id -1;
-    this.prevProjectId = id +1;
+    // this.nextProjectId = id -1;
+    // this.prevProjectId = id +1;
 
+    this.getProject(slug);
+
+
+
+  }
+
+  getProject(slug): void {
+    console.log('-- go get',slug);
+    this.contentfulApiService.getProjectBySlug(slug)
+      .then(project => this.project = project)
+      .then(project => console.log('GOT',this.project))
+      .then(project => console.log('GOT',this.project.fields.displayOrder))
+      // .then(() => this.getPrevProject(this.project.fields.displayOrder-1))
+      // .then(() => this.getNextProject(this.project.fields.displayOrder+1))
+      .then(() => this.loadPage())
+  }
+
+
+
+
+  getPrevProject(id): void {
+    console.log('getPrevProject',id);
+    this.contentfulApiService.getProjectByOrderId(id)
+    .then(projectPrev => this.projectPrev = projectPrev)
+    .then(projectPrev => console.log('GOT-',this.projectPrev))
+  }
+  getNextProject(id): void {
+    console.log('getNextProject',id);
+    this.contentfulApiService.getProjectByOrderId(id)
+    .then(projectNext => this.projectNext = projectNext)
+    .then(projectNext => console.log('GOT+',this.projectNext))
+  }
+
+
+
+
+  loadPage(){
+    setTimeout(function(){
+      this.isDataAvailable = true;
+    }.bind(this), 400*2);
   }
 
 
