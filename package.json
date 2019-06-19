@@ -27,7 +27,7 @@
     "angular-ga": "^1.0.0",
     "angular-google-analytics": "^1.1.8",
     "angular-in-memory-web-api": "^0.6.1",
-    "contentful": "^7.6.0",
+    "contentful": "^7.8.0",
     "core-js": "^2.6.5",
     "googleanalytics-angular": "^1.0.5",
     "gsap": "^2.1.2",
