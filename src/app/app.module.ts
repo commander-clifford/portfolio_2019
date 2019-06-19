@@ -38,6 +38,7 @@ import { ProjectComponent } from './project/project.component';
 import { MessagesComponent } from './messages/messages.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
+
 import { NavigationComponent } from './navigation/navigation.component';
 import { SafePipe } from './safe.pipe';
 
