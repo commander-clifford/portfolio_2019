@@ -2,15 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
-
 import { Project } from '../project/project';
 import { ProjectService } from '../project/project.service';
 import { OrderPipe } from 'ngx-order-pipe';
 
-import 'instafeed';
-import * as Instafeed from 'instafeed';
-
-// import 'planck-js';
+import * as Instafeed from 'instafeed.js'; // https://www.npmjs.com/package/instafeed.js
 
 @Component({
   selector: 'app-about',
@@ -35,7 +31,6 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     this.getProjects();
-    // https://www.npmjs.com/package/instafeed
     var feed1 = new Instafeed({
       get: 'user',
       userId: '3530247962',
@@ -44,9 +39,7 @@ export class AboutComponent implements OnInit {
       target: 'instafeed-1',
       sort: "most-recent",
       limit: 20,
-      videoTemplate: "<a class=\"instafeed__card\" href=\"{{link}}\" target=\"_blank\"><img src=\"{{previewImage}}\" width=\"{{previewWidth}}\" height=\"{{previewHeight}}\"></a>",
-      carouselFrameTemplate: "<a class=\"instafeed__card\" href=\"{{link}}\" target=\"_blank\"><img src=\"{{previewImage}}\" width=\"{{previewWidth}}\" height=\"{{previewHeight}}\"></a>",
-      imageTemplate: "<a class=\"instafeed__card\" href=\"{{link}}\" target=\"_blank\"><img src=\"{{image}}\" width=\"{{width}}\" height=\"{{height}}\"></a>",
+      template: "<a class=\"instafeed__card\" href=\"{{link}}\" target=\"_blank\"><img src=\"{{image}}\" width=\"{{width}}\" height=\"{{height}}\"></a>",
       onSuccess: function() {},
       onError: function(message) { console.log(message); }
 
@@ -61,9 +54,7 @@ export class AboutComponent implements OnInit {
       target: 'instafeed-2',
       sort: "most-liked",
       limit: 20,
-      videoTemplate: "<a class=\"instafeed__card\" href=\"{{link}}\" target=\"_blank\"><img src=\"{{previewImage}}\" width=\"{{previewWidth}}\" height=\"{{previewHeight}}\"></a>",
-      carouselFrameTemplate: "<a class=\"instafeed__card\" href=\"{{link}}\" target=\"_blank\"><img src=\"{{previewImage}}\" width=\"{{previewWidth}}\" height=\"{{previewHeight}}\"></a>",
-      imageTemplate: "<a class=\"instafeed__card\" href=\"{{link}}\" target=\"_blank\"><img src=\"{{image}}\" width=\"{{width}}\" height=\"{{height}}\"></a>",
+      template: "<a class=\"instafeed__card\" href=\"{{link}}\" target=\"_blank\"><img src=\"{{image}}\" width=\"{{width}}\" height=\"{{height}}\"></a>",
       onSuccess: function() {},
       onError: function(message) { console.log(message); }
 
