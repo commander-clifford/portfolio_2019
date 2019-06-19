@@ -40,9 +40,12 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SafePipe } from './safe.pipe';
-
-// import { GoogleAnalyticsModule, GA_TOKEN } from 'googleanalytics-angular';
 import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { ProjectSectionComponent } from './components/project-section/project-section.component';
+import { WhirligigComponent } from './components/whirligig/whirligig.component';
+import { FooterComponent } from './footer/footer.component';
+import { SanitizeHtmlPipe } from './sanitize-html.pipe';
 import { InstagramFeedComponent } from './components/instagram-feed/instagram-feed.component';
 
 
@@ -59,7 +62,13 @@ import { InstagramFeedComponent } from './components/instagram-feed/instagram-fe
     ResumeComponent,
     NavigationComponent,
     SafePipe,
-    InstagramFeedComponent
+    InstagramFeedComponent,
+    ProjectCardComponent,
+    ProjectSectionComponent,
+    WhirligigComponent,
+    FooterComponent,
+    SanitizeHtmlPipe,
+    InstagramFeedComponent,
   ],
   imports: [
     AppRoutingModule,

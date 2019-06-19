@@ -6,6 +6,9 @@ import { Project } from '../project/project';
 import { ProjectService } from '../project/project.service';
 import { OrderPipe } from 'ngx-order-pipe';
 
+import { ContenfulApiService } from '../contenful-api.service';
+import { Entry } from 'contentful';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
