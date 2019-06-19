@@ -48,6 +48,7 @@ import { ProjectSectionComponent } from './components/project-section/project-se
 import { WhirligigComponent } from './components/whirligig/whirligig.component';
 import { FooterComponent } from './footer/footer.component';
 import { SanitizeHtmlPipe } from './sanitize-html.pipe';
+import { InstagramFeedComponent } from './components/instagram-feed/instagram-feed.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { SanitizeHtmlPipe } from './sanitize-html.pipe';
     ProjectSectionComponent,
     WhirligigComponent,
     FooterComponent,
-    SanitizeHtmlPipe
+    SanitizeHtmlPipe,
+    InstagramFeedComponent,
   ],
   imports: [
     AppRoutingModule,

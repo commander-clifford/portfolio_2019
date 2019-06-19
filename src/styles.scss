@@ -238,16 +238,7 @@ body {
     }
   }
 
-  .instafeed {
-    &__card {
-      display: block;
-      border-right: 1px solid $color-dark-white;
-      img {
-        display: block;
-        max-width: unset;
-      }
-    }
-  }
+
 
   .text {
     &--fineprint {
