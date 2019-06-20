@@ -1,37 +1,31 @@
 <article class="portfolio page">
 
-  <section
-    class="page__section page__section--style1"
-    style="padding: 2em;">
+  <section class="page__section page__section--full-width" style="min-height: 60vh;">
 
-    <h2 class="page__headline">All the Projects</h2>
+    <div *ngIf="!isDataAvailable">
 
-    <p>
-      Thanks for checking out my projects!
-      <br>
-      <br>
-      Here you'll find out about a few of the things I'm working on. I'm updating this part as I go, so be sure to contact me about anything specific.
-      <br>
-      <br>
-      (open during construction)
-    </p>
+      <div class="indicators-container growy-three-circles">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+        <span class="circle three"></span>
+      </div>
 
-    <mat-grid-list
-      class="portfolio__list"
-      cols="4"
-      rowHeight="2:1">
-      <mat-grid-tile
-        *ngFor="let project of projects | orderBy: 'id':true"
-        class="portfolio__tile"
-        [colspan]="project.tile.cols"
-        [rowspan]="project.tile.rows"
-        [style.backgroundColor]="project.tile.color"
-        [style.backgroundImage]="'url('+ project.thumbnail.url +')'"
-        routerLink="/projects/{{project.id}}"
-        [class.selected]="hero === selectedHero"
-        >
-      </mat-grid-tile>
-    </mat-grid-list>
+    </div>
+
+    <div *ngIf="isDataAvailable">
+
+      <app-whirligig
+        [projects_cda]="projects_cda">
+      </app-whirligig>
+
+      <!-- <hr>
+
+      <div *ngFor="let project of projects_cda">
+        <app-project-card [project]="project"></app-project-card>
+      </div> -->
+
+    </div>
+
 
   </section>
 

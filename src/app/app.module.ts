@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
+
 import { HttpClientModule }    from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './project/in-memory-data.service';
+
+import { ContenfulApiService }  from './contenful-api.service';
+import { NguCarouselModule } from '@ngu/carousel';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -33,12 +38,19 @@ import { ProjectComponent } from './project/project.component';
 import { MessagesComponent } from './messages/messages.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
+
 import { NavigationComponent } from './navigation/navigation.component';
 import { SafePipe } from './safe.pipe';
 
 // import { GoogleAnalyticsModule, GA_TOKEN } from 'googleanalytics-angular';
 import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
-import { InstagramFeedComponent } from './components/instagram-feed/instagram-feed.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { ProjectSectionComponent } from './components/project-section/project-section.component';
+import { WhirligigComponent } from './components/whirligig/whirligig.component';
+import { FooterComponent } from './footer/footer.component';
+import { SanitizeHtmlPipe } from './sanitize-html.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -54,7 +66,11 @@ import { InstagramFeedComponent } from './components/instagram-feed/instagram-fe
     ResumeComponent,
     NavigationComponent,
     SafePipe,
-    InstagramFeedComponent
+    ProjectCardComponent,
+    ProjectSectionComponent,
+    WhirligigComponent,
+    FooterComponent,
+    SanitizeHtmlPipe
   ],
   imports: [
     AppRoutingModule,
@@ -81,11 +97,14 @@ import { InstagramFeedComponent } from './components/instagram-feed/instagram-fe
     MatToolbarModule,
     MatExpansionModule,
     MatGridListModule,
+    NguCarouselModule,
     OrderModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: CustomReuseStrategy },
-    { provide: GA_TOKEN, useValue: 'UA-139887211-2' }
+    { provide: GA_TOKEN, useValue: 'UA-139887211-2' },
+    ContenfulApiService,
   ],
   bootstrap: [AppComponent]
 })
