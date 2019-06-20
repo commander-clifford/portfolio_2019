@@ -16,16 +16,16 @@ import { Entry } from 'contentful';
 })
 export class AboutComponent implements OnInit {
 
-  projects: object;
-  selectedProject: Project;
-  private projects_cda: Entry<any>[] = []; // define a private class property to the class which defines that this component will include a collection of several projects
+  public projects: object;
+  public selectedProject: Project;
+  public projects_cda: Entry<any>[] = []; // define a private class property to the class which defines that this component will include a collection of several projects
 
   constructor(
-    private route: ActivatedRoute,
-    private location: Location,
-    private router: Router,
-    private projectService: ProjectService,
-    private contentfulApiService: ContenfulApiService,
+    public route: ActivatedRoute,
+    public location: Location,
+    public router: Router,
+    public projectService: ProjectService,
+    public contentfulApiService: ContenfulApiService,
   ) { }
 
   getProjects(): void {

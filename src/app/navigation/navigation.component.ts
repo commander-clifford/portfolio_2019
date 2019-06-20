@@ -12,7 +12,7 @@ export class NavigationComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private router: Router,
+    public router: Router,
   ) { }
 
   ngOnInit() {

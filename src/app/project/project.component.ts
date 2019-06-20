@@ -18,7 +18,7 @@ export class ProjectComponent {
   // nextProjectId;
   // prevProjectId;
 
-  private isDataAvailable: boolean = false;
+  public isDataAvailable: boolean = false;
   private project: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
   private projectPrev: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
   private projectNext: Entry<any>; // define a private class property to the class which defines that this component will include a collection of several projects
