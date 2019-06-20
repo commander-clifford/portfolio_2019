@@ -42,7 +42,6 @@ import { ResumeComponent } from './resume/resume.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SafePipe } from './safe.pipe';
 
-// import { GoogleAnalyticsModule, GA_TOKEN } from 'googleanalytics-angular';
 import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectSectionComponent } from './components/project-section/project-section.component';
@@ -51,7 +50,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SanitizeHtmlPipe } from './sanitize-html.pipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-
+import { InstagramFeedComponent } from './components/instagram-feed/instagram-feed.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +67,7 @@ import { environment } from '../environments/environment';
     SafePipe,
     ProjectCardComponent,
     ProjectSectionComponent,
+    InstagramFeedComponent,
     WhirligigComponent,
     FooterComponent,
     SanitizeHtmlPipe
