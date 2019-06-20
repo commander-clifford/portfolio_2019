@@ -14,7 +14,7 @@
     </div>
   </section>
 
-  <section id="instafeed-2" class="instafeed"></section>
+  <app-instagram-feed sort="most-liked"></app-instagram-feed>
 
   <section class="page__section">
 
@@ -26,7 +26,6 @@
             <p>I've studied engineering, psychology and design. In 2014 I graduated with a Bachelors Degree in Web Design with a 4.0 GPA as Valedictorian. Today, my favorite exercise is collaborating with team members to design and build game changing experiences from the&nbsp;ground&nbsp;up.</p>
 
             <hr>
-
 
             <p>This makes me fit for a somewhat niche position as a ‘Creative Technologist’. My ideal role is one where I’m exploring the boundaries of how humans and&nbsp;computers&nbsp;connect.</p>
 
@@ -138,7 +137,7 @@
 
   </section>
 
-  <section id="instafeed-1" class="instafeed"></section>
+  <app-instagram-feed sort="most-recent"></app-instagram-feed>
 
   <section class="page__section">
 
@@ -213,14 +212,6 @@
 
     <h2 class="page__headline">Portfolio</h2>
 
-    Check out some of the
-    <a
-      routerLink="/portfolio"
-      routerLinkActive="app__link--active"
-      >
-      things I've been up to
-    </a>
-
     <app-whirligig
       [projects_cda]="projects_cda">
     </app-whirligig>
@@ -249,203 +240,6 @@
             </div>
           </div>
 
-          <!-- <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-2.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-3.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-4.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-5.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-6.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-7.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-8.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-9.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-10.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-11.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-12.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-13.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-14.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-15.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-16.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-17.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-18.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-19.jpg" alt=""  />
-            </div>
-            <div class="tile__details">
-              <div class="tile__title">
-                Top Gear
-              </div>
-            </div>
-          </div> -->
 
         </div>
       </div>
@@ -456,55 +250,19 @@
 
   <app-footer></app-footer>
 
-  <!-- <section class="action">
-    <button
-      class="action__link"
-      mat-stroked-button
-
-      routerLink="/portfolio"
-      routerLinkActive="app__link--active">
-      Portfolio<mat-icon>navigate_next</mat-icon>
-    </button>
-  </section> -->
-
-  <!--  -->
-
 </article>
-
-
-
-
-
 
 <!--
 
 I've been working with digital media for over 10 years, and I love learning new things everyday.
 
-
-
-
-
 <p>I’m experienced with HTML5, CSS3, JavaScript, PHP, AngularJS, React, Handlebars and other JS frameworks.</p>
 
 <p>Specialities: Design strategy, user interface, interaction design, research, direct marketing, wireframing, prototyping, responsive web design, test driven development, animation, motion, typography, HTML/CSS/JS, AngularJS, Google Material</p>
 
-
-
-
-
-
-
-
-
--->
-<!--
-
 <p>I’m experienced with HTML5, CSS3, JavaScript, PHP, AngularJS, React, Handlebars and other JS frameworks.</p>
 
 <p>Specialities: Design strategy, user interface, interaction design, research, direct marketing, wireframing, prototyping, responsive web design, test driven development, animation, motion, typography, HTML/CSS/JS, AngularJS, Google Material</p>
-
-
-
 
 Minimum qualifications:
 
@@ -536,8 +294,5 @@ Embrace emerging standards while promoting best practices in order to push the l
 Manage your own time, and work well both independently and as part of a team.
 Launch, iterate and make a difference. Provide front-end coding expertise, and help make our products better for users.
 Design and develop the front ends of user-facing products.
-
-
-
 
 -->

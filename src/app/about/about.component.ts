@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
-
 import { Project } from '../project/project';
 import { ProjectService } from '../project/project.service';
 import { OrderPipe } from 'ngx-order-pipe';
