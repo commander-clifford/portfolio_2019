@@ -1,4 +1,5 @@
 import {trigger, animate, style, group, query as q, transition, stagger,} from '@angular/animations';
+import { query } from './router.animationsQuery.js';
 
 // export function query = ( s,a,o ={optional:true} ) => q(s,a,o);
 
