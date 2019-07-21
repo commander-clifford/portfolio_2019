@@ -1,11 +1,7 @@
 import {trigger, animate, style, group, query as q, transition, stagger,} from '@angular/animations';
+import { query } from './router.animationsQuery.js';
 
-export const durationNum = 800;
-export const duration = durationNum+'ms ';
-export const mockDelayNum = 2000;
-export const mockDelay = mockDelayNum+'ms ';
-
-const query = (s,a,o={optional:true})=>q(s,a,o);
+// export function query = ( s,a,o ={optional:true} ) => q(s,a,o);
 
 export const routerTransition = trigger('routerTransition', [
 

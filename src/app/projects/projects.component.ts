@@ -22,10 +22,10 @@ import { Entry } from 'contentful';
 
 export class ProjectsComponent {
 
-  private isDataAvailable: boolean = false;
-  private project: Entry<any>;
-  private projectPrev: Entry<any>;
-  private projectNext: Entry<any>;
+  public isDataAvailable: boolean = false;
+  public project: Entry<any>;
+  public projectPrev: Entry<any>;
+  public projectNext: Entry<any>;
 
   constructor(
 

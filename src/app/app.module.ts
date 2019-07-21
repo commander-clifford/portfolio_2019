@@ -35,7 +35,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectComponent } from './project/project.component';
-import { MessagesComponent } from './messages/messages.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
 
@@ -60,7 +59,6 @@ import { InstagramFeedComponent } from './components/instagram-feed/instagram-fe
     AboutComponent,
     ProjectsComponent,
     ProjectComponent,
-    MessagesComponent,
     PortfolioComponent,
     ResumeComponent,
     NavigationComponent,

@@ -16,7 +16,7 @@
 
     </div>
 
-    <div *ngIf="isDataAvailable">
+    <div *ngIf="isDataAvailable" style="width:100%; display: flex; justify-content: space-between;">
 
       <div class="project__brief hero__brief">
         <h2 class="brief__title" [innerHtml]="project.fields.title | uppercase"></h2>
@@ -26,11 +26,11 @@
       <div class="project__connect">
 
         <a
-          *ngIf="project.fields.url"
+          *ngIf="project.fields.liveUrl"
           class="connect__link live_demo"
           target="_blank"
           mat-stroked-button
-          [href]="project.fields.url"
+          [href]="project.fields.liveUrl"
           >
           <i class="material-icons">open_in_new</i>
           {{project.fields.buttonText ? project.fields.buttonText : 'live'}}

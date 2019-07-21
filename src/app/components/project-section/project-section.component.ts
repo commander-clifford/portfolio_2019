@@ -11,8 +11,7 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 export class ProjectSectionComponent implements OnInit {
 
   @Input() section: Entry<any>;
-  private sectionSys: object;
-  private bodyHTML;
+  public bodyHTML;
 
   constructor() {}
 
