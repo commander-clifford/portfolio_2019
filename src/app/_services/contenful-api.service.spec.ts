@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ContenfulApiService } from './contenful-api.service';
+import { ContenfulApiService } from './_services/contenful-api.service';
 
 describe('ContenfulApiService', () => {
   beforeEach(() => {

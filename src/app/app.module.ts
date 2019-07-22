@@ -4,7 +4,7 @@ import { HttpClientModule }    from '@angular/common/http';
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService }  from './_components/project/in-memory-data.service';
 
-import { ContenfulApiService }  from './contenful-api.service';
+import { ContenfulApiService }  from './_services/contenful-api.service';
 import { NguCarouselModule } from '@ngu/carousel';
 
 import { BrowserModule } from '@angular/platform-browser';

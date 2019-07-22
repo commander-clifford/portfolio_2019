@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Project } from '../../_models/project';
 import { ProjectService } from '../../_services/project/project.service';
 // import { ProjectsRoutingService } from '../page-projects/projects-routing.service';
-import { ContenfulApiService } from '../../contenful-api.service';
+import { ContenfulApiService } from '../../_services/contenful-api.service';
 import { Entry } from 'contentful';
 
 @Component({
@@ -97,7 +97,7 @@ export class ProjectComponent {
 // import { Component, OnInit } from '@angular/core';
 // import { ActivatedRoute } from '@angular/router';
 // import { Location } from '@angular/common';
-// import { slideInOutAnimation } from '../router.animations';
+
 // import { ProjectService }  from '../_components/project.service';
 // import { Project } from '../_components/project';
 // import { Router } from '@angular/router';

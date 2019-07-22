@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { routerTransition } from './router.animations';
+import { routerTransition } from './_routing/router.animations';
 import { Location } from '@angular/common';
 
 @Component({
@@ -20,7 +20,6 @@ export class AppComponent {
     let state = outlet.activatedRouteData.state;
     return outlet.activatedRouteData.state;
   }
-
 
   goBack(): void {
     this.location.back();
