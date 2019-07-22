@@ -226,7 +226,7 @@
             <div
               *ngFor="let project of projects | orderBy: 'id':true"
               class="tile"
-              (click)="this.router.navigate(['/projects/'+project.id])"
+              (click)="this.router.navigate(['/project/'+project.id])"
             >
               <div class="tile__media">
                 <img class="tile__img" [src]="project.thumbnail.url" />

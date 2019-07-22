@@ -16,7 +16,6 @@ import {
   Elastic
 } from "gsap/all";
 
-
 @Component({
   selector: 'app-cover',
   templateUrl: './cover.component.html',
@@ -50,11 +49,6 @@ export class CoverComponent implements OnInit {
       opacity: (1-(p*4)),
       ease: Power4.easeInOut
     });
-
-
-
-
-
 
     // var scrollLimit = 16*1;
     // if (window.scrollY >= scrollLimit) {
@@ -99,8 +93,6 @@ export class CoverComponent implements OnInit {
         }
       }
     });
-
-
 
   }
 

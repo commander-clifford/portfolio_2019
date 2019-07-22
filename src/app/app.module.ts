@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 
 import { HttpClientModule }    from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './project/in-memory-data.service';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService }  from './_components/project/in-memory-data.service';
 
 import { ContenfulApiService }  from './contenful-api.service';
 import { NguCarouselModule } from '@ngu/carousel';
@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 import { ActivatedRouteSnapshot, RouteReuseStrategy, DetachedRouteHandle } from '@angular/router';
-import { CustomReuseStrategy } from './routing/route.reuse';
+import { CustomReuseStrategy } from './_routing/route.reuse';
 import { OrderModule } from 'ngx-order-pipe';
 
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
@@ -29,38 +29,38 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './routing/app-routing.module';
-import { CoverComponent } from './cover/cover.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ProjectComponent } from './project/project.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ResumeComponent } from './resume/resume.component';
+import { AppRoutingModule } from './_routing/app-routing.module';
+import { CoverComponent } from './_components/cover/cover.component';
+import { PageHomeComponent } from './page-home/page-home.component';
+import { PageAboutComponent } from './page-about/page-about.component';
+import { PageProjectsComponent } from './page-projects/page-projects.component';
+import { ProjectComponent } from './_components/project/project.component';
+import { PagePortfolioComponent } from './page-portfolio/page-portfolio.component';
+import { PageResumeComponent } from './page-resume/page-resume.component';
 
-import { NavigationComponent } from './navigation/navigation.component';
+import { NavigationComponent } from './_components/navigation/navigation.component';
 import { SafePipe } from './safe.pipe';
 
 import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
-import { ProjectCardComponent } from './components/project-card/project-card.component';
-import { ProjectSectionComponent } from './components/project-section/project-section.component';
-import { WhirligigComponent } from './components/whirligig/whirligig.component';
-import { FooterComponent } from './footer/footer.component';
+import { ProjectCardComponent } from './_components/project-card/project-card.component';
+import { ProjectSectionComponent } from './_components/project-section/project-section.component';
+import { WhirligigComponent } from './_components/whirligig/whirligig.component';
+import { FooterComponent } from './_components/footer/footer.component';
 import { SanitizeHtmlPipe } from './sanitize-html.pipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { InstagramFeedComponent } from './components/instagram-feed/instagram-feed.component';
+import { InstagramFeedComponent } from './_components/instagram-feed/instagram-feed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoverComponent,
-    HomeComponent,
-    AboutComponent,
-    ProjectsComponent,
+    PageHomeComponent,
+    PageAboutComponent,
+    PageProjectsComponent,
     ProjectComponent,
-    PortfolioComponent,
-    ResumeComponent,
+    PagePortfolioComponent,
+    PageResumeComponent,
     NavigationComponent,
     SafePipe,
     ProjectCardComponent,
@@ -68,7 +68,7 @@ import { InstagramFeedComponent } from './components/instagram-feed/instagram-fe
     InstagramFeedComponent,
     WhirligigComponent,
     FooterComponent,
-    SanitizeHtmlPipe
+    SanitizeHtmlPipe,
   ],
   imports: [
     AppRoutingModule,
@@ -81,9 +81,9 @@ import { InstagramFeedComponent } from './components/instagram-feed/instagram-fe
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // ),
     MatButtonToggleModule,
     MatButtonModule,
     MatCardModule,

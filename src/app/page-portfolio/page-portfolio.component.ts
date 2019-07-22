@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from '../project/project';
-import { ProjectService } from '../project/project.service';
+import { Project } from '../_models/project';
+import { ProjectService } from '../_services/project/project.service';
 import { OrderPipe } from 'ngx-order-pipe';
 import { ContenfulApiService } from '../contenful-api.service';
 import { Entry } from 'contentful';
 
 @Component({
   selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  templateUrl: './page-portfolio.component.html',
+  styleUrls: ['./page-portfolio.component.scss']
 })
 
-export class PortfolioComponent implements OnInit { 
+export class PagePortfolioComponent implements OnInit { 
 
   private projects_cda: Entry<any>[] = []; // define a private class property to the class which defines that this component will include a collection of several projects
   private projects: object;

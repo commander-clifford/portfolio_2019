@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Project } from './project';
-import { ProjectService } from './project.service';
-import { ProjectsRoutingService } from '../projects/projects-routing.service';
-import { ContenfulApiService } from '../contenful-api.service';
+import { Project } from '../../_models/project';
+import { ProjectService } from '../../_services/project/project.service';
+// import { ProjectsRoutingService } from '../page-projects/projects-routing.service';
+import { ContenfulApiService } from '../../contenful-api.service';
 import { Entry } from 'contentful';
 
 @Component({
@@ -27,7 +27,7 @@ export class ProjectComponent {
 
     private route: ActivatedRoute,
     // private projectService: ProjectService,
-    private projectsRouting: ProjectsRoutingService,
+    // private projectsRouting: ProjectsRoutingService,
     private contentfulApiService: ContenfulApiService,
 
   ) {
@@ -98,8 +98,8 @@ export class ProjectComponent {
 // import { ActivatedRoute } from '@angular/router';
 // import { Location } from '@angular/common';
 // import { slideInOutAnimation } from '../router.animations';
-// import { ProjectService }  from '../project.service';
-// import { Project } from '../project';
+// import { ProjectService }  from '../_components/project.service';
+// import { Project } from '../_components/project';
 // import { Router } from '@angular/router';
 //
 //
@@ -140,11 +140,11 @@ export class ProjectComponent {
 //     if(dir === 'next'){
 //       // alert('next');
 //       // this.mainState = 'next';
-//       this.router.navigate(["/projects/" + this.nextProjectId ]);
+//       this.router.navigate(["/project/" + this.nextProjectId ]);
 //     } else {
 //       // alert('prev');
 //       // this.mainState = 'prev';
-//       this.router.navigate(["/projects/" + this.prevProjectId ]);
+//       this.router.navigate(["/project/" + this.prevProjectId ]);
 //     }
 //   }
 //

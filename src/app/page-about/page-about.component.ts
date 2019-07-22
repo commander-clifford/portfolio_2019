@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
-import { Project } from '../project/project';
-import { ProjectService } from '../project/project.service';
+import { Project } from '../_models/project';
+import { ProjectService } from '../_services/project/project.service';
 import { OrderPipe } from 'ngx-order-pipe';
 
 import { ContenfulApiService } from '../contenful-api.service';
@@ -11,10 +11,10 @@ import { Entry } from 'contentful';
 
 @Component({
   selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  templateUrl: './page-about.component.html',
+  styleUrls: ['./page-about.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class PageAboutComponent implements OnInit {
 
   public projects: object;
   public selectedProject: Project;

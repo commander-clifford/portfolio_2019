@@ -3,7 +3,7 @@
   <nav class="projects__nav">
 
     <button
-      [routerLink]="isDataAvailable && projectPrev ? '/projects/' + projectPrev.fields.slug : '/portfolio/'"
+      [routerLink]="isDataAvailable && projectPrev ? '/project/' + projectPrev.fields.slug : '/portfolio/'"
       class="btn btn-secondary btn-action btn-lg"
       mat-button
       >
@@ -21,7 +21,7 @@
 
 
     <button
-      [routerLink]="isDataAvailable && projectNext ? '/projects/' + projectNext.fields.slug : '/portfolio/'"
+      [routerLink]="isDataAvailable && projectNext ? '/project/' + projectNext.fields.slug : '/portfolio/'"
       class="btn btn-secondary btn-action btn-lg"
       mat-button
       >
@@ -46,7 +46,7 @@
   <nav *ngIf="false" class="projects__nav">
 
     <button
-      [routerLink]="isDataAvailable && projectPrev ? '/projects/' + projectPrev.fields.slug : '/portfolio/'"
+      [routerLink]="isDataAvailable && projectPrev ? '/project/' + projectPrev.fields.slug : '/portfolio/'"
       class="btn btn-secondary btn-action btn-lg"
       mat-button
       >
@@ -64,7 +64,7 @@
 
 
     <button
-      [routerLink]="isDataAvailable && projectNext ? '/projects/' + projectNext.fields.slug : '/portfolio/'"
+      [routerLink]="isDataAvailable && projectNext ? '/project/' + projectNext.fields.slug : '/portfolio/'"
       class="btn btn-secondary btn-action btn-lg"
       mat-button
       >
