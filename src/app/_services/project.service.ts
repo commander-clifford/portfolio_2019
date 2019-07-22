@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
 
-import { Project } from '../../_models/project';
-import { PROJECTS } from '../api-portfolio';
+import { Project } from '../_models/project';
+import { PROJECTS } from './api-portfolio';
 // import { MessageService } from '../message.service';
 
 @Injectable({

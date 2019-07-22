@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { filter, map, share, pairwise, startWith } from 'rxjs/operators';
 import { routerTransition } from '../_routing/router.animations';
 import { RouterOutlet } from '@angular/router';
-import { ProjectService } from '../_services/project/project.service';
+import { ProjectService } from '../_services/project.service';
 import { ProjectsRoutingService } from './projects-routing.service';
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';

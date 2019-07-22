@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../_models/project';
-import { ProjectService } from '../_services/project/project.service';
+import { ProjectService } from '../_services/project.service';
 import { OrderPipe } from 'ngx-order-pipe';
 import { ContenfulApiService } from '../_services/contenful-api.service';
 import { Entry } from 'contentful';
