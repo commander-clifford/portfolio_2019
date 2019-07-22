@@ -2,29 +2,52 @@
 @import "../../../fontawesome.scss";
 
 .section {
-  display: flex;
-  width: 100%;
-
-  flex-direction: column;
-  justify-content: center;
 
   @include md {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 3fr 6fr 1fr;
+    grid-column-gap: 4em;
+
+    &__left {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      justify-self: end;
+      align-self: start;
+      min-width: 0;
+    }
+
+    &__right {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      min-width: 0;
+    }
   }
 
   &__title {
     font-size: 2em;
     font-weight: bold;
+    padding: 0;
+    margin: 0;
     text-align: left;
+    
+    @include md {
+      text-align: right;
+    }
   }
+
   &__content {
     text-align: left;
-    width: 90%;
 
-    @include md {
-      width: 60%;
+    p:first-child {
+      @include md {
+        margin-top: 0;
+        padding-top: 0;
+      }
     }
   }
 }

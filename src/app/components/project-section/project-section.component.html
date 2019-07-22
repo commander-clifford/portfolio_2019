@@ -1,4 +1,8 @@
 <section class="section">
-  <h2 class="section__title" [innerHtml]="section.fields.title"></h2>
-  <div class="section__content" [innerHtml]="this.bodyHTML | sanitizeHtml"></div>
+  <div class="section__left">
+    <h2 class="section__title" [innerHtml]="section.fields.title"></h2>
+  </div>
+  <div class="section__right">
+    <div class="section__content" [innerHtml]="this.bodyHTML | sanitizeHtml"></div>
+  </div>
 </section>

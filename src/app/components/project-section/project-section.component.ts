@@ -1,11 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Entry } from 'contentful';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 @Component({
   selector: 'app-project-section',
   templateUrl: './project-section.component.html',
-  styleUrls: ['./project-section.component.scss']
+  styleUrls: ['./project-section.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 
 export class ProjectSectionComponent implements OnInit {
