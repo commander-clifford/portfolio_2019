@@ -39,14 +39,14 @@ import { PagePortfolioComponent } from './page-portfolio/page-portfolio.componen
 import { PageResumeComponent } from './page-resume/page-resume.component';
 
 import { NavigationComponent } from './_components/navigation/navigation.component';
-import { SafePipe } from './safe.pipe';
+import { SafePipe } from './_pipes/safe.pipe';
 
 import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
 import { ProjectCardComponent } from './_components/project-card/project-card.component';
 import { ProjectSectionComponent } from './_components/project-section/project-section.component';
 import { WhirligigComponent } from './_components/whirligig/whirligig.component';
 import { FooterComponent } from './_components/footer/footer.component';
-import { SanitizeHtmlPipe } from './sanitize-html.pipe';
+import { SanitizeHtmlPipe } from './_pipes/sanitize-html.pipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { InstagramFeedComponent } from './_components/instagram-feed/instagram-feed.component';
